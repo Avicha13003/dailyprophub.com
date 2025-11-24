@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DailyPropHub – NBA Player Props Trends & Model-Powered Insights</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
+  <meta name="description"
+        content="DailyPropHub delivers NBA player prop trends, model-powered edges, and context-rich dashboards to help you make smarter bets. Updated daily before tip-off." />
+  <meta name="keywords"
+        content="NBA props, NBA player props, prop bets, betting model, NBA trends, NBA stats, DailyPropHub, player prop predictions" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DailyPropHub – NBA Player Prop Trends & Edges" />
+  <meta property="og:description"
+        content="Track NBA player prop trends, model-powered edges, and context in one dashboard. Updated daily before tip-off." />
+  <meta property="og:url" content="https://dailyprophub.com/" />
+  <!-- Replace this with a real image URL later -->
+  <meta property="og:image" content="https://dailyprophub.com/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DailyPropHub – NBA Player Prop Trends & Edges" />
+  <meta name="twitter:description"
+        content="Data-driven NBA player props dashboard with trends, model probabilities, and context in one place." />
+  <meta name="twitter:image" content="https://dailyprophub.com/og-image.png" />
+
+  <!-- Favicon (optional – update path later) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">
+        <span class="logo-mark">DPH</span>
+        <span class="logo-text">DailyPropHub</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#support">Support the Project</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn-primary" href="https://nbadailytrends.streamlit.app" target="_blank" rel="noopener">
+          Launch NBA Dashboard
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>NBA Player Prop Trends & Model-Powered Edges — In One Place.</h1>
+        <p class="hero-subtitle">
+          DailyPropHub tracks NBA player props, hit rates, model probabilities, and context
+          (fatigue, travel, matchups, venues) to help you make sharper decisions — not just vibes.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn-primary hero-main-cta" href="https://nbadailytrends.streamlit.app" target="_blank" rel="noopener">
+            🚀 Open Daily NBA Dashboard
+          </a>
+          <a class="btn-secondary" href="#features">
+            See what’s inside
+          </a>
+        </div>
+
+        <p class="hero-meta">
+          Updated daily at least ~2 hours before first tip-off.  
+          <span class="hero-tag">For informational & entertainment purposes only.</span>
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="mini-tag">Live App Preview</div>
+        <h2>Today’s Slate at a Glance</h2>
+        <ul class="hero-list">
+          <li>🔥 Best Parlay of the Day (model + correlation based)</li>
+          <li>📊 Top Overs by market (PTS, REB, AST, STL, 3PM)</li>
+          <li>📈 Recent trend charts vs line & season averages</li>
+          <li>🛫 Travel, fatigue, opponent defense & allowed stats</li>
+          <li>🧠 Confidence index combining model, trends & context</li>
+        </ul>
+        <p class="hero-disclaimer">
+          No picks sold. No subscriptions. Just data & tools — free to use.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Why Bettors Use DailyPropHub</h2>
+      <p class="section-subtitle">
+        Built by a hoops fan who got tired of guessing and scrolling — DailyPropHub sits between
+        raw box scores and paid touts, giving you a transparent view into the numbers.
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>📊 Model-Powered Edges</h3>
+          <p>
+            See model over probabilities vs implied book odds, plus estimated edge on each prop.
+            No “locks”, just transparent numbers.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>📈 Real Trends, Not Narratives</h3>
+          <p>
+            Quickly see last-N game performance vs the line and vs season averages, along with
+            volatility (standard deviation) so you understand consistency.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>🧩 Correlated “Best Parlay”</h3>
+          <p>
+            A single 3-leg parlay surfaced each day based on model edge, correlation, and AIR
+            score — designed as a starting point for your own research.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>🛫 Context: Fatigue, Travel, Matchups</h3>
+          <p>
+            Back-to-backs, travel miles, defensive rankings, and opponent allowed stats
+            are baked into the view so you don’t miss hidden context.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>📚 Player Profiles & History</h3>
+          <p>
+            Dive into historical hit rates by market, day-of-week splits, and player-specific
+            logs to see where certain props truly shine (or disappoint).
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>💻 Free, Evolving, Transparent</h3>
+          <p>
+            The project is actively iterated to improve consistency and accuracy over time.
+            No paywall — just optional support if the data helps you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <h2 class="section-title">How DailyPropHub Works</h2>
+      <div class="hiw-grid">
+        <div class="hiw-step">
+          <div class="step-number">1</div>
+          <h3>Collect & Clean Data</h3>
+          <p>
+            Game logs, prop lines, odds, and team context are pulled daily and cleaned into a
+            consistent dataset with rolling metrics and matchup stats.
+          </p>
+        </div>
+        <div class="hiw-step">
+          <div class="step-number">2</div>
+          <h3>Run the Models</h3>
+          <p>
+            A blend of baseline logic and machine learning estimates probabilities for each
+            player prop, calibrated against historical outcomes.
+          </p>
+        </div>
+        <div class="hiw-step">
+          <div class="step-number">3</div>
+          <h3>Surface Edges & Context</h3>
+          <p>
+            The dashboard highlights potential edges, recent hit rates, and contextual factors
+            so you can quickly decide what deserves a deeper look.
+          </p>
+        </div>
+        <div class="hiw-step">
+          <div class="step-number">4</div>
+          <h3>You Do the Final Handicapping</h3>
+          <p>
+            DailyPropHub is built as a decision support tool — you bring the judgment, risk
+            tolerance, and bankroll management. No picks are guaranteed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <section class="section cta-strip">
+    <div class="container cta-strip-inner">
+      <div>
+        <h2>Ready to explore today’s NBA player prop landscape?</h2>
+        <p>Open the live dashboard and start with the top markets or the Best Parlay of the Day.</p>
+      </div>
+      <div>
+        <a class="btn-primary btn-large" href="https://nbadailytrends.streamlit.app" target="_blank" rel="noopener">
+          Launch the Dashboard
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support / Venmo -->
+  <section id="support" class="section section-alt">
+    <div class="container support-grid">
+      <div>
+        <h2 class="section-title">Support the Project</h2>
+        <p class="section-subtitle">
+          If DailyPropHub has helped you cash some slips or just save time digging through stats,
+          you can support ongoing development and improvements.
+        </p>
+
+        <div class="donation-options">
+          <a class="don-btn" href="https://venmo.com/u/DailyPropHub" target="_blank" rel="noopener">
+            🍺 Buy me a beer ($5)
+          </a>
+          <a class="don-btn" href="https://venmo.com/u/DailyPropHub" target="_blank" rel="noopener">
+            💸 Tip me ($1)
+          </a>
+          <a class="don-btn" href="https://venmo.com/u/DailyPropHub" target="_blank" rel="noopener">
+            🏦 Pay a bill ($100)
+          </a>
+        </div>
+
+        <p class="support-meta">
+          Venmo: <strong>@DailyPropHub</strong>  
+          <br />
+          Every bit helps justify more time spent improving the models, visuals, and
+          overall experience.
+        </p>
+      </div>
+
+      <div class="support-sidebox">
+        <h3>What’s Coming Next?</h3>
+        <ul>
+          <li>⚾ MLB player prop expansion when the season returns</li>
+          <li>📬 Optional email updates for new features & big slates</li>
+          <li>📱 More mobile-first UX enhancements</li>
+          <li>🧪 Ongoing model tuning using historical results</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Is this a pick-selling service?</h3>
+          <p>
+            No. DailyPropHub does not sell picks, “locks”, or subscriptions. It’s a data and
+            visualization tool to help you make more informed decisions.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Is this free to use?</h3>
+          <p>
+            Yes. The NBA dashboard is free. If the tools help you, you can optionally support
+            the project via Venmo to help cover time and hosting.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Does this guarantee profits?</h3>
+          <p>
+            Absolutely not. Sports are volatile and betting carries real risk. DailyPropHub
+            is for informational and entertainment purposes only and does not guarantee
+            outcomes or profits.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Will you add MLB or other sports?</h3>
+          <p>
+            MLB is planned as the next major expansion, using similar home run / prop modeling
+            concepts. Other leagues might follow over time.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>How often is the data updated?</h3>
+          <p>
+            The goal is to update at least once daily during the NBA season, typically ~2 hours
+            before the first tip-off, with additional improvements to the pipeline over time.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I share feedback or feature ideas?</h3>
+          <p>
+            Definitely. The project is actively evolving. A contact/feedback channel will be
+            added soon, but for now you can include notes in donation messages.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="logo footer-logo">
+          <span class="logo-mark">DPH</span>
+          <span class="logo-text">DailyPropHub</span>
+        </div>
+        <p class="footer-text">
+          NBA player prop trends & model-powered insights, refreshed throughout the season.
+        </p>
+        <p class="footer-disclaimer">
+          DailyPropHub is for informational and entertainment purposes only.  
+          Nothing on this site or in the dashboard is betting advice or a guarantee of results.  
+          Please bet responsibly and within your means.
+        </p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <a class="btn-secondary footer-cta" href="https://nbadailytrends.streamlit.app" target="_blank" rel="noopener">
+          Open NBA Dashboard
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> DailyPropHub. All rights reserved.
+    </div>
+    <script>
+      // simple year injection
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
