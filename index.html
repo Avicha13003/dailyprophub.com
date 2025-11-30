@@ -441,11 +441,12 @@
         if (!email || !msg) {
             alert("Please enter both email and message.");
             return;
-        }
+        }  
 
         emailjs.send("service_xb35won", "template_j46hu89", {
-            user_email: email,
-            message: msg
+            email: email,     // matches {{email}} in EmailJS
+            name: "User",     // matches {{name}} — you can add a name field later
+            title: msg        // matches {{title}} in the auto-reply
         })
         .then(() => {
             alert("Message sent! We'll get back to you soon.");
@@ -456,7 +457,9 @@
             console.error(err);
         });
     }
-  </script>
+    </script>
+
 
 </body>
 </html>
+
