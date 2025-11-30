@@ -7,7 +7,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-FKT71P5JMH');
   </script>
   
@@ -45,12 +44,11 @@
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
-  <!-- Favicon (optional – update path later) -->
   <link rel="icon" href="/favicon.ico" />
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <!-- Top Nav -->
   <header class="site-header">
     <div class="container nav">
@@ -318,7 +316,7 @@
           <h3>Can I share feedback or feature ideas?</h3>
           <p>
             Definitely. The project is actively evolving. A contact/feedback channel will be
-            added soon, but for now you can include notes in donation messages.
+            added soon.
           </p>
         </div>
       </div>
@@ -347,23 +345,27 @@
           <a href="#features">Features</a>
           <a href="#how-it-works">How It Works</a>
           <a href="#faq">FAQ</a>
-          <a href="#" id="footerContactBtn">Contact</a>
+
+          <!-- FIXED CONTACT BUTTON -->
+          <a href="javascript:void(0)" id="footerContactBtn">Contact</a>
+
         </div>
         <a class="btn-secondary footer-cta" href="https://nbadailytrends.streamlit.app" target="_blank" rel="noopener">
           Open NBA Dashboard
         </a>
       </div>
     </div>
+
     <div class="footer-bottom">
       © <span id="year"></span> DailyPropHub. All rights reserved.
     </div>
+
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
 
-
-  <!-- 🔥🔥 CONTACT FORM MODAL + EMAILJS (added at bottom) -->
+  <!-- CONTACT MODAL + EMAILJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
       emailjs.init("0_dafSDzoQhezJW_o");
@@ -376,26 +378,28 @@
       top:0; left:0;
       width:100%; height:100%;
       background:rgba(0,0,0,0.7);
+      backdrop-filter: blur(5px);
       z-index:9999;
       justify-content:center;
       align-items:center;
   ">
       <div style="
-          background:#fff;
+          background:#111;
           padding:24px;
           width:90%;
           max-width:420px;
           border-radius:12px;
-          color:#333;
+          color:white;
+          box-shadow:0 4px 20px rgba(0,0,0,0.4);
       ">
           <h2>Contact Us</h2>
-          <p>Have a suggestion, idea, or issue? Send us a message.</p>
+          <p style="color:#ccc;">Have a suggestion, idea, or issue? Send us a message.</p>
 
           <input id="contactEmail" type="email" placeholder="Your email"
-              style="width:100%;padding:10px;margin-bottom:10px;border:1px solid #ddd;border-radius:6px;">
+              style="width:100%;padding:10px;margin-bottom:10px;border:1px solid #333;border-radius:6px;background:#1c1c1c;color:#fff;">
 
           <textarea id="contactMessage" placeholder="Your message"
-              style="width:100%;height:120px;padding:10px;border:1px solid #ddd;border-radius:6px;"></textarea>
+              style="width:100%;height:120px;padding:10px;border:1px solid #333;border-radius:6px;background:#1c1c1c;color:#fff;"></textarea>
 
           <button onclick="sendContact()" style="
               width:100%;
@@ -410,7 +414,8 @@
 
           <button onclick="closeContact()" style="
               width:100%;
-              background:#ccc;
+              background:#555;
+              color:white;
               padding:8px;
               margin-top:10px;
               border:none;
@@ -419,10 +424,10 @@
       </div>
   </div>
 
-
   <script>
     const modal = document.getElementById("contactModal");
-    document.getElementById("contactBtn").onclick = () => modal.style.display = "flex";
+
+    // 🔥 FIXED: only use the existing footer button
     document.getElementById("footerContactBtn").onclick = () => modal.style.display = "flex";
 
     function closeContact() {
