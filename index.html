@@ -229,6 +229,83 @@
     </div>
   </section>
 
+  <!-- Live Preview Section -->
+  <section class="section section-alt" id="preview">
+    <div class="container">
+      <h2 class="section-title">Live Dashboard Preview</h2>
+      <p class="section-subtitle">
+        Here’s a quick look at what you’ll see inside the DailyPropHub NBA dashboard — 
+        real model-powered edges, clean visuals, and everything organized for fast decision-making.
+      </p>
+
+      <!-- Screenshot Grid -->
+      <div class="preview-grid">
+
+        <div class="preview-item">
+          <img src="assets/screenshots/001_predictions.png" alt="Predictions Overview" />
+          <p class="preview-caption">🏀 Predictions Overview</p>
+        </div>
+
+        <div class="preview-item">
+          <img src="assets/screenshots/005_top_overs_3pm.png" alt="3PM Top Overs" />
+          <p class="preview-caption">🔥 3PM · Top Overs</p>
+        </div>
+
+        <div class="preview-item">
+          <img src="assets/screenshots/008_yesterday_results.png" alt="Yesterday Results" />
+          <p class="preview-caption">📊 Yesterday's Results Breakdown</p>
+        </div>
+
+        <div class="preview-item">
+          <img src="assets/screenshots/009_history_profile.png" alt="Player History" />
+          <p class="preview-caption">📚 Historical Player Profiles</p>
+        </div>
+
+      </div>
+
+      <!-- Tutorial Video -->
+      <div class="video-wrapper">
+        <h3 class="video-title">🎥 Full Tutorial: How to Use the Dashboard</h3>
+        <video controls class="tutorial-video">
+          <source src="assets/video/final_tutorial.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .preview-item img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      border: 1px solid #222;
+    }
+    .preview-caption {
+      text-align: center;
+      margin-top: 8px;
+      color: #ccc;
+      font-size: 0.95em;
+    }
+    .video-wrapper {
+      margin-top: 60px;
+      text-align: center;
+    }
+    .tutorial-video {
+      width: 100%;
+      max-width: 780px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+    }
+  </style>
+  
   <!-- Support / Venmo -->
   <section id="support" class="section section-alt">
     <div class="container support-grid">
@@ -462,4 +539,3 @@
 
 </body>
 </html>
-
