@@ -1,22 +1,23 @@
 {
-  "date": "2026-01-13",
-  "player": "Donovan Clingan",
-  "team": "POR",
-  "market": "AST",
-  "line": "2.5",
-  "odds": "125",
-  "blend_prob": 0.6242992188789619,
-  "implied_prob": 0.4444444444444444,
-  "edge": 0.1798547744345174,
-  "air_score": 0.8884306748101551,
+  "date": "2026-01-14",
+  "player": "Immanuel Quickley",
+  "team": "TOR",
+  "market": "REB",
+  "line": "4.5",
+  "odds": "-113",
+  "blend_prob": 0.7068921591208067,
+  "implied_prob": 0.5305164319248826,
+  "edge": 0.1763757271959241,
+  "air_score": 0.815212070488487,
   "why": [
-    "Model edge: +18.0% vs book implied",
-    "Team pace factor: +0.92z"
+    "Model edge: +17.6% vs book implied",
+    "Risk note: player has a limitation/injury tag (volatility higher)",
+    "Team pace factor: -0.59z (headwind priced in)"
   ],
   "disclaimer": "Research highlight \u2014 not a betting recommendation",
   "_meta": {
     "used_fallback": false,
-    "air_gate": 0.8111959679191205,
+    "air_gate": 0.7162204268305997,
     "max_edge_outlier": 0.18,
     "pts_minutes_floor": 26,
     "pts_vol_suppression": {
