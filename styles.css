@@ -583,4 +583,84 @@ html, body {
     font-size: 0.8rem;
     color: #888;
   }
+  .model-highlights {
+    background: radial-gradient(circle at top, #0b1220, #05070d);
+  }
+
+  .model-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+  }
+
+  .model-card {
+    cursor: pointer;
+  }
+
+  .model-card-inner {
+    background: linear-gradient(180deg, rgba(20,30,50,.9), rgba(10,15,25,.95));
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 18px;
+    padding: 22px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .model-card-inner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,.6);
+  }
+
+  .model-badge {
+    font-size: .75rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #4cffc3;
+  }
+
+  .model-player {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    align-items: center;
+  }
+
+  .player-headshot {
+    width: 70px;
+    border-radius: 12px;
+  }
+
+  .player-meta h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .player-meta p {
+    margin: 4px 0 0;
+    color: #bbb;
+  }
+
+  .model-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    text-align: center;
+  }
+
+  .model-stats div span {
+    display: block;
+    font-size: .75rem;
+    color: #999;
+  }
+
+  .model-stats .edge strong {
+    color: #4cffc3;
+  }
+
+  .model-cta {
+    margin-top: 18px;
+    text-align: right;
+    font-weight: 600;
+    color: #4cffc3;
+  }
 }
