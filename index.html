@@ -112,6 +112,54 @@
     </div>
   </section>
 
+  <!-- ============================= -->
+  <!-- TODAY'S MODEL HIGHLIGHTS -->
+  <!-- ============================= -->
+  <section class="section model-highlights">
+    <div class="container">
+      <h2 class="section-title">📌 Today’s Model Highlights</h2>
+      <p class="section-subtitle">
+        Two different lenses on today’s NBA slate — one curated for stability, one purely model-driven.
+      </p>
+
+      <div class="highlights-grid">
+
+        <!-- Featured Edge -->
+        <div class="highlight-card featured-edge">
+          <h3>⭐ Featured Edge</h3>
+          <p class="highlight-desc">
+            A single, curated prop that balances model edge, trends, and volatility filters.
+          </p>
+
+          <div id="featuredEdgeContent" class="highlight-content loading">
+            Loading Featured Edge…
+          </div>
+
+          <p class="highlight-disclaimer">
+            Lower variance focus. Still informational — not betting advice.
+          </p>
+        </div>
+
+        <!-- Top Model Pick -->
+        <div class="highlight-card top-model">
+          <h3>🔥 Top Model Pick</h3>
+          <p class="highlight-desc">
+            The highest raw expected value according to the model — volatility included.
+          </p>
+
+          <div id="topModelContent" class="highlight-content loading">
+            Loading Top Model Pick…
+          </div>
+
+          <p class="highlight-disclaimer">
+            Pure EV. Higher variance. Use as a research input, not a lock.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    
   <!-- Features -->
   <section id="features" class="section section-alt">
     <div class="container">
@@ -539,8 +587,56 @@
     }
     </script>
 
+<script>
+  async function loadJson(url) {
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error("Failed to load " + url);
+    return res.json();
+  }
 
+  function renderPick(containerId, data) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+
+    el.classList.remove("loading");
+
+    el.innerHTML = `
+      <div class="pick-player">${data.player}</div>
+      <div class="pick-line">
+        ${data.market} Over ${data.line}
+        <span class="pick-odds">${data.odds > 0 ? "+" : ""}${data.odds}</span>
+      </div>
+      <div class="pick-meta">
+        <div>Model Prob: ${(data.blend_prob * 100).toFixed(1)}%</div>
+        <div>Implied: ${(data.implied_prob * 100).toFixed(1)}%</div>
+        <div class="pick-edge">Edge: ${(data.edge * 100).toFixed(1)}%</div>
+      </div>
+      ${data.why ? `
+        <ul class="pick-why">
+          ${data.why.map(w => `<li>${w}</li>`).join("")}
+        </ul>
+      ` : ""}
+    `;
+  }
+
+  (async () => {
+    try {
+      const featured = await loadJson("/data/featured_edge_today.json");
+      renderPick("featuredEdgeContent", featured);
+    } catch (e) {
+      document.getElementById("featuredEdgeContent").innerText =
+        "Featured Edge unavailable today.";
+    }
+
+    try {
+      const topModel = await loadJson("/data/top_model_pick_today.json");
+      renderPick("topModelContent", topModel);
+    } catch (e) {
+      document.getElementById("topModelContent").innerText =
+        "Top Model Pick unavailable today.";
+    }
+  })();
+</script>
+ 
 </body>
 </html>
-
-

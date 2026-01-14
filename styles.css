@@ -508,4 +508,79 @@ html, body {
   .hero {
     padding-top: 28px;
   }
+  .model-highlights {
+    background: #0d1117;
+  }
+
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+  }
+
+  .highlight-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  }
+
+  .highlight-card h3 {
+    margin-bottom: 8px;
+  }
+
+  .highlight-desc {
+    color: #bbb;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .highlight-content.loading {
+    color: #777;
+  }
+
+  .pick-player {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .pick-line {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+
+  .pick-odds {
+    margin-left: 6px;
+    color: #1d72f3;
+  }
+
+  .pick-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+
+  .pick-edge {
+    color: #4ade80;
+    font-weight: 600;
+  }
+
+  .pick-why {
+    margin-top: 10px;
+    padding-left: 18px;
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+
+  .highlight-disclaimer {
+    margin-top: 14px;
+    font-size: 0.8rem;
+    color: #888;
+  }
 }
