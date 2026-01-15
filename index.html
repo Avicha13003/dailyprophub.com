@@ -594,7 +594,7 @@
         const teamAbbr = safeTeamAbbr(d);
         const teamLogo = teamAbbr
           ? `https://cdn.nba.com/logos/nba/${teamAbbr}/global/L/logo.svg`
-          : "";
+          : null;
 
         // Headshot from your mapping
         const mappedHeadshot = headshots[d.player];
