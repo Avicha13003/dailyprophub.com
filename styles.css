@@ -486,6 +486,42 @@ html, body {
     0 0 28px rgba(76, 255, 195, 0.08);
 }
 
+/* Desktop layout: side-by-side model cards */
+.model-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+/* Featured Edge styling */
+#featured-edge-card .model-card-inner {
+  border-left: 4px solid #4cffc3;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 40, 35, 0.9),
+    rgba(10, 20, 18, 0.95)
+  );
+}
+
+/* Top Model Pick styling */
+#top-model-card .model-card-inner {
+  border-left: 4px solid #ff8f1f;
+  background: linear-gradient(
+    180deg,
+    rgba(45, 30, 10, 0.9),
+    rgba(25, 15, 8, 0.95)
+  );
+}
+
+.model-card-inner {
+  min-height: 340px;
+}
+
+.model-player {
+  margin-bottom: 14px;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links {
