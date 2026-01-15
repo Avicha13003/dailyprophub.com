@@ -602,26 +602,36 @@
         const headshot = mappedHeadshot || "assets/player_silhouette.png";
 
         el.innerHTML = `
-          <div class="model-card-inner team-accent" data-team="${teamAbbr}"
-               role="button" tabindex="0"
+          <div class="model-card-inner team-accent" role="button" tabindex="0"
                onclick="window.open('${DASHBOARD_URL}','_blank')"
                onkeypress="if(event.key==='Enter'){window.open('${DASHBOARD_URL}','_blank')}">
 
+            <!-- HEADER (badge only — logo REMOVED here) -->
             <div class="model-card-header">
               <span class="model-badge">${label}</span>
-              ${teamLogo ? `<img class="team-logo" src="${teamLogo}" alt="${teamAbbr} logo" onerror="this.style.display='none'">` : ""}
             </div>
 
+            <!-- PLAYER ROW -->
             <div class="model-player">
               <div class="player-media">
-                ${teamLogo ? `<img class="team-logo-inline" src="${teamLogo}" alt="${teamAbbr}">` : ""}
-                <img class="player-headshot" src="${headshot}" alt="${d.player}"
+                ${teamLogo ? `
+                  <img class="team-logo-inline"
+                       src="${teamLogo}"
+                       alt="${teamAbbr} logo"
+                       onerror="this.style.display='none'">
+        `         : ""}
+
+                <img class="player-headshot"
+                     src="${headshot}"
+                     alt="${d.player}"
                      onerror="this.src='assets/player_silhouette.png'">
               </div>
 
               <div class="player-meta">
                 <h3>${d.player}</h3>
-                <p>${d.market} Over ${d.line} <span class="odds">${formatOdds(d.odds)}</span></p>
+                <p>${d.market} Over ${d.line}
+                  <span class="odds">${formatOdds(d.odds)}</span>
+                </p>
                 <p class="model-sub">${subtitle}</p>
               </div>
             </div>
@@ -629,12 +639,16 @@
             <div class="model-stats">
               <div><strong>${(Number(d.blend_prob)*100).toFixed(1)}%</strong><span>Model</span></div>
               <div><strong>${(Number(d.implied_prob)*100).toFixed(1)}%</strong><span>Implied</span></div>
-              <div class="edge"><strong>${(Number(d.edge)*100 >= 0 ? "+" : "")}${(Number(d.edge)*100).toFixed(1)}%</strong><span>Edge</span></div>
+              <div class="edge">
+                <strong>${(Number(d.edge)*100 >= 0 ? "+" : "")}${(Number(d.edge)*100).toFixed(1)}%</strong>
+                <span>Edge</span>
+              </div>
             </div>
 
             <div class="model-cta">View full breakdown →</div>
           </div>
         `;
+
       } catch (e) {
         console.error("Failed loading model card", pickUrl, e);
         el.innerHTML = `

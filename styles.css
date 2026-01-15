@@ -464,11 +464,11 @@ html, body {
 }
 
 .team-logo-inline {
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
-  opacity: 0.9;
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,.45));
+  opacity: 0.95;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0,.45));
 }
 
 /* Team-accented glow */
