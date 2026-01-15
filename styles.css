@@ -584,6 +584,7 @@ html, body {
     rgba(76,255,195,.15),
     transparent
   );
+  pointer-events: none; /* ✅ CRITICAL */
 }
 
 .model-card-inner:hover::before {
