@@ -534,7 +534,7 @@ html, body {
 }
 
 #featured-edge-card .model-badge::after {
-  content: " • Curated";
+  content: " • Best Angle";
   color: #7fffd4;
   font-weight: 500;
 }
