@@ -486,12 +486,14 @@ html, body {
     0 0 28px rgba(76, 255, 195, 0.08);
 }
 
-/* Desktop layout: side-by-side model cards */
-.model-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px;
-  align-items: stretch;
+/* Desktop: side-by-side cards */
+@media (min-width: 901px) {
+  .model-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+  }
 }
 
 /* Featured Edge styling */
@@ -514,8 +516,21 @@ html, body {
   );
 }
 
+#featured-edge-card .model-badge::after {
+  content: " • Curated";
+  color: #7fffd4;
+  font-weight: 500;
+}
+
+#top-model-card .model-badge::after {
+  content: " • Model Max";
+  color: #ffb347;
+  font-weight: 500;
+}
+
 .model-card-inner {
   min-height: 340px;
+  padding-top: 26px;
 }
 
 .model-player {
