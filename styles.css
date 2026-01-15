@@ -664,9 +664,10 @@ html, body {
 
 .confidence-box {
   position: absolute;
-  top: 26px;
+  top: 22px;
   right: 22px;
   text-align: center;
+  pointer-events: none;
 }
 
 .confidence-ring {
@@ -693,6 +694,46 @@ html, body {
   color: #9aa4b2;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+/* Desktop cards reserve space for confidence */
+@media (min-width: 901px) {
+  .model-card-inner {
+    padding-right: 120px; /* space for confidence ring */
+  }
+}
+
+@media (min-width: 901px) {
+  .model-card-inner::after {
+    background: linear-gradient(
+      90deg,
+      transparent 55%,
+      rgba(255,255,255,0.02) 100%
+    );
+  }
+}
+
+@media (max-width: 900px) {
+  .confidence-box {
+    position: static;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+  }
+
+  .confidence-ring {
+    width: 44px;
+    height: 44px;
+    font-size: 0.8rem;
+  }
+
+  .confidence-label {
+    margin-top: 0;
+    font-size: 0.7rem;
+  }
 }
 
 /* Responsive */

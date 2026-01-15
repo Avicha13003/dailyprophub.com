@@ -659,6 +659,18 @@
             <div class="model-card-header">
               <span class="model-badge">${label}</span>
             </div>
+            
+            ${(() => {
+              const c = confidenceTier(Number(d.edge));
+              return `
+                <div class="confidence-box">
+                  <div class="confidence-ring" style="--pct:${c.pct}">
+                    <span>${c.pct}%</span>
+                  </div>
+                  <div class="confidence-label">${c.label}</div>
+                </div>
+              `;
+            })()}
 
             <!-- PLAYER ROW -->
             <div class="model-player">
@@ -709,18 +721,6 @@
                 <span>Edge</span>
               </div>
             </div>
-            
-            ${(() => {
-              const c = confidenceTier(Number(d.edge));
-              return `
-                <div class="confidence-box">
-                  <div class="confidence-ring" style="--pct:${c.pct}">
-                    <span>${c.pct}%</span>
-                  </div>
-                  <div class="confidence-label">${c.label}</div>
-                </div>
-              `;
-            })()}
 
             ${d.why && d.why.length ? `
               <details class="why-pick">
