@@ -460,12 +460,12 @@ html, body {
 .player-media {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .team-logo-inline {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   opacity: 0.95;
   filter: drop-shadow(0 6px 14px rgba(0,0,0,0,.45));
@@ -473,7 +473,8 @@ html, body {
 
 /* Slightly larger headshot for balance */
 .player-headshot {
-  width: 70px;
+  width: 72px;
+  height: auto;
   border-radius: 12px;
 }
 
