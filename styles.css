@@ -605,6 +605,11 @@ html, body {
   border-radius: inherit;
 }
 
+.model-card-inner::before,
+.model-card-inner::after {
+  pointer-events: none;
+}
+
 .model-player {
   margin-bottom: 14px;
 }
