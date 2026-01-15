@@ -690,6 +690,15 @@
               </div>
             </div>
 
+            ${d.why && d.why.length ? `
+              <details class="why-pick">
+                <summary>Why this pick</summary>
+                <ul>
+                  ${d.why.map(w => `<li>${w}</li>`).join("")}
+                </ul>
+              </details>
+            ` : ""}
+
             <div class="model-cta">View full breakdown →</div>
           </div>
         `;
