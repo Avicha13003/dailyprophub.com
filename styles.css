@@ -486,6 +486,17 @@ html, body {
     0 0 28px rgba(76, 255, 195, 0.08);
 }
 
+/* Team color gradient background */
+.model-card-inner.team-accent {
+  background:
+    linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--team-primary, #4cffc3) 18%, transparent),
+      rgba(10,15,25,0.95)
+    );
+  border-left-color: var(--team-primary, #4cffc3);
+}
+
 /* Matchup line (opponent / time / venue) */
 .matchup-line {
   margin: 4px 0 6px;
@@ -548,6 +559,39 @@ html, body {
 .model-card-inner {
   min-height: 340px;
   padding-top: 26px;
+}
+
+/* Subtle animated glow on hover */
+@media (hover: hover) and (pointer: fine) {
+  .model-card-inner {
+    position: relative;
+  }
+
+  .model-card-inner::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at top,
+      rgba(255,255,255,0.18),
+      transparent 60%
+    );
+  }
+
+  .model-card-inner:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 16px 50px rgba(0,0,0,0.65),
+      0 0 28px rgba(76,255,195,0.18);
+  }
+
+  .model-card-inner:hover::after {
+    opacity: 1;
+  }
 }
 
 .model-player {

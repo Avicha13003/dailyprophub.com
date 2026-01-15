@@ -602,6 +602,15 @@
 
       try {
         const d = await loadJson(pickUrl);
+        
+        let teamColors = null;
+        try {
+          const logos = await loadJson("/data/team_logos.json");
+          const abbr = safeTeamAbbr(d);
+          teamColors = logos[abbr] || null;
+        } catch (e) {
+          console.warn("team_logos.json not loaded", e);
+        }
 
         const teamAbbr = safeTeamAbbr(d);
         const teamLogo = teamAbbr
@@ -629,7 +638,15 @@
         const headshot = mappedHeadshot || "assets/player_silhouette.png";
 
         el.innerHTML = `
-          <div class="model-card-inner team-accent" role="button" tabindex="0"
+          <div class="model-card-inner team-accent"
+               role="button"
+               tabindex="0"
+               style="
+                 ${teamColors ? `
+                   --team-primary: ${teamColors.primary_color};
+                   --team-secondary: ${teamColors.secondary_color};
+                 ` : ''}
+               "
                onclick="window.open('${DASHBOARD_URL}','_blank')"
                onkeypress="if(event.key==='Enter'){window.open('${DASHBOARD_URL}','_blank')}">
 
