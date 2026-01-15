@@ -471,6 +471,12 @@ html, body {
   filter: drop-shadow(0 6px 14px rgba(0,0,0,0,.45));
 }
 
+/* Slightly larger headshot for balance */
+.player-headshot {
+  width: 70px;
+  border-radius: 12px;
+}
+
 /* Team-accented glow */
 .model-card-inner.team-accent {
   border-left: 4px solid rgba(76, 255, 195, 0.9);
