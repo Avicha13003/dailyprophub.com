@@ -647,8 +647,6 @@
                    --team-secondary: ${teamColors.secondary_color};
                  ` : ''}
                "
-               onclick="window.open('${DASHBOARD_URL}','_blank')"
-               onkeypress="if(event.key==='Enter'){window.open('${DASHBOARD_URL}','_blank')}">
 
             <!-- HEADER (badge only — logo REMOVED here) -->
             <div class="model-card-header">
@@ -699,7 +697,12 @@
               </details>
             ` : ""}
 
-            <div class="model-cta">View full breakdown →</div>
+            <a class="model-cta"
+               href="${DASHBOARD_URL}"
+               target="_blank"
+               rel="noopener">
+               View full breakdown →
+            </a>
           </div>
         `;
 

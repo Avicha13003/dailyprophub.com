@@ -556,6 +556,11 @@ html, body {
   font-weight: 500;
 }
 
+#featured-edge-card .model-card-inner,
+#top-model-card .model-card-inner {
+  padding-left: 28px; /* pushes content away from accent line */
+}
+
 .model-card-inner {
   min-height: 340px;
   padding-top: 26px;
@@ -583,6 +588,20 @@ html, body {
 
 .model-card-inner:hover::before {
   opacity: 1;
+}
+
+.model-card-inner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.02) 0%,
+    rgba(255,255,255,0.01) 60%,
+    rgba(255,255,255,0.00) 100%
+  );
+  pointer-events: none;
+  border-radius: inherit;
 }
 
 .model-player {
