@@ -467,6 +467,55 @@ html, body {
   filter: drop-shadow(0 6px 14px rgba(0,0,0,.45));
 }
 
+/* === MODEL HIGHLIGHTS ENHANCEMENTS === */
+
+.model-card-inner {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle glow using team color */
+.model-card-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(76, 255, 195, 0.18),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.model-card-inner:hover::before {
+  opacity: 1;
+}
+
+/* Player + logo grouping */
+.player-visual {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* Bigger, cleaner team logo */
+.team-logo-large {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  opacity: 0.95;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.6));
+}
+
+/* Matchup line */
+.matchup-line {
+  font-size: 0.82rem;
+  color: #9aa4b2;
+  margin-top: 4px;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links {

@@ -602,7 +602,8 @@
         const headshot = mappedHeadshot || "assets/player_silhouette.png";
 
         el.innerHTML = `
-          <div class="model-card-inner" role="button" tabindex="0"
+          <div class="model-card-inner team-accent" data-team="${teamAbbr}"
+               role="button" tabindex="0"
                onclick="window.open('${DASHBOARD_URL}','_blank')"
                onkeypress="if(event.key==='Enter'){window.open('${DASHBOARD_URL}','_blank')}">
 
@@ -612,8 +613,12 @@
             </div>
 
             <div class="model-player">
-              <img class="player-headshot" src="${headshot}" alt="${d.player}"
-                   onerror="this.src='assets/player_silhouette.png'">
+              <div class="player-media">
+                ${teamLogo ? `<img class="team-logo-inline" src="${teamLogo}" alt="${teamAbbr}">` : ""}
+                <img class="player-headshot" src="${headshot}" alt="${d.player}"
+                     onerror="this.src='assets/player_silhouette.png'">
+              </div>
+
               <div class="player-meta">
                 <h3>${d.player}</h3>
                 <p>${d.market} Over ${d.line} <span class="odds">${formatOdds(d.odds)}</span></p>
