@@ -682,16 +682,4 @@ html, body {
     color:#9aa4b2;
     font-size:.85rem;
   }
-  .team-logo {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    margin-left: auto;
-  }
-
-  .model-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 }
