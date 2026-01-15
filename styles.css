@@ -486,6 +486,23 @@ html, body {
     0 0 28px rgba(76, 255, 195, 0.08);
 }
 
+/* Matchup line (opponent / time / venue) */
+.matchup-line {
+  margin: 4px 0 6px;
+  font-size: 0.85rem;
+  color: #9aa4b2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 900px) {
+  .matchup-line {
+    font-size: 0.9rem;
+  }
+}
+
 /* Desktop: side-by-side cards */
 @media (min-width: 901px) {
   .model-cards {

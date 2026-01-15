@@ -576,6 +576,18 @@
     return n > 0 ? `+${n}` : `${n}`;
   }
 
+  function formatTime(t) {
+    // expects "18:00"
+    try {
+      const [h, m] = t.split(":").map(Number);
+      const ampm = h >= 12 ? "PM" : "AM";
+      const hr = h % 12 || 12;
+      return `${hr}:${m.toString().padStart(2, "0")} ${ampm}`;
+    } catch {
+      return t;
+    }
+  }
+
   async function loadModelCards() {
     let headshots = {};
     try {
@@ -595,6 +607,21 @@
         const teamLogo = teamAbbr
           ? `https://a.espncdn.com/i/teamlogos/nba/500/${teamAbbr}.png`
           : null;
+
+        // --- Matchup info (supports both JSON shapes) ---
+        const opponentAbbr = d.opponent || d.matchup?.opponent_abbr || "";
+        const opponentFull = d.opponent_full || d.matchup?.opponent || "";
+        const isHome = d.is_home === 1 || d.matchup?.home_team === d.team_full;
+
+        const homeAwayLabel = isHome ? "vs" : "@";
+
+        const startTime = d.start_time_local || d.matchup?.start_time_local || "";
+        const venueCity = d.venue_city || "";
+        const venueState = d.venue_state || "";
+
+        const matchupLine = opponentFull
+          ? `${homeAwayLabel} ${opponentFull}${startTime ? " • " + formatTime(startTime) : ""}${venueCity ? " • " +         venueCity + (venueState ? ", " + venueState : "") : ""}`
+          : "";
 
         // Headshot from your mapping
         const mappedHeadshot = headshots[d.player];
@@ -629,9 +656,10 @@
 
               <div class="player-meta">
                 <h3>${d.player}</h3>
-                <p>${d.market} Over ${d.line}
-                  <span class="odds">${formatOdds(d.odds)}</span>
-                </p>
+
+                ${matchupLine ? `<p class="matchup-line">${matchupLine}</p>` : ""}
+
+                <p>${d.market} Over ${d.line} <span class="odds">${formatOdds(d.odds)}</span></p>
                 <p class="model-sub">${subtitle}</p>
               </div>
             </div>
