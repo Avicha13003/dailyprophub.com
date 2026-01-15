@@ -456,17 +456,6 @@ html, body {
   border-top: 1px solid rgba(15,23,42,1);
 }
 
-/* ============================= */
-/* Team Logo (GLOBAL) */
-/* ============================= */
-.team-logo {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
-  opacity: 0.9;
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,.45));
-}
-
 /* Player + Team logo layout */
 .player-media {
   display: flex;
@@ -479,7 +468,7 @@ html, body {
   height: 34px;
   object-fit: contain;
   opacity: 0.9;
-  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.45));
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.45));
 }
 
 /* Team-accented glow */
