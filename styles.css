@@ -473,9 +473,9 @@ html, body {
 
 /* Slightly larger headshot for balance */
 .player-headshot {
-  width: 92px;
+  width: 124px;
   height: auto;
-  border-radius: 18px;
+  border-radius: 24px;
 }
 
 /* Team-accented glow */
