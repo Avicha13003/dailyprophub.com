@@ -652,6 +652,49 @@ html, body {
   line-height: 1.35;
 }
 
+.player-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.player-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.confidence-box {
+  position: absolute;
+  top: 26px;
+  right: 22px;
+  text-align: center;
+}
+
+.confidence-ring {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      #4cffc3 calc(var(--pct) * 1%),
+      rgba(255,255,255,0.12) 0
+    );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #eafff6;
+  box-shadow: 0 0 18px rgba(76,255,195,0.35);
+}
+
+.confidence-label {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: #9aa4b2;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links {

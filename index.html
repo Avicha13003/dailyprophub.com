@@ -588,6 +588,13 @@
     }
   }
 
+  function confidenceTier(edge) {
+    if (edge >= 0.22) return { label: "ELITE", pct: 95 };
+    if (edge >= 0.15) return { label: "HIGH", pct: 85 };
+    if (edge >= 0.08) return { label: "MEDIUM", pct: 70 };
+    return { label: "LEAN", pct: 55 };
+  }
+
   async function loadModelCards() {
     let headshots = {};
     try {
@@ -663,14 +670,29 @@
                        onerror="this.style.display='none'">
         `         : ""}
 
-                <img class="player-headshot"
-                     src="${headshot}"
-                     alt="${d.player}"
-                     onerror="this.src='assets/player_silhouette.png'">
+                <a
+                  href="https://nbadailytrends.streamlit.app/?player=${encodeURIComponent(d.player)}"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img class="player-headshot"
+                       src="${headshot}"
+                       alt="${d.player}"
+                       onerror="this.src='assets/player_silhouette.png'">
+                </a>
               </div>
 
               <div class="player-meta">
-                <h3>${d.player}</h3>
+                <h3>
+                  <a
+                    href="https://nbadailytrends.streamlit.app/?player=${encodeURIComponent(d.player)}"
+                    target="_blank"
+                    rel="noopener"
+                    class="player-link"
+                  >
+                    ${d.player}
+                  </a>
+                </h3>
 
                 ${matchupLine ? `<p class="matchup-line">${matchupLine}</p>` : ""}
 
@@ -687,6 +709,18 @@
                 <span>Edge</span>
               </div>
             </div>
+            
+            ${(() => {
+              const c = confidenceTier(Number(d.edge));
+              return `
+                <div class="confidence-box">
+                  <div class="confidence-ring" style="--pct:${c.pct}">
+                    <span>${c.pct}%</span>
+                  </div>
+                  <div class="confidence-label">${c.label}</div>
+                </div>
+              `;
+            })()}
 
             ${d.why && d.why.length ? `
               <details class="why-pick">
