@@ -115,7 +115,7 @@
   <!-- ============================= -->
   <!-- TODAY'S MODEL HIGHLIGHTS -->
   <!-- ============================= -->
-  <section class="section model-highlights">
+<section class="section model-highlights">
   <div class="container">
     <h2 class="section-title">🔥 Today’s Model Highlights</h2>
     <p class="section-subtitle">
@@ -557,69 +557,102 @@
     </script>
 
 <script>
-let PLAYER_HEADSHOTS = {};
-let TEAM_LOGOS = {};
+  const DASHBOARD_URL = "https://nbadailytrends.streamlit.app";
 
-async function loadLookups() {
-  const [players, teams] = await Promise.all([
-    fetch("./data/player_headshots.json").then(r => r.json()),
-    fetch("./data/team_logos.json").then(r => r.json())
-  ]);
-
-  players.forEach(p => PLAYER_HEADSHOTS[p.player] = p.headshot_url);
-  teams.forEach(t => TEAM_LOGOS[t.team] = t);
-}
-
-async function loadModelCard(url, containerId, label) {
-  try {
+  async function loadJson(url) {
     const res = await fetch(url, { cache: "no-store" });
-    const d = await res.json();
-
-    const headshot =
-      PLAYER_HEADSHOTS[d.player] ||
-      "https://cdn.nba.com/headshots/nba/latest/260x190/0.png";
-
-    const team = TEAM_LOGOS[d.team] || {};
-    const teamLogo = team.logo_url || "";
-    const accent = team.primary_color || "#4cffc3";
-
-    document.getElementById(containerId).innerHTML = `
-      <div class="model-card-inner"
-           style="border-left: 4px solid ${accent}"
-           onclick="window.open('https://nbadailytrends.streamlit.app','_blank')">
-
-        <div class="model-card-header">
-          <span class="model-badge">${label}</span>
-          ${teamLogo ? `<img class="team-logo" src="${teamLogo}" alt="${d.team}">` : ""}
-        </div>
-
-        <div class="model-player">
-          <img class="player-headshot" src="${headshot}" alt="${d.player}">
-          <div class="player-meta">
-            <h3>${d.player}</h3>
-            <p>${d.market} Over ${d.line} <span class="odds">${d.odds}</span></p>
-          </div>
-        </div>
-
-        <div class="model-stats">
-          <div><strong>${(d.blend_prob*100).toFixed(1)}%</strong><span>Model</span></div>
-          <div><strong>${(d.implied_prob*100).toFixed(1)}%</strong><span>Implied</span></div>
-          <div class="edge"><strong>+${(d.edge*100).toFixed(1)}%</strong><span>Edge</span></div>
-        </div>
-
-        <div class="model-cta">View full breakdown →</div>
-      </div>
-    `;
-  } catch (e) {
-    console.error("Failed loading model card", e);
+    if (!res.ok) throw new Error("Failed to load " + url);
+    return res.json();
   }
-}
 
-(async () => {
-  await loadLookups();
-  loadModelCard("./data/featured_edge_today.json", "featured-edge-card", "⭐ Featured Edge");
-  loadModelCard("./data/top_model_pick_today.json", "top-model-card", "🔥 Top Model Pick");
-})();
+  function safeTeamAbbr(d) {
+    // Prefer team_abbr if you add it; otherwise fallback to team (often already BOS/PHI/etc)
+    return (d.team_abbr || d.team || "").toString().trim().toUpperCase();
+  }
+
+  function formatOdds(o) {
+    const n = Number(o);
+    if (!Number.isFinite(n)) return "";
+    return n > 0 ? `+${n}` : `${n}`;
+  }
+
+  async function loadModelCards() {
+    let headshots = {};
+    try {
+      headshots = await loadJson("/data/player_headshots.json");
+    } catch (e) {
+      console.warn("player_headshots.json not found (headshots will fallback).", e);
+    }
+
+    async function renderCard(pickUrl, containerId, label, subtitle) {
+      const el = document.getElementById(containerId);
+      if (!el) return;
+
+      try {
+        const d = await loadJson(pickUrl);
+
+        const teamAbbr = safeTeamAbbr(d);
+        const teamLogo = teamAbbr
+          ? `https://cdn.nba.com/logos/nba/${teamAbbr}/global/L/logo.svg`
+          : "";
+
+        // Headshot from your mapping
+        const mappedHeadshot = headshots[d.player];
+        // If no mapping, fall back to a silhouette in /assets (optional)
+        const headshot = mappedHeadshot || "assets/player_silhouette.png";
+
+        el.innerHTML = `
+          <div class="model-card-inner" role="button" tabindex="0"
+               onclick="window.open('${DASHBOARD_URL}','_blank')"
+               onkeypress="if(event.key==='Enter'){window.open('${DASHBOARD_URL}','_blank')}">
+
+            <div class="model-card-header">
+              <span class="model-badge">${label}</span>
+              ${teamLogo ? `<img class="team-logo" src="${teamLogo}" alt="${teamAbbr} logo" onerror="this.style.display='none'">` : ""}
+            </div>
+
+            <div class="model-player">
+              <img class="player-headshot" src="${headshot}" alt="${d.player}"
+                   onerror="this.src='assets/player_silhouette.png'">
+              <div class="player-meta">
+                <h3>${d.player}</h3>
+                <p>${d.market} Over ${d.line} <span class="odds">${formatOdds(d.odds)}</span></p>
+                <p class="model-sub">${subtitle}</p>
+              </div>
+            </div>
+
+            <div class="model-stats">
+              <div><strong>${(Number(d.blend_prob)*100).toFixed(1)}%</strong><span>Model</span></div>
+              <div><strong>${(Number(d.implied_prob)*100).toFixed(1)}%</strong><span>Implied</span></div>
+              <div class="edge"><strong>${(Number(d.edge)*100 >= 0 ? "+" : "")}${(Number(d.edge)*100).toFixed(1)}%</strong><span>Edge</span></div>
+            </div>
+
+            <div class="model-cta">View full breakdown →</div>
+          </div>
+        `;
+      } catch (e) {
+        console.error("Failed loading model card", pickUrl, e);
+        el.innerHTML = `
+          <div class="model-card-inner">
+            <div class="model-card-header">
+              <span class="model-badge">${label}</span>
+            </div>
+            <div class="model-player">
+              <div class="player-meta">
+                <h3>Unavailable today</h3>
+                <p>Model output not found yet.</p>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    renderCard("/data/featured_edge_today.json", "featured-edge-card", "⭐ Featured Edge", "Lower variance, stability-filtered");
+    renderCard("/data/top_model_pick_today.json", "top-model-card", "🔥 Top Model Pick", "Highest raw EV (more variance)");
+  }
+
+  loadModelCards();
 </script>
  
 </body>
