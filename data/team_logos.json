@@ -1,212 +1,212 @@
-[
-  {
-    "TEAM":"ATL",
-    "TEAM_FULL":"Atlanta Hawks",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
-    "PRIMARY_COLOR":"#E03A3E",
-    "SECONDARY_COLOR":"#C1D32F"
+{
+  "ATL": {
+    "team": "ATL",
+    "team_full": "Atlanta Hawks",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+    "primary_color": "#E03A3E",
+    "secondary_color": "#C1D32F"
   },
-  {
-    "TEAM":"BOS",
-    "TEAM_FULL":"Boston Celtics",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
-    "PRIMARY_COLOR":"#007A33",
-    "SECONDARY_COLOR":"#BA9653"
+  "BOS": {
+    "team": "BOS",
+    "team_full": "Boston Celtics",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/bos.png",
+    "primary_color": "#007A33",
+    "secondary_color": "#BA9653"
   },
-  {
-    "TEAM":"BKN",
-    "TEAM_FULL":"Brooklyn Nets",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/bkn.png",
-    "PRIMARY_COLOR":"#000000",
-    "SECONDARY_COLOR":"#FFFFFF"
+  "BKN": {
+    "team": "BKN",
+    "team_full": "Brooklyn Nets",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/bkn.png",
+    "primary_color": "#000000",
+    "secondary_color": "#FFFFFF"
   },
-  {
-    "TEAM":"CHA",
-    "TEAM_FULL":"Charlotte Hornets",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/cha.png",
-    "PRIMARY_COLOR":"#1D1160",
-    "SECONDARY_COLOR":"#00788C"
+  "CHA": {
+    "team": "CHA",
+    "team_full": "Charlotte Hornets",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/cha.png",
+    "primary_color": "#1D1160",
+    "secondary_color": "#00788C"
   },
-  {
-    "TEAM":"CHI",
-    "TEAM_FULL":"Chicago Bulls",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/chi.png",
-    "PRIMARY_COLOR":"#CE1141",
-    "SECONDARY_COLOR":"#000000"
+  "CHI": {
+    "team": "CHI",
+    "team_full": "Chicago Bulls",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/chi.png",
+    "primary_color": "#CE1141",
+    "secondary_color": "#000000"
   },
-  {
-    "TEAM":"CLE",
-    "TEAM_FULL":"Cleveland Cavaliers",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/cle.png",
-    "PRIMARY_COLOR":"#860038",
-    "SECONDARY_COLOR":"#041E42"
+  "CLE": {
+    "team": "CLE",
+    "team_full": "Cleveland Cavaliers",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/cle.png",
+    "primary_color": "#860038",
+    "secondary_color": "#041E42"
   },
-  {
-    "TEAM":"DAL",
-    "TEAM_FULL":"Dallas Mavericks",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/dal.png",
-    "PRIMARY_COLOR":"#00538C",
-    "SECONDARY_COLOR":"#B8C4CA"
+  "DAL": {
+    "team": "DAL",
+    "team_full": "Dallas Mavericks",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/dal.png",
+    "primary_color": "#00538C",
+    "secondary_color": "#B8C4CA"
   },
-  {
-    "TEAM":"DEN",
-    "TEAM_FULL":"Denver Nuggets",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/den.png",
-    "PRIMARY_COLOR":"#0E2240",
-    "SECONDARY_COLOR":"#FEC524"
+  "DEN": {
+    "team": "DEN",
+    "team_full": "Denver Nuggets",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/den.png",
+    "primary_color": "#0E2240",
+    "secondary_color": "#FEC524"
   },
-  {
-    "TEAM":"DET",
-    "TEAM_FULL":"Detroit Pistons",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/det.png",
-    "PRIMARY_COLOR":"#C8102E",
-    "SECONDARY_COLOR":"#006BB6"
+  "DET": {
+    "team": "DET",
+    "team_full": "Detroit Pistons",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/det.png",
+    "primary_color": "#C8102E",
+    "secondary_color": "#006BB6"
   },
-  {
-    "TEAM":"GSW",
-    "TEAM_FULL":"Golden State Warriors",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/gsw.png",
-    "PRIMARY_COLOR":"#1D428A",
-    "SECONDARY_COLOR":"#FFC72C"
+  "GSW": {
+    "team": "GSW",
+    "team_full": "Golden State Warriors",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/gsw.png",
+    "primary_color": "#1D428A",
+    "secondary_color": "#FFC72C"
   },
-  {
-    "TEAM":"HOU",
-    "TEAM_FULL":"Houston Rockets",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
-    "PRIMARY_COLOR":"#CE1141",
-    "SECONDARY_COLOR":"#C4CED4"
+  "HOU": {
+    "team": "HOU",
+    "team_full": "Houston Rockets",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/hou.png",
+    "primary_color": "#CE1141",
+    "secondary_color": "#C4CED4"
   },
-  {
-    "TEAM":"IND",
-    "TEAM_FULL":"Indiana Pacers",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/ind.png",
-    "PRIMARY_COLOR":"#002D62",
-    "SECONDARY_COLOR":"#FDBB30"
+  "IND": {
+    "team": "IND",
+    "team_full": "Indiana Pacers",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/ind.png",
+    "primary_color": "#002D62",
+    "secondary_color": "#FDBB30"
   },
-  {
-    "TEAM":"LAC",
-    "TEAM_FULL":"LA Clippers",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
-    "PRIMARY_COLOR":"#C8102E",
-    "SECONDARY_COLOR":"#1D428A"
+  "LAC": {
+    "team": "LAC",
+    "team_full": "LA Clippers",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
+    "primary_color": "#C8102E",
+    "secondary_color": "#1D428A"
   },
-  {
-    "TEAM":"LAL",
-    "TEAM_FULL":"Los Angeles Lakers",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
-    "PRIMARY_COLOR":"#552583",
-    "SECONDARY_COLOR":"#FDB927"
+  "LAL": {
+    "team": "LAL",
+    "team_full": "Los Angeles Lakers",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
+    "primary_color": "#552583",
+    "secondary_color": "#FDB927"
   },
-  {
-    "TEAM":"MEM",
-    "TEAM_FULL":"Memphis Grizzlies",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
-    "PRIMARY_COLOR":"#5D76A9",
-    "SECONDARY_COLOR":"#12173F"
+  "MEM": {
+    "team": "MEM",
+    "team_full": "Memphis Grizzlies",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
+    "primary_color": "#5D76A9",
+    "secondary_color": "#12173F"
   },
-  {
-    "TEAM":"MIA",
-    "TEAM_FULL":"Miami Heat",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
-    "PRIMARY_COLOR":"#98002E",
-    "SECONDARY_COLOR":"#F9A01B"
+  "MIA": {
+    "team": "MIA",
+    "team_full": "Miami Heat",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/mia.png",
+    "primary_color": "#98002E",
+    "secondary_color": "#F9A01B"
   },
-  {
-    "TEAM":"MIL",
-    "TEAM_FULL":"Milwaukee Bucks",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/mil.png",
-    "PRIMARY_COLOR":"#00471B",
-    "SECONDARY_COLOR":"#EEE1C6"
+  "MIL": {
+    "team": "MIL",
+    "team_full": "Milwaukee Bucks",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/mil.png",
+    "primary_color": "#00471B",
+    "secondary_color": "#EEE1C6"
   },
-  {
-    "TEAM":"MIN",
-    "TEAM_FULL":"Minnesota Timberwolves",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/min.png",
-    "PRIMARY_COLOR":"#0C2340",
-    "SECONDARY_COLOR":"#78BE20"
+  "MIN": {
+    "team": "MIN",
+    "team_full": "Minnesota Timberwolves",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/min.png",
+    "primary_color": "#0C2340",
+    "secondary_color": "#78BE20"
   },
-  {
-    "TEAM":"NOP",
-    "TEAM_FULL":"New Orleans Pelicans",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/no.png",
-    "PRIMARY_COLOR":"#0C2340",
-    "SECONDARY_COLOR":"#85714D"
+  "NOP": {
+    "team": "NOP",
+    "team_full": "New Orleans Pelicans",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
+    "primary_color": "#0C2340",
+    "secondary_color": "#85714D"
   },
-  {
-    "TEAM":"NYK",
-    "TEAM_FULL":"New York Knicks",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/nyk.png",
-    "PRIMARY_COLOR":"#006BB6",
-    "SECONDARY_COLOR":"#F58426"
+  "NYK": {
+    "team": "NYK",
+    "team_full": "New York Knicks",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/nyk.png",
+    "primary_color": "#006BB6",
+    "secondary_color": "#F58426"
   },
-  {
-    "TEAM":"OKC",
-    "TEAM_FULL":"Oklahoma City Thunder",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
-    "PRIMARY_COLOR":"#007AC1",
-    "SECONDARY_COLOR":"#EF3B24"
+  "OKC": {
+    "team": "OKC",
+    "team_full": "Oklahoma City Thunder",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/okc.png",
+    "primary_color": "#007AC1",
+    "secondary_color": "#EF3B24"
   },
-  {
-    "TEAM":"ORL",
-    "TEAM_FULL":"Orlando Magic",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/orl.png",
-    "PRIMARY_COLOR":"#0077C0",
-    "SECONDARY_COLOR":"#C4CED4"
+  "ORL": {
+    "team": "ORL",
+    "team_full": "Orlando Magic",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/orl.png",
+    "primary_color": "#0077C0",
+    "secondary_color": "#C4CED4"
   },
-  {
-    "TEAM":"PHI",
-    "TEAM_FULL":"Philadelphia 76ers",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
-    "PRIMARY_COLOR":"#006BB6",
-    "SECONDARY_COLOR":"#ED174C"
+  "PHI": {
+    "team": "PHI",
+    "team_full": "Philadelphia 76ers",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
+    "primary_color": "#006BB6",
+    "secondary_color": "#ED174C"
   },
-  {
-    "TEAM":"PHX",
-    "TEAM_FULL":"Phoenix Suns",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/phx.png",
-    "PRIMARY_COLOR":"#1D1160",
-    "SECONDARY_COLOR":"#E56020"
+  "PHX": {
+    "team": "PHX",
+    "team_full": "Phoenix Suns",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/phx.png",
+    "primary_color": "#1D1160",
+    "secondary_color": "#E56020"
   },
-  {
-    "TEAM":"POR",
-    "TEAM_FULL":"Portland Trail Blazers",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/por.png",
-    "PRIMARY_COLOR":"#E03A3E",
-    "SECONDARY_COLOR":"#000000"
+  "POR": {
+    "team": "POR",
+    "team_full": "Portland Trail Blazers",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/por.png",
+    "primary_color": "#E03A3E",
+    "secondary_color": "#000000"
   },
-  {
-    "TEAM":"SAC",
-    "TEAM_FULL":"Sacramento Kings",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
-    "PRIMARY_COLOR":"#5A2D81",
-    "SECONDARY_COLOR":"#63727A"
+  "SAC": {
+    "team": "SAC",
+    "team_full": "Sacramento Kings",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/sac.png",
+    "primary_color": "#5A2D81",
+    "secondary_color": "#63727A"
   },
-  {
-    "TEAM":"SAS",
-    "TEAM_FULL":"San Antonio Spurs",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/sas.png",
-    "PRIMARY_COLOR":"#C4CED4",
-    "SECONDARY_COLOR":"#000000"
+  "SAS": {
+    "team": "SAS",
+    "team_full": "San Antonio Spurs",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/sas.png",
+    "primary_color": "#C4CED4",
+    "secondary_color": "#000000"
   },
-  {
-    "TEAM":"TOR",
-    "TEAM_FULL":"Toronto Raptors",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
-    "PRIMARY_COLOR":"#CE1141",
-    "SECONDARY_COLOR":"#000000"
+  "TOR": {
+    "team": "TOR",
+    "team_full": "Toronto Raptors",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/tor.png",
+    "primary_color": "#CE1141",
+    "secondary_color": "#000000"
   },
-  {
-    "TEAM":"UTA",
-    "TEAM_FULL":"Utah Jazz",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
-    "PRIMARY_COLOR":"#002B5C",
-    "SECONDARY_COLOR":"#F9A01B"
+  "UTA": {
+    "team": "UTA",
+    "team_full": "Utah Jazz",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/utah.png",
+    "primary_color": "#002B5C",
+    "secondary_color": "#F9A01B"
   },
-  {
-    "TEAM":"WAS",
-    "TEAM_FULL":"Washington Wizards",
-    "LOGO_URL":"https://a.espncdn.com/i/teamlogos/nba/500/was.png",
-    "PRIMARY_COLOR":"#002B5C",
-    "SECONDARY_COLOR":"#E31837"
+  "WAS": {
+    "team": "WAS",
+    "team_full": "Washington Wizards",
+    "logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/was.png",
+    "primary_color": "#002B5C",
+    "secondary_color": "#E31837"
   }
-]
+}
