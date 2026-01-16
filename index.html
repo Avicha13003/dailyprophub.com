@@ -777,7 +777,7 @@
     renderCard("/data/top_model_pick_today.json", "top-model-card", "🔥 Top Model Pick", "Highest raw EV (more variance)");
   }
   
-  document.addEventListener("click", async (e) => {
+    document.addEventListener("click", async (e) => {
     if (!e.target.classList.contains("subscribe-btn")) return;
 
     const box = e.target.closest(".subscribe-box");
@@ -793,31 +793,25 @@
       return;
     }
 
-    msg.textContent = "Subscribing…";
+    msg.textContent = "Subscribing...";
     msg.style.color = "#9ca3af";
 
     try {
-      const res = await fetch(SUBSCRIBE_ENDPOINT, {
+      await fetch(SUBSCRIBE_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email,
-          source: "dailyprophub_card"
-        })
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `email=${encodeURIComponent(email)}&source=dailyprophub_card`
       });
 
-      const json = await res.json();
+      msg.textContent = "✅ Subscribed! Check your inbox.";
+      msg.style.color = "#4cffc3";
+      input.value = "";
 
-      if (json.success) {
-        msg.textContent = "✅ Subscribed! Daily picks coming soon.";
-        msg.style.color = "#4cffc3";
-        input.value = "";
-      } else {
-        msg.textContent = "❌ Already subscribed or error.";
-        msg.style.color = "#f87171";
-      }
     } catch (err) {
-      msg.textContent = "❌ Network error. Try again.";
+      msg.textContent = "❌ Subscription failed. Try again later.";
       msg.style.color = "#f87171";
     }
   });
