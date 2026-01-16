@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unsubscribe – DailyPropHub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #020617;
+      padding: 32px;
+      border-radius: 12px;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,.4);
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #dc2626;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:disabled {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Unsubscribe</h2>
+  <p id="emailText"></p>
+
+  <button id="btn">Confirm Unsubscribe</button>
+
+  <p id="status" style="margin-top:16px;font-size:14px;"></p>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get("email");
+
+  const emailText = document.getElementById("emailText");
+  const btn = document.getElementById("btn");
+  const status = document.getElementById("status");
+
+  if (!email) {
+    emailText.textContent = "Missing email address.";
+    btn.disabled = true;
+  } else {
+    emailText.textContent = `You are unsubscribing: ${email}`;
+  }
+
+  btn.onclick = async () => {
+    btn.disabled = true;
+    status.textContent = "Processing...";
+
+    try {
+      const res = await fetch(
+        "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+            action: "unsubscribe",
+            email: email
+          }),
+        }
+      );
+
+      const json = await res.json();
+
+      if (json.success) {
+        status.textContent = "✅ You have been unsubscribed.";
+      } else {
+        status.textContent = "⚠️ Unable to unsubscribe.";
+      }
+    } catch (e) {
+      status.textContent = "❌ Network error.";
+    }
+  };
+</script>
+
+</body>
+</html>
