@@ -736,6 +736,43 @@ html, body {
   }
 }
 
+.subscribe-box {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.subscribe-input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #0b1220;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.subscribe-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.subscribe-btn:hover {
+  opacity: 0.9;
+}
+
+.subscribe-msg {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  color: #9ca3af;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links {

@@ -558,6 +558,9 @@
 
 <script>
   const DASHBOARD_URL = "https://nbadailytrends.streamlit.app";
+  const SUBSCRIBE_ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbzJ7Y_3fxaxCTATqC3LsxHWbQG89JMiRkBYmremH2s3gjx6waaxEPLsiAPRDz7wF3YS/exec";
+
 
   async function loadJson(url) {
     const res = await fetch(url, { cache: "no-store" });
@@ -731,6 +734,16 @@
               </details>
             ` : ""}
 
+            <div class="subscribe-box">
+              <input
+                type="email"
+                placeholder="Get daily picks by email"
+                class="subscribe-input"
+              />
+              <button class="subscribe-btn">Subscribe</button>
+              <div class="subscribe-msg"></div>
+            </div>
+
             <a
               class="model-cta"
               href="https://nbadailytrends.streamlit.app"
@@ -763,6 +776,51 @@
     renderCard("/data/featured_edge_today.json", "featured-edge-card", "⭐ Featured Edge", "Lower variance, stability-filtered");
     renderCard("/data/top_model_pick_today.json", "top-model-card", "🔥 Top Model Pick", "Highest raw EV (more variance)");
   }
+  
+  document.addEventListener("click", async (e) => {
+    if (!e.target.classList.contains("subscribe-btn")) return;
+
+    const box = e.target.closest(".subscribe-box");
+    if (!box) return;
+
+    const input = box.querySelector(".subscribe-input");
+    const msg = box.querySelector(".subscribe-msg");
+
+    const email = input.value.trim();
+    if (!email || !email.includes("@")) {
+      msg.textContent = "Enter a valid email";
+      msg.style.color = "#f87171";
+      return;
+    }
+
+    msg.textContent = "Subscribing…";
+    msg.style.color = "#9ca3af";
+
+    try {
+      const res = await fetch(SUBSCRIBE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          source: "dailyprophub_card"
+        })
+      });
+
+      const json = await res.json();
+
+      if (json.success) {
+        msg.textContent = "✅ Subscribed! Daily picks coming soon.";
+        msg.style.color = "#4cffc3";
+        input.value = "";
+      } else {
+        msg.textContent = "❌ Already subscribed or error.";
+        msg.style.color = "#f87171";
+      }
+    } catch (err) {
+      msg.textContent = "❌ Network error. Try again.";
+      msg.style.color = "#f87171";
+    }
+  });
 
   loadModelCards();
 </script>
