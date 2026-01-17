@@ -7,8 +7,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-FKT71P5JMH');
+
+    gtag('config', 'G-FKT71P5JMH', {
+      send_page_view: true
+    });
   </script>
+
   
   <meta charset="UTF-8" />
   <title>DailyPropHub – NBA Player Props Trends & Model-Powered Insights</title>
@@ -734,14 +738,26 @@
               </details>
             ` : ""}
 
-            <div class="subscribe-box">
-              <input
-                type="email"
-                placeholder="Get daily picks by email"
-                class="subscribe-input"
-              />
-              <button class="subscribe-btn">Subscribe</button>
-              <div class="subscribe-msg"></div>
+            <div class="model-card-footer">
+              <div class="subscribe-panel">
+                <div class="subscribe-copy">
+                  <div class="subscribe-title">📬 Daily Picks</div>
+                  <div class="subscribe-sub">
+                    One email · top edges only · no spam
+                  </div>
+                </div>
+
+                <div class="subscribe-form">
+                  <input
+                    type="email"
+                    placeholder="you@email.com"
+                    class="subscribe-input"
+                  />
+                  <button class="subscribe-btn">Subscribe</button>
+                </div>
+
+                <div class="subscribe-msg"></div>
+              </div>
             </div>
 
             <a
@@ -780,6 +796,14 @@
     document.addEventListener("click", async (e) => {
     if (!e.target.classList.contains("subscribe-btn")) return;
 
+    // GA: subscribe click intent
+    if (typeof gtag === "function") {
+      gtag("event", "subscribe_click", {
+        event_category: "engagement",
+        event_label: "model_card_subscribe"
+      });
+    }
+
     const box = e.target.closest(".subscribe-box");
     if (!box) return;
 
@@ -809,10 +833,40 @@
       msg.textContent = "✅ Subscribed! Check your inbox.";
       msg.style.color = "#4cffc3";
       input.value = "";
+      
+      // GA: subscribe success
+      if (typeof gtag === "function") {
+        gtag("event", "subscribe_success", {
+          event_category: "conversion",
+          event_label: "dailyprophub_card"
+        });
+      }
 
     } catch (err) {
+      // GA: subscribe error
+      if (typeof gtag === "function") {
+        gtag("event", "subscribe_error", {
+          event_category: "conversion",
+          event_label: err?.message || "unknown_error"
+        });
+      }
       msg.textContent = "❌ Subscription failed. Try again later.";
       msg.style.color = "#f87171";
+    }
+  });
+
+  // GA: outbound clicks to Streamlit
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (!link) return;
+
+    if (link.href && link.href.includes("nbadailytrends.streamlit.app")) {
+      if (typeof gtag === "function") {
+        gtag("event", "outbound_nba_dashboard", {
+          event_category: "outbound",
+          event_label: link.href
+        });
+      }
     }
   });
 
