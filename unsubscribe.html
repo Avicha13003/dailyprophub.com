@@ -63,35 +63,27 @@
   }
 
   btn.onclick = async () => {
-    btn.disabled = true;
-    status.textContent = "Processing...";
+  btn.disabled = true;
+  status.textContent = "Processing...";
 
-    try {
-      const res = await fetch(
-        "https://script.google.com/macros/s/AKfycbwHOWAfNchFzuPri9yhkEVVlwHYh9tjBPH-e-TrxyyW4Oo6jhSsT3zGQyLMPVmKkSiD2g/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({
-            action: "unsubscribe",
-            email: email
-          }),
-        }
-      );
-
-      const json = await res.json();
-
-      if (json.success) {
-        status.textContent = "✅ You have been unsubscribed.";
-      } else {
-        status.textContent = "⚠️ Unable to unsubscribe.";
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbwHOWAfNchFzuPri9yhkEVVlwHYh9tjBPH-e-TrxyyW4Oo6jhSsT3zGQyLMPVmKkSiD2g/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: new URLSearchParams({
+          action: "unsubscribe",
+          email: email
+        }),
       }
-    } catch (e) {
-      status.textContent = "❌ Network error.";
-    }
-  };
+    );
+
+    status.textContent = "✅ You have been unsubscribed.";
+  } catch (e) {
+    status.textContent = "❌ Network error.";
+  }
+};
 </script>
 
 </body>
