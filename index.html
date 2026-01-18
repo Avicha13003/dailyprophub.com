@@ -132,6 +132,26 @@
     </div>
   </div>
 </section>
+
+  <!-- ============================= -->
+  <!-- MODEL PERFORMANCE SUMMARY -->
+  <!-- ============================= -->
+<section class="section model-performance">
+  <div class="container">
+    <h2 class="section-title">📈 Model Performance</h2>
+    <p class="section-subtitle">
+      Every Featured Edge and Top Model Pick is tracked — wins and losses included.
+    </p>
+
+    <div id="model-results" class="results-grid">
+      <div class="result-card">Loading performance…</div>
+    </div>
+
+    <p class="results-footnote">
+      Past performance is not predictive. Shown for transparency only.
+    </p>
+  </div>
+</section>
     
   <!-- Features -->
   <section id="features" class="section section-alt">
@@ -843,6 +863,56 @@
     }
   });
 
+  async function loadModelResults() {
+    try {
+      const res = await fetch("/data/model_results_summary.json", {
+        cache: "no-store"
+      });
+      const d = await res.json();
+
+      const el = document.getElementById("model-results");
+      if (!el) return;
+
+      el.innerHTML = `
+        <div class="result-card">
+          <h3>Latest Result</h3>
+          <p>
+            ⭐ Featured:
+            <span class="${d.featured.yesterday === "HIT" ? "result-hit" : "result-miss"}">
+              ${d.featured.yesterday ?? "—"}
+            </span>
+          </p>
+          <p>
+            🔥 Top Model:
+            <span class="${d.top_model.yesterday === "HIT" ? "result-hit" : "result-miss"}">
+              ${d.top_model.yesterday ?? "—"}
+            </span>
+          </p>
+        </div>
+
+        <div class="result-card">
+          <h3>Last 7 Days</h3>
+          <p>
+            Featured: ${d.featured.last_7_days.wins}-${d.featured.last_7_days.losses}
+            (${(d.featured.last_7_days.hit_rate * 100).toFixed(1)}%)
+          </p>
+          <p>
+            Top Model: ${d.top_model.last_7_days.wins}-${d.top_model.last_7_days.losses}
+            (${(d.top_model.last_7_days.hit_rate * 100).toFixed(1)}%)
+          </p>
+        </div>
+
+        <div class="result-card">
+          <h3>Season-to-Date</h3>
+          <p>Featured: ${(d.featured.season_to_date.hit_rate * 100).toFixed(1)}%</p>
+          <p>Top Model: ${(d.top_model.season_to_date.hit_rate * 100).toFixed(1)}%</p>
+        </div>
+      `;
+    } catch (err) {
+      console.error("Failed to load model results", err);
+    }
+  }
+
   // GA: outbound clicks to Streamlit
   document.addEventListener("click", (e) => {
     const link = e.target.closest("a");
@@ -859,6 +929,8 @@
   });
 
   loadModelCards();
+  loadModelResults();
+
 </script>
  
 </body>

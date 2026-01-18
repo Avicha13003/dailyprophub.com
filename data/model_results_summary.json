@@ -1,0 +1,31 @@
+{
+  "featured": {
+    "latest_date": "2026-01-17",
+    "yesterday": HIT,
+    "last_7_days": {
+      "wins": 1,
+      "losses": 0,
+      "hit_rate": 1.0
+    },
+    "season_to_date": {
+      "wins": 1,
+      "losses": 0,
+      "hit_rate": 1.0
+    }
+  },
+  "top_model": {
+    "latest_date": "2026-01-17",
+    "yesterday": MISS,
+    "last_7_days": {
+      "wins": 0,
+      "losses": 1,
+      "hit_rate": 0.0
+    },
+    "season_to_date": {
+      "wins": 0,
+      "losses": 1,
+      "hit_rate": 0.0
+    }
+  },
+  "generated_at": "2026-01-17"
+}
