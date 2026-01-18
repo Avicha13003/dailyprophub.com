@@ -864,14 +864,43 @@
   });
 
   async function loadModelResults() {
-    try {
-      const res = await fetch("/data/model_results_summary.json", {
-        cache: "no-store"
-      });
-      const d = await res.json();
+    const el = document.getElementById("model-results");
+    if (!el) {
+      console.error("[model-results] element not found");
+      return;
+    }
 
-      const el = document.getElementById("model-results");
-      if (!el) return;
+    // Make it obvious the function is running
+    el.innerHTML = `<div class="result-card">Loading performance… (fetching)</div>`;
+
+    // Use a cache-busting query param so GH Pages / CDN can't serve stale
+    const url = `./data/model_results_summary.json?v=${Date.now()}`;
+    console.log("[model-results] fetching:", url);
+
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      console.log("[model-results] status:", res.status);
+
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(`HTTP ${res.status} ${res.statusText} — ${text.slice(0, 120)}`);
+      }
+
+      // Read as text first so we can show useful errors if JSON parse fails
+      const raw = await res.text();
+      let d;
+      try {
+        d = JSON.parse(raw);
+      } catch (e) {
+        throw new Error(`JSON parse failed: ${e.message}. First 120 chars: ${raw.slice(0, 120)}`);
+      }
+
+      // Validate expected shape
+      if (!d?.featured || !d?.top_model) {
+        throw new Error(
+          `Unexpected JSON shape. Expected keys: featured, top_model. Got: ${Object.keys(d || {}).join(", ")}`
+        );
+      }
 
       el.innerHTML = `
         <div class="result-card">
@@ -908,8 +937,23 @@
           <p>Top Model: ${(d.top_model.season_to_date.hit_rate * 100).toFixed(1)}%</p>
         </div>
       `;
+
+      console.log("[model-results] rendered OK");
     } catch (err) {
-      console.error("Failed to load model results", err);
+      console.error("[model-results] failed:", err);
+
+      // IMPORTANT: show the error on the page instead of silently sitting on “Loading…”
+      el.innerHTML = `
+        <div class="result-card">
+          <h3>Performance Unavailable</h3>
+          <p style="color:#f87171; font-size:13px; line-height:1.4;">
+            ${String(err?.message || err)}
+          </p>
+          <p style="color:#9ca3af; font-size:12px;">
+            Open DevTools → Console and search for <strong>[model-results]</strong>.
+          </p>
+        </div>
+      `;
     }
   }
 
