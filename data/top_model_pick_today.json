@@ -1,23 +1,23 @@
 {
-  "date": "2026-01-20",
-  "player": "Scottie Barnes",
-  "team": "TOR",
-  "team_abbr": "TOR",
+  "date": "2026-01-21",
+  "player": "Isaiah Stewart",
+  "team": "DET",
+  "team_abbr": "DET",
   "market": "REB",
-  "line": "8.5",
+  "line": "5.5",
   "odds": "-117",
-  "blend_prob": 0.8029091479376226,
+  "blend_prob": 0.8079323960869218,
   "implied_prob": 0.5391705069124424,
-  "edge": 0.2637386410251802,
-  "ev_score": 0.3704411675690431,
+  "edge": 0.2687618891744794,
+  "ev_score": 0.3861116543617942,
   "matchup": {
-    "game": "Toronto Raptors @ Golden State Warriors",
-    "home_team": "Golden State Warriors",
-    "away_team": "Toronto Raptors",
-    "game_date": "1/20/2026",
-    "start_time_local": "21:00",
-    "opponent": "Golden State Warriors",
-    "opponent_abbr": "GSW"
+    "game": "Detroit Pistons @ New Orleans Pelicans",
+    "home_team": "New Orleans Pelicans",
+    "away_team": "Detroit Pistons",
+    "game_date": "1/21/2026",
+    "start_time_local": "19:00",
+    "opponent": "New Orleans Pelicans",
+    "opponent_abbr": "NOP"
   },
   "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
 }
