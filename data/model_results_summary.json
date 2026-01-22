@@ -4,8 +4,8 @@
     "yesterday": "HIT",
     "last_7_days": {
       "wins": 4,
-      "losses": 0,
-      "hit_rate": 1.0
+      "losses": 1,
+      "hit_rate": 0.8
     },
     "season_to_date": {
       "wins": 4,
@@ -27,5 +27,5 @@
       "hit_rate": 0.4
     }
   },
-  "generated_at": "2026-01-22"
+  "generated_at": "2026-01-21"
 }
