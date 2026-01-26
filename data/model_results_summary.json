@@ -15,7 +15,7 @@
   },
   "top_model": {
     "latest_date": "2026-01-25",
-    "yesterday": "HIT",
+    "yesterday": "MISS",
     "last_7_days": {
       "wins": 2,
       "losses": 5,
