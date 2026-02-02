@@ -17,9 +17,9 @@
     "latest_date": "2026-02-01",
     "yesterday": "MISS",
     "last_7_days": {
-      "wins": 1,
+      "wins": 2,
       "losses": 5,
-      "hit_rate": 0.167
+      "hit_rate": 0.286
     },
     "season_to_date": {
       "wins": 5,
