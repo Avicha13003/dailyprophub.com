@@ -556,6 +556,61 @@ html, body {
   letter-spacing: 0.3px;
 }
 
+.daily-email-cta {
+  margin-top: 36px;
+  padding: 24px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(29, 114, 243, 0.15),
+    rgba(13, 17, 23, 0.9)
+  );
+  border: 1px solid #1d72f3;
+  text-align: center;
+}
+
+.email-cta-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.email-cta-sub {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+.email-cta-inline {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.email-cta-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #0d1117;
+  color: #fff;
+  min-width: 240px;
+}
+
+.email-cta-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #1d72f3;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.email-cta-btn:hover {
+  background: #155ec4;
+}
+
 #featured-edge-card .model-badge::after {
   content: " • Best Angle";
   color: #7fffd4;
