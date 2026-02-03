@@ -544,6 +544,18 @@ html, body {
   );
 }
 
+.live-badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4cffc3;
+  background: rgba(76, 255, 195, 0.12);
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+}
+
 #featured-edge-card .model-badge::after {
   content: " • Best Angle";
   color: #7fffd4;
