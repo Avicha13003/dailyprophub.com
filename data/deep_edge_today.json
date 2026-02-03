@@ -1,0 +1,37 @@
+{
+  "date": "2026-02-03",
+  "player": "CJ McCollum",
+  "team": "Atlanta Hawks",
+  "opponent": "Miami Heat",
+  "market": "PTS",
+  "line": 17.5,
+  "odds": -109,
+  "model_prob": 0.563,
+  "implied_prob": 0.522,
+  "edge_pct": 4.1,
+  "confidence_tier": "LEAN",
+  "why": [
+    "Cleared this line in 28/43 recent games",
+    "Miami Heat ranks bottom-tier defending this market",
+    "Game environment projects above-average pace",
+    "Opponent travel fatigue creates efficiency upside"
+  ],
+  "risk_factors": [
+    "Early start time adds variance",
+    "Recent volatility elevated"
+  ],
+  "meta": {
+    "selection_tier": "relaxed",
+    "reason_tags": [
+      "recent_form",
+      "matchup",
+      "pace",
+      "fatigue"
+    ],
+    "excluded_from": [
+      "featured_edge",
+      "top_model"
+    ],
+    "signals_triggered": 4
+  }
+}
