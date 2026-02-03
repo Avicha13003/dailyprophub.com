@@ -604,8 +604,66 @@
 <script>
   const DASHBOARD_URL = "https://nbadailytrends.streamlit.app";
   const SUBSCRIBE_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbwHOWAfNchFzuPri9yhkEVVlwHYh9tjBPH-e-TrxyyW4Oo6jhSsT3zGQyLMPVmKkSiD2g/exec";
+    "https://script.google.com/macros/s/AKfycbwHOWAfNchFzuPri9yhkEVVlwHYh9tjBPH-e-TrxyyW4Oo6jhSsT3zGQyLMPVmKkSiD2g/exec";
 
+  /* ===============================
+     DAILY EMAIL CTA HANDLER
+  ================================ */
+  document.addEventListener("click", async (e) => {
+    if (!e.target.classList.contains("email-cta-btn")) return;
+
+    const wrapper = e.target.closest(".daily-email-cta");
+    if (!wrapper) return;
+
+    const input = wrapper.querySelector(".email-cta-input");
+    const msg = wrapper.querySelector(".email-cta-msg");
+
+    const email = input.value.trim();
+
+    if (!email || !email.includes("@")) {
+      msg.textContent = "Please enter a valid email.";
+      msg.style.color = "#f87171";
+      return;
+    }
+
+    // GA: intent
+    if (typeof gtag === "function") {
+      gtag("event", "subscribe_click", {
+        event_category: "engagement",
+        event_label: "daily_email_cta"
+      });
+    }
+
+    msg.textContent = "Subscribing...";
+    msg.style.color = "#9ca3af";
+
+    try {
+      await fetch(SUBSCRIBE_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `email=${encodeURIComponent(email)}&source=dailyprophub_daily_cta`
+      });
+
+      msg.textContent = "✅ You’re in. Today’s edge will be emailed.";
+      msg.style.color = "#4cffc3";
+      input.value = "";
+
+      // GA: success
+      if (typeof gtag === "function") {
+        gtag("event", "subscribe_success", {
+          event_category: "conversion",
+          event_label: "daily_email_cta"
+        });
+      }
+
+    } catch (err) {
+      msg.textContent = "❌ Something went wrong. Try again later.";
+      msg.style.color = "#f87171";
+    }
+  });
 
   async function loadJson(url) {
     const res = await fetch(url, { cache: "no-store" });
@@ -810,69 +868,7 @@
 
     renderCard("/data/featured_edge_today.json", "featured-edge-card", "⭐ Featured Edge", "Lower variance, stability-filtered");
     renderCard("/data/top_model_pick_today.json", "top-model-card", "🔥 Top Model Pick", "Highest raw EV (more variance)");
-  }
-  
-    document.addEventListener("click", async (e) => {
-    if (!e.target.classList.contains("subscribe-btn")) return;
-
-    // GA: subscribe click intent
-    if (typeof gtag === "function") {
-      gtag("event", "subscribe_click", {
-        event_category: "engagement",
-        event_label: "model_card_subscribe"
-      });
-    }
-
-    const box = e.target.closest(".subscribe-box");
-    if (!box) return;
-
-    const input = box.querySelector(".subscribe-input");
-    const msg = box.querySelector(".subscribe-msg");
-
-    const email = input.value.trim();
-    if (!email || !email.includes("@")) {
-      msg.textContent = "Enter a valid email";
-      msg.style.color = "#f87171";
-      return;
-    }
-
-    msg.textContent = "Subscribing...";
-    msg.style.color = "#9ca3af";
-
-    try {
-      await fetch(SUBSCRIBE_ENDPOINT, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `email=${encodeURIComponent(email)}&source=dailyprophub_card`
-      });
-
-      msg.textContent = "✅ Subscribed! Check your inbox.";
-      msg.style.color = "#4cffc3";
-      input.value = "";
-      
-      // GA: subscribe success
-      if (typeof gtag === "function") {
-        gtag("event", "subscribe_success", {
-          event_category: "conversion",
-          event_label: "dailyprophub_card"
-        });
-      }
-
-    } catch (err) {
-      // GA: subscribe error
-      if (typeof gtag === "function") {
-        gtag("event", "subscribe_error", {
-          event_category: "conversion",
-          event_label: err?.message || "unknown_error"
-        });
-      }
-      msg.textContent = "❌ Subscription failed. Try again later.";
-      msg.style.color = "#f87171";
-    }
-  });
+  }    
 
   async function loadModelResults() {
     const el = document.getElementById("model-results");
