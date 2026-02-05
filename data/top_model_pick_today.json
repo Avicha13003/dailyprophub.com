@@ -1,23 +1,18 @@
 {
-  "date": "2026-02-04",
-  "player": "Julian Champagnie",
-  "team": "SAS",
-  "team_abbr": "SAS",
-  "market": "PTS",
-  "line": "9.5",
-  "odds": "-120",
-  "blend_prob": 0.6636361104392688,
-  "implied_prob": 0.5454545454545454,
-  "edge": 0.1181815649847234,
-  "ev_score": 0.08030914726001052,
-  "matchup": {
-    "game": "Oklahoma City Thunder @ San Antonio Spurs",
-    "home_team": "San Antonio Spurs",
-    "away_team": "Oklahoma City Thunder",
-    "game_date": "2/4/2026",
-    "start_time_local": "20:30",
-    "opponent": "Oklahoma City Thunder",
-    "opponent_abbr": "OKC"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
