@@ -760,6 +760,40 @@ html, body {
   text-align: center;
 }
 
+.placeholder-card {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.placeholder-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.placeholder-icon {
+  font-size: 48px;
+  opacity: 0.85;
+}
+
+.placeholder-body h3 {
+  margin: 4px 0;
+  font-size: 1.2rem;
+  color: #e5e7eb;
+}
+
+.placeholder-main {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.placeholder-sub {
+  color: #6b7280;
+  font-size: 0.85rem;
+  max-width: 240px;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links {

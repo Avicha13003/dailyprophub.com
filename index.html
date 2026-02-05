@@ -709,12 +709,38 @@
       console.warn("player_headshots.json not found (headshots will fallback).", e);
     }
 
+    function renderPlaceholderCard(el, label, subtitle) {
+      el.innerHTML = `
+        <div class="model-card-inner placeholder-card">
+          <div class="model-card-header">
+            <span class="model-badge">${label}</span>
+          </div>
+
+          <div class="placeholder-body">
+            <div class="placeholder-icon">⏳</div>
+            <h3>Not Live Yet</h3>
+            <p class="placeholder-main">
+              Check back ~2 hours before tip-off
+            </p>
+            <p class="placeholder-sub">
+              ${subtitle}
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
     async function renderCard(pickUrl, containerId, label, subtitle) {
       const el = document.getElementById(containerId);
       if (!el) return;
 
       try {
         const d = await loadJson(pickUrl);
+
+      if (d.status === "PLACEHOLDER") {
+        renderPlaceholderCard(el, label, subtitle);
+        return;
+      }
         
         let teamColors = null;
         try {
