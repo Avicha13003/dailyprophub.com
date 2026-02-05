@@ -709,7 +709,7 @@
       console.warn("player_headshots.json not found (headshots will fallback).", e);
     }
 
-    function renderPlaceholderCard(el, label, subtitle) {
+    function renderPlaceholderCard(el, d, label, subtitle) {
       el.innerHTML = `
         <div class="model-card-inner placeholder-card">
           <div class="model-card-header">
@@ -718,13 +718,38 @@
 
           <div class="placeholder-body">
             <div class="placeholder-icon">⏳</div>
-            <h3>Not Live Yet</h3>
-            <p class="placeholder-main">
-              Check back ~2 hours before tip-off
-            </p>
-            <p class="placeholder-sub">
-              ${subtitle}
-            </p>
+
+            <h3>${d.title || "Not Live Yet"}</h3>
+
+            ${d.message ? `
+              <p class="placeholder-main">
+                ${d.message}
+              </p>
+            ` : ""}
+
+            ${Array.isArray(d.details) && d.details.length ? `
+              <ul class="placeholder-details">
+                ${d.details.map(x => `<li>${x}</li>`).join("")}
+              </ul>
+            ` : ""}
+
+            ${d.timing ? `
+              <p class="placeholder-timing">
+                ${d.timing}
+              </p>
+            ` : ""}
+
+            ${subtitle ? `
+              <p class="placeholder-sub">
+                ${subtitle}
+              </p>
+            ` : ""}
+
+            ${d.footer_note ? `
+              <p class="placeholder-footer">
+                ${d.footer_note}
+              </p>
+            ` : ""}
           </div>
         </div>
       `;
@@ -738,7 +763,7 @@
         const d = await loadJson(pickUrl);
 
       if (d.status === "PLACEHOLDER") {
-        renderPlaceholderCard(el, label, subtitle);
+        renderPlaceholderCard(el, d, label, subtitle);
         return;
       }
         

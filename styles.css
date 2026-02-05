@@ -794,6 +794,31 @@ html, body {
   max-width: 240px;
 }
 
+.placeholder-details {
+  margin: 10px 0;
+  padding-left: 18px;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.placeholder-details li {
+  margin-bottom: 4px;
+}
+
+.placeholder-timing {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+.placeholder-footer {
+  margin-top: 14px;
+  font-size: 0.75rem;
+  color: #6b7280;
+  letter-spacing: 0.02em;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links {
