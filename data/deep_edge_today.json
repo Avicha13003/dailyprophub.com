@@ -1,29 +1,29 @@
 {
-  "date": "2026-02-04",
-  "player": "Immanuel Quickley",
-  "team": "Toronto Raptors",
-  "opponent": "Minnesota Timberwolves",
-  "market": "REB",
-  "line": 4.5,
-  "odds": 114,
-  "model_prob": 0.525,
-  "implied_prob": 0.467,
-  "edge_pct": 5.7,
-  "confidence_tier": "LEAN",
+  "date": "2026-02-05",
+  "player": "Keldon Johnson",
+  "team": "San Antonio Spurs",
+  "opponent": "Dallas Mavericks",
+  "market": "3PM",
+  "line": 1.5,
+  "odds": 171,
+  "model_prob": 0.532,
+  "implied_prob": 0.369,
+  "edge_pct": 16.3,
+  "confidence_tier": "MEDIUM-HIGH",
   "why": [
-    "Cleared this line in 30/44 recent games",
-    "Minnesota Timberwolves ranks bottom-tier defending this market",
-    "Favorable rest and home-court setup"
+    "Dallas Mavericks ranks bottom-tier defending this market",
+    "Opponent travel fatigue creates efficiency upside",
+    "Lower recent volatility compared to league median"
   ],
   "risk_factors": [
-    "Early start time adds variance"
+    "Back-to-back spot could cap ceiling"
   ],
   "meta": {
     "selection_tier": "relaxed",
     "reason_tags": [
-      "recent_form",
       "matchup",
-      "rest_home"
+      "fatigue",
+      "volatility"
     ],
     "excluded_from": [
       "featured_edge",
