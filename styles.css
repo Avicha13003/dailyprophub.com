@@ -819,6 +819,30 @@ html, body {
   letter-spacing: 0.02em;
 }
 
+.placeholder-details {
+  margin: 14px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.placeholder-details li {
+  display: flex;
+  align-items: flex-start;   /* 🔑 THIS fixes vertical alignment */
+  gap: 10px;
+  margin-bottom: 6px;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Custom bullet */
+.placeholder-details li::before {
+  content: "•";
+  color: #e5e7eb;
+  line-height: 1.2;
+  margin-top: 2px;          /* fine-tune bullet vertical position */
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links {
