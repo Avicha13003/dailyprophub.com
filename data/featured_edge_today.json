@@ -1,18 +1,40 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "FEATURED",
-
-  "title": "Featured Edge · Coming Soon",
-  "message": "Today’s Featured Edge is still being finalized.",
-
-  "details": [
-    "We wait for confirmed line movement",
-    "Late injury and rotation news",
-    "Final slate-level context"
+  "date": "2026-02-06",
+  "player": "Cedric Coward",
+  "team": "MEM",
+  "team_full": "Memphis Grizzlies",
+  "market": "REB",
+  "line": "6.5",
+  "odds": "-109",
+  "opponent": "POR",
+  "opponent_full": "Portland Trail Blazers",
+  "is_home": 0,
+  "game_date": "2/6/2026",
+  "start_time_local": "21:00",
+  "venue_city": "Portland",
+  "venue_state": "OR",
+  "blend_prob": 0.6084691568444436,
+  "implied_prob": 0.5215311004784688,
+  "edge": 0.0869380563659747,
+  "air_score": 0.6582971533689063,
+  "why": [
+    "Model edge: +8.7% vs book implied",
+    "Matchup pace tailwind: +0.93z",
+    "Matchup pace tailwind: +0.93z",
+    "Team pace factor: +0.91z"
   ],
-
-  "timing": "Check back ~2 hours before tip-off.",
-
-  "footer_note": "Updated daily · Never rushed",
-  "date": "2026-02-06"
+  "disclaimer": "Research highlight \u2014 not a betting recommendation",
+  "_meta": {
+    "used_fallback": false,
+    "air_gate": 0.6582971533689063,
+    "max_edge_outlier": 0.18,
+    "pts_minutes_floor": 26,
+    "pts_vol_suppression": {
+      "min_recent_n": 10,
+      "max_vol_std10": 6.5,
+      "max_vol_var_ratio": 1.25,
+      "max_line_to_season_diff_pos": 3.5,
+      "min_top10_score": 0.55
+    }
+  }
 }

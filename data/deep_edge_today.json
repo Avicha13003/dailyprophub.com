@@ -1,34 +1,33 @@
 {
-  "date": "2026-02-05",
-  "player": "Keldon Johnson",
-  "team": "San Antonio Spurs",
-  "opponent": "Dallas Mavericks",
-  "market": "3PM",
-  "line": 1.5,
-  "odds": 171,
-  "model_prob": 0.532,
-  "implied_prob": 0.369,
-  "edge_pct": 16.3,
-  "confidence_tier": "MEDIUM-HIGH",
+  "date": "2026-02-06",
+  "player": "Jaime Jaquez Jr.",
+  "team": "Miami Heat",
+  "opponent": "Boston Celtics",
+  "market": "PTS",
+  "line": 13.5,
+  "odds": -103,
+  "model_prob": 0.563,
+  "implied_prob": 0.507,
+  "edge_pct": 5.6,
+  "confidence_tier": "LEAN",
   "why": [
-    "Dallas Mavericks ranks bottom-tier defending this market",
-    "Opponent travel fatigue creates efficiency upside",
-    "Lower recent volatility compared to league median"
+    "Cleared this line in 28/44 recent games",
+    "Opponent travel fatigue creates efficiency upside"
   ],
   "risk_factors": [
-    "Back-to-back spot could cap ceiling"
+    "Early start time adds variance",
+    "Recent volatility elevated"
   ],
   "meta": {
     "selection_tier": "relaxed",
     "reason_tags": [
-      "matchup",
-      "fatigue",
-      "volatility"
+      "recent_form",
+      "fatigue"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 3
+    "signals_triggered": 2
   }
 }
