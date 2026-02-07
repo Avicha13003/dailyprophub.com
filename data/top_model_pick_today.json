@@ -1,23 +1,18 @@
 {
-  "date": "2026-02-06",
-  "player": "DeMar DeRozan",
-  "team": "SAC",
-  "team_abbr": "SAC",
-  "market": "PTS",
-  "line": "17.5",
-  "odds": "-108",
-  "blend_prob": 0.557391975,
-  "implied_prob": 0.519230769,
-  "edge": 0.038161206,
-  "ev_score": 0.008799369,
-  "matchup": {
-    "game": "Los Angeles Clippers @ Sacramento Kings",
-    "home_team": "Sacramento Kings",
-    "away_team": "Los Angeles Clippers",
-    "game_date": "2/6/2026",
-    "start_time_local": "21:00",
-    "opponent": "Los Angeles Clippers",
-    "opponent_abbr": "LAC"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
