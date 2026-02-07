@@ -1,18 +1,23 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-02-07",
+  "player": "Dylan Harper",
+  "team": "SAS",
+  "team_abbr": "SAS",
+  "market": "REB",
+  "line": "2.5",
+  "odds": "-172",
+  "blend_prob": 0.7003320690709071,
+  "implied_prob": 0.6323529411764706,
+  "edge": 0.0679791278944365,
+  "ev_score": 0.05770609776786017,
+  "matchup": {
+    "game": "Dallas Mavericks @ San Antonio Spurs",
+    "home_team": "San Antonio Spurs",
+    "away_team": "Dallas Mavericks",
+    "game_date": "2/7/2026",
+    "start_time_local": "17:00",
+    "opponent": "Dallas Mavericks",
+    "opponent_abbr": "DAL"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
 }
