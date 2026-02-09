@@ -1,23 +1,18 @@
 {
-  "date": "2026-02-08",
-  "player": "Ayo Dosunmu",
-  "team": "MIN",
-  "team_abbr": "MIN",
-  "market": "PTS",
-  "line": "9.5",
-  "odds": "-126",
-  "blend_prob": 0.653398256393734,
-  "implied_prob": 0.5575221238938053,
-  "edge": 0.0958761324999286,
-  "ev_score": 0.06078646730087446,
-  "matchup": {
-    "game": "Los Angeles Clippers @ Minnesota Timberwolves",
-    "home_team": "Minnesota Timberwolves",
-    "away_team": "Los Angeles Clippers",
-    "game_date": "2/8/2026",
-    "start_time_local": "nan",
-    "opponent": "LA Clippers",
-    "opponent_abbr": "LAC"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
