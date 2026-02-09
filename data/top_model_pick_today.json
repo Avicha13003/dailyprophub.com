@@ -1,18 +1,23 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-02-09",
+  "player": "Isaiah Joe",
+  "team": "OKC",
+  "team_abbr": "OKC",
+  "market": "3PM",
+  "line": "2.5",
+  "odds": "121",
+  "blend_prob": 0.5600955655353836,
+  "implied_prob": 0.4524886877828054,
+  "edge": 0.1076068777525782,
+  "ev_score": 0.025992431958028427,
+  "matchup": {
+    "game": "Oklahoma City Thunder @ Los Angeles Lakers",
+    "home_team": "Los Angeles Lakers",
+    "away_team": "Oklahoma City Thunder",
+    "game_date": "2/9/2026",
+    "start_time_local": "21:00",
+    "opponent": "Los Angeles Lakers",
+    "opponent_abbr": "LAL"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
 }
