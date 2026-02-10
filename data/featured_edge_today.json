@@ -1,39 +1,18 @@
 {
-  "date": "2026-02-09",
-  "player": "Joel Embiid",
-  "team": "PHI",
-  "team_full": "Philadelphia 76ers",
-  "market": "REB",
-  "line": "8.5",
-  "odds": "-105",
-  "opponent": "POR",
-  "opponent_full": "Portland Trail Blazers",
-  "is_home": 0,
-  "game_date": "2/9/2026",
-  "start_time_local": "21:00",
-  "venue_city": "Portland",
-  "venue_state": "OR",
-  "blend_prob": 0.5758303741418842,
-  "implied_prob": 0.5121951219512195,
-  "edge": 0.0636352521906646,
-  "air_score": 0.713275496997287,
-  "why": [
-    "Model edge: +6.4% vs book implied",
-    "Risk note: player has a limitation/injury tag (volatility higher)",
-    "Opponent pace factor: +0.97z"
+  "status": "PLACEHOLDER",
+  "type": "FEATURED",
+
+  "title": "Featured Edge · Coming Soon",
+  "message": "Today’s Featured Edge is still being finalized.",
+
+  "details": [
+    "We wait for confirmed line movement",
+    "Late injury and rotation news",
+    "Final slate-level context"
   ],
-  "disclaimer": "Research highlight \u2014 not a betting recommendation",
-  "_meta": {
-    "used_fallback": true,
-    "air_gate": null,
-    "max_edge_outlier": 0.18,
-    "pts_minutes_floor": 26,
-    "pts_vol_suppression": {
-      "min_recent_n": 10,
-      "max_vol_std10": 6.5,
-      "max_vol_var_ratio": 1.25,
-      "max_line_to_season_diff_pos": 3.5,
-      "min_top10_score": 0.55
-    }
-  }
+
+  "timing": "Check back ~2 hours before tip-off.",
+
+  "footer_note": "Updated daily · Never rushed",
+  "date": "2026-02-06"
 }
