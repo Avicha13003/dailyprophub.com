@@ -1,23 +1,18 @@
 {
-  "date": "2026-02-10",
-  "player": "Keldon Johnson",
-  "team": "SAS",
-  "team_abbr": "SAS",
-  "market": "REB",
-  "line": "4.5",
-  "odds": "112",
-  "blend_prob": 0.572679151967713,
-  "implied_prob": 0.4716981132075472,
-  "edge": 0.1009810387601658,
-  "ev_score": 0.029566287219969584,
-  "matchup": {
-    "game": "San Antonio Spurs @ Los Angeles Lakers",
-    "home_team": "Los Angeles Lakers",
-    "away_team": "San Antonio Spurs",
-    "game_date": "2/10/2026",
-    "start_time_local": "21:30",
-    "opponent": "Los Angeles Lakers",
-    "opponent_abbr": "LAL"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
