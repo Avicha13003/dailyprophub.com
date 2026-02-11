@@ -1,18 +1,23 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-02-11",
+  "player": "Lauri Markkanen",
+  "team": "UTA",
+  "team_abbr": "UTA",
+  "market": "REB",
+  "line": "4.5",
+  "odds": "-136",
+  "blend_prob": 0.7230054821015167,
+  "implied_prob": 0.576271186440678,
+  "edge": 0.1467342956608387,
+  "ev_score": 0.1407796843494348,
+  "matchup": {
+    "game": "Sacramento Kings @ Utah Jazz",
+    "home_team": "Utah Jazz",
+    "away_team": "Sacramento Kings",
+    "game_date": "2/11/2026",
+    "start_time_local": "20:00",
+    "opponent": "Sacramento Kings",
+    "opponent_abbr": "SAC"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
 }

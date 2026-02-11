@@ -1,34 +1,34 @@
 {
-  "date": "2026-02-09",
-  "player": "Miles Bridges",
-  "team": "Charlotte Hornets",
-  "opponent": "Detroit Pistons",
-  "market": "REB",
-  "line": 5.5,
-  "odds": 106,
-  "model_prob": 0.562,
-  "implied_prob": 0.485,
-  "edge_pct": 7.7,
+  "date": "2026-02-11",
+  "player": "Ayo Dosunmu",
+  "team": "Minnesota Timberwolves",
+  "opponent": "Portland Trail Blazers",
+  "market": "3PM",
+  "line": 1.5,
+  "odds": -128,
+  "model_prob": 0.642,
+  "implied_prob": 0.561,
+  "edge_pct": 8.0,
   "confidence_tier": "MEDIUM",
   "why": [
-    "Cleared this line in 33/49 recent games",
-    "Detroit Pistons ranks bottom-tier defending this market",
-    "Favorable rest and home-court setup"
+    "Cleared this line in 31/44 recent games",
+    "Game environment projects above-average pace",
+    "Favorable rest and home-court setup",
+    "Lower recent volatility compared to league median"
   ],
-  "risk_factors": [
-    "Early start time adds variance"
-  ],
+  "risk_factors": [],
   "meta": {
     "selection_tier": "strict",
     "reason_tags": [
       "recent_form",
-      "matchup",
-      "rest_home"
+      "pace",
+      "rest_home",
+      "volatility"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 3
+    "signals_triggered": 4
   }
 }
