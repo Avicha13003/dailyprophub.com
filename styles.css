@@ -291,18 +291,22 @@ html, body {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+  align-items: stretch; /* critical */
 }
 
 .product-card {
   background: #111;
   border: 1px solid #222;
   border-radius: 14px;
-  padding: 28px;
+  padding: 36px 28px;
   transition: all 0.25s ease;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+
+  display: flex;          /* NEW */
+  flex-direction: column; /* NEW */
 }
 
 .product-card:hover {
@@ -335,8 +339,7 @@ html, body {
 }
 
 .product-card .btn-large {
-  width: 100%;
-  text-align: center;
+  margin-top: auto;  /* 🔥 THIS is the magic */
 }
 
 .mlb-btn {
