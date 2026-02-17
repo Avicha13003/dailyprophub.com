@@ -291,10 +291,10 @@ html, body {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: 1fr 1fr;  /* Force equal columns */
   gap: 40px;
   margin-top: 50px;
-  align-items: stretch; /* critical */
+  align-items: stretch;
 }
 
 .product-card {
@@ -570,6 +570,12 @@ html, body {
 @media (min-width: 900px) {
   .matchup-line {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: 1fr;
   }
 }
 
