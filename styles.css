@@ -330,6 +330,25 @@ html, body {
   margin-bottom: 6px;
 }
 
+.product-card {
+  margin-bottom: 40px;
+}
+
+.product-card .btn-large {
+  width: 100%;
+  text-align: center;
+}
+
+.mlb-btn {
+  background: linear-gradient(90deg, #ff4c4c, #ff7a7a);
+  border: none;
+}
+
+.mlb-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(255, 76, 76, 0.4);
+}
+
 /* How it works */
 .hiw-grid {
   display: grid;
