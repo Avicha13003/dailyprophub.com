@@ -289,6 +289,47 @@ html, body {
   font-size: 1rem;
 }
 
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 28px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: #1d72f3;
+}
+
+.mlb-card:hover {
+  border-color: #ff4c4c;
+}
+
+.product-badge {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.product-features {
+  margin: 18px 0;
+  padding-left: 18px;
+  color: #ccc;
+}
+
+.product-features li {
+  margin-bottom: 6px;
+}
+
 /* How it works */
 .hiw-grid {
   display: grid;

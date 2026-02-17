@@ -117,6 +117,70 @@
   </section>
 
   <!-- ============================= -->
+  <!-- NBA + MLB PRODUCTS -->
+  <!-- ============================= -->
+  <section class="section products-section">
+    <div class="container">
+      <h2 class="section-title">Two Sports. Two Models. One Edge.</h2>
+      <p class="section-subtitle">
+        DailyPropHub now powers both NBA and MLB player prop models — built for trend clarity, transparency, and edge.
+      </p>
+
+      <div class="products-grid">
+
+        <!-- NBA CARD -->
+        <div class="product-card">
+          <div class="product-badge">🏀 NBA</div>
+          <h3>NBADailyTrends</h3>
+          <p>
+            Free dashboard featuring model edges, top overs, parlay builder,
+            recent trend charts, and matchup context.
+          </p>
+
+          <ul class="product-features">
+            <li>📊 Model vs Implied Probabilities</li>
+            <li>🔥 Featured Edge + Top Model Pick</li>
+            <li>📈 Hit Rates & Volatility</li>
+            <li>🧠 Correlated Best Parlay</li>
+          </ul>
+
+          <a class="btn-primary btn-large"
+             href="https://nbadailytrends.streamlit.app"
+             target="_blank"
+             rel="noopener">
+            Open NBA Dashboard →
+          </a>
+        </div>
+
+        <!-- MLB CARD -->
+        <div class="product-card mlb-card">
+          <div class="product-badge">⚾ MLB</div>
+          <h3>MLBDailyTrends</h3>
+          <p>
+            Season-long MLB prop model focused on:
+            <strong>Hits, Total Bases, H+R+RBI, Walks, and Pitcher Strikeouts.</strong>
+          </p>
+
+          <ul class="product-features">
+            <li>📅 Daily Picks (Email Subscribers)</li>
+            <li>📊 Rolling Production Trends</li>
+            <li>🏟 Park, Elevation & Context</li>
+            <li>🚀 Founding Member Access</li>
+          </ul>
+
+          <a class="btn-secondary btn-large"
+             href="https://mlbdailytrends.streamlit.app"
+             target="_blank"
+             rel="noopener">
+            Explore MLB →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
   <!-- TODAY'S MODEL HIGHLIGHTS -->
   <!-- ============================= -->
 <section class="section model-highlights">
@@ -401,7 +465,7 @@
       <div class="support-sidebox">
         <h3>What’s Coming Next?</h3>
         <ul>
-          <li>⚾ MLB player prop expansion when the season returns</li>
+          <li>⚾ MLBDailyTrends now live for 2026 season</li>
           <li>📬 Optional email updates for new features & big slates</li>
           <li>📱 More mobile-first UX enhancements</li>
           <li>🧪 Ongoing model tuning using historical results</li>
@@ -1023,6 +1087,15 @@
     if (link.href && link.href.includes("nbadailytrends.streamlit.app")) {
       if (typeof gtag === "function") {
         gtag("event", "outbound_nba_dashboard", {
+          event_category: "outbound",
+          event_label: link.href
+        });
+      }
+    }
+
+    if (link.href && link.href.includes("mlbdailytrends.streamlit.app")) {
+      if (typeof gtag === "function") {
+        gtag("event", "outbound_mlb_dashboard", {
           event_category: "outbound",
           event_label: link.href
         });
