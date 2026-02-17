@@ -334,10 +334,6 @@ html, body {
   margin-bottom: 6px;
 }
 
-.product-card + .product-card {
-  margin-top: 60px;
-}
-
 .product-card .btn-large {
   margin-top: auto;  /* 🔥 THIS is the magic */
 }
