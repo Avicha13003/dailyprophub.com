@@ -1,0 +1,34 @@
+{
+  "date": "2026-02-19",
+  "player": "Harrison Barnes",
+  "team": "San Antonio Spurs",
+  "opponent": "Phoenix Suns",
+  "market": "PTS",
+  "line": 7.5,
+  "odds": -123,
+  "model_prob": 0.724,
+  "implied_prob": 0.552,
+  "edge_pct": 17.2,
+  "confidence_tier": "MEDIUM-HIGH",
+  "why": [
+    "Cleared this line in 41/51 recent games",
+    "Phoenix Suns ranks bottom-tier defending this market",
+    "Favorable rest and home-court setup"
+  ],
+  "risk_factors": [
+    "Recent volatility elevated"
+  ],
+  "meta": {
+    "selection_tier": "strict",
+    "reason_tags": [
+      "recent_form",
+      "matchup",
+      "rest_home"
+    ],
+    "excluded_from": [
+      "featured_edge",
+      "top_model"
+    ],
+    "signals_triggered": 3
+  }
+}
