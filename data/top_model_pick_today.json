@@ -1,23 +1,18 @@
 {
-  "date": "2026-02-19",
-  "player": "Onyeka Okongwu",
-  "team": "ATL",
-  "team_abbr": "ATL",
-  "market": "3PM",
-  "line": "1.5",
-  "odds": "-169",
-  "blend_prob": 0.7705329343954932,
-  "implied_prob": 0.6282527881040892,
-  "edge": 0.1422801462914039,
-  "ev_score": 0.17234719711623117,
-  "matchup": {
-    "game": "Atlanta Hawks @ Philadelphia 76ers",
-    "home_team": "Philadelphia 76ers",
-    "away_team": "Atlanta Hawks",
-    "game_date": "2/19/2026",
-    "start_time_local": "18:00",
-    "opponent": "Philadelphia 76ers",
-    "opponent_abbr": "PHI"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
