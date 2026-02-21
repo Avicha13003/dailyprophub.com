@@ -1,40 +1,18 @@
 {
-  "date": "2026-02-20",
-  "player": "Ayo Dosunmu",
-  "team": "MIN",
-  "team_full": "Minnesota Timberwolves",
-  "market": "3PM",
-  "line": "1.5",
-  "odds": "102",
-  "opponent": "DAL",
-  "opponent_full": "Dallas Mavericks",
-  "is_home": 1,
-  "game_date": "2/20/2026",
-  "start_time_local": "18:30",
-  "venue_city": "Minneapolis",
-  "venue_state": "MN",
-  "blend_prob": 0.6002714421980175,
-  "implied_prob": 0.495049504950495,
-  "edge": 0.1052219372475224,
-  "air_score": 0.5225841517756505,
-  "why": [
-    "Model edge: +10.5% vs book implied",
-    "Matchup pace tailwind: +0.83z",
-    "Matchup pace tailwind: +0.83z",
-    "Team pace factor: +0.63z"
+  "status": "PLACEHOLDER",
+  "type": "FEATURED",
+
+  "title": "Featured Edge · Coming Soon",
+  "message": "Today’s Featured Edge is still being finalized.",
+
+  "details": [
+    "We wait for confirmed line movement",
+    "Late injury and rotation news",
+    "Final slate-level context"
   ],
-  "disclaimer": "Research highlight \u2014 not a betting recommendation",
-  "_meta": {
-    "used_fallback": false,
-    "air_gate": 0.5225841517756505,
-    "max_edge_outlier": 0.18,
-    "pts_minutes_floor": 26,
-    "pts_vol_suppression": {
-      "min_recent_n": 10,
-      "max_vol_std10": 6.5,
-      "max_vol_var_ratio": 1.25,
-      "max_line_to_season_diff_pos": 3.5,
-      "min_top10_score": 0.55
-    }
-  }
+
+  "timing": "Check back ~2 hours before tip-off.",
+
+  "footer_note": "Updated daily · Never rushed",
+  "date": "2026-02-06"
 }
