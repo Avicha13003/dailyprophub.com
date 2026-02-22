@@ -1,18 +1,23 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-02-22",
+  "player": "Onyeka Okongwu",
+  "team": "ATL",
+  "team_abbr": "ATL",
+  "market": "3PM",
+  "line": "1.5",
+  "odds": "-147",
+  "blend_prob": 0.6266609310019791,
+  "implied_prob": 0.5951417004048583,
+  "edge": 0.0315192305971208,
+  "ev_score": 0.01632439501382899,
+  "matchup": {
+    "game": "Brooklyn Nets @ Atlanta Hawks",
+    "home_team": "Atlanta Hawks",
+    "away_team": "Brooklyn Nets",
+    "game_date": "2/22/2026",
+    "start_time_local": "14:30",
+    "opponent": "Brooklyn Nets",
+    "opponent_abbr": "BKN"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
 }

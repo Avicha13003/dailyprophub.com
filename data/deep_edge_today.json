@@ -1,36 +1,35 @@
 {
-  "date": "2026-02-21",
-  "player": "Jaylen Wells",
-  "team": "Memphis Grizzlies",
-  "opponent": "Miami Heat",
+  "date": "2026-02-22",
+  "player": "Jock Landale",
+  "team": "Atlanta Hawks",
+  "opponent": "Brooklyn Nets",
   "market": "REB",
-  "line": 3.5,
-  "odds": 121,
-  "model_prob": 0.603,
-  "implied_prob": 0.452,
-  "edge_pct": 15.1,
-  "confidence_tier": "MEDIUM-HIGH",
+  "line": 5.5,
+  "odds": 110,
+  "model_prob": 0.522,
+  "implied_prob": 0.476,
+  "edge_pct": 4.6,
+  "confidence_tier": "LEAN",
   "why": [
-    "Miami Heat ranks bottom-tier defending this market",
-    "Game environment projects above-average pace",
-    "Opponent travel fatigue creates efficiency upside",
-    "Lower recent volatility compared to league median"
+    "Cleared this line in 30/47 recent games",
+    "Brooklyn Nets ranks bottom-tier defending this market",
+    "Favorable rest and home-court setup"
   ],
   "risk_factors": [
-    "Back-to-back spot could cap ceiling"
+    "Early start time adds variance",
+    "Recent volatility elevated"
   ],
   "meta": {
-    "selection_tier": "strict",
+    "selection_tier": "relaxed",
     "reason_tags": [
+      "recent_form",
       "matchup",
-      "pace",
-      "fatigue",
-      "volatility"
+      "rest_home"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 4
+    "signals_triggered": 3
   }
 }
