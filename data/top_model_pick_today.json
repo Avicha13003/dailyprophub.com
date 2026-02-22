@@ -1,23 +1,18 @@
 {
-  "date": "2026-02-21",
-  "player": "Tre Jones",
-  "team": "CHI",
-  "team_abbr": "CHI",
-  "market": "PTS",
-  "line": "9.5",
-  "odds": "102",
-  "blend_prob": 0.7048330514787162,
-  "implied_prob": 0.495049504950495,
-  "edge": 0.2097835465282211,
-  "ev_score": 0.18259976203204858,
-  "matchup": {
-    "game": "Detroit Pistons @ Chicago Bulls",
-    "home_team": "Chicago Bulls",
-    "away_team": "Detroit Pistons",
-    "game_date": "2/21/2026",
-    "start_time_local": "19:00",
-    "opponent": "Detroit Pistons",
-    "opponent_abbr": "DET"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
