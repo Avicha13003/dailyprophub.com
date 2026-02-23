@@ -1,30 +1,29 @@
 {
-  "date": "2026-02-22",
-  "player": "Jock Landale",
-  "team": "Atlanta Hawks",
-  "opponent": "Brooklyn Nets",
-  "market": "REB",
-  "line": 5.5,
-  "odds": 110,
-  "model_prob": 0.522,
-  "implied_prob": 0.476,
-  "edge_pct": 4.6,
-  "confidence_tier": "LEAN",
+  "date": "2026-02-23",
+  "player": "Lauri Markkanen",
+  "team": "Utah Jazz",
+  "opponent": "Houston Rockets",
+  "market": "PTS",
+  "line": 18.5,
+  "odds": -108,
+  "model_prob": 0.607,
+  "implied_prob": 0.519,
+  "edge_pct": 8.8,
+  "confidence_tier": "MEDIUM",
   "why": [
-    "Cleared this line in 30/47 recent games",
-    "Brooklyn Nets ranks bottom-tier defending this market",
-    "Favorable rest and home-court setup"
+    "Cleared this line in 25/38 recent games",
+    "Houston Rockets ranks bottom-tier defending this market",
+    "Opponent travel fatigue creates efficiency upside"
   ],
   "risk_factors": [
-    "Early start time adds variance",
     "Recent volatility elevated"
   ],
   "meta": {
-    "selection_tier": "relaxed",
+    "selection_tier": "strict",
     "reason_tags": [
       "recent_form",
       "matchup",
-      "rest_home"
+      "fatigue"
     ],
     "excluded_from": [
       "featured_edge",
