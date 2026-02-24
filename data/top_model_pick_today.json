@@ -1,23 +1,18 @@
 {
-  "date": "2026-02-23",
-  "player": "Keyonte George",
-  "team": "UTA",
-  "team_abbr": "UTA",
-  "market": "AST",
-  "line": "4.5",
-  "odds": "112",
-  "blend_prob": 0.6043056060070667,
-  "implied_prob": 0.4716981132075472,
-  "edge": 0.1326074927995195,
-  "ev_score": 0.05615103286632953,
-  "matchup": {
-    "game": "Utah Jazz @ Houston Rockets",
-    "home_team": "Houston Rockets",
-    "away_team": "Utah Jazz",
-    "game_date": "2/23/2026",
-    "start_time_local": "20:30",
-    "opponent": "Houston Rockets",
-    "opponent_abbr": "HOU"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
