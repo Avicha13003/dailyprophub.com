@@ -1,18 +1,23 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-02-24",
+  "player": "Tre Jones",
+  "team": "CHI",
+  "team_abbr": "CHI",
+  "market": "AST",
+  "line": "4.5",
+  "odds": "-108",
+  "blend_prob": 0.6980840065329666,
+  "implied_prob": 0.5192307692307693,
+  "edge": 0.1788532373021973,
+  "ev_score": 0.14991310896968424,
+  "matchup": {
+    "game": "Charlotte Hornets @ Chicago Bulls",
+    "home_team": "Chicago Bulls",
+    "away_team": "Charlotte Hornets",
+    "game_date": "2/24/2026",
+    "start_time_local": "19:00",
+    "opponent": "Charlotte Hornets",
+    "opponent_abbr": "CHA"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
 }

@@ -1,34 +1,36 @@
 {
-  "date": "2026-02-23",
-  "player": "Lauri Markkanen",
-  "team": "Utah Jazz",
-  "opponent": "Houston Rockets",
-  "market": "PTS",
-  "line": 18.5,
-  "odds": -108,
-  "model_prob": 0.607,
-  "implied_prob": 0.519,
-  "edge_pct": 8.8,
-  "confidence_tier": "MEDIUM",
+  "date": "2026-02-24",
+  "player": "Jock Landale",
+  "team": "Atlanta Hawks",
+  "opponent": "Washington Wizards",
+  "market": "REB",
+  "line": 5.5,
+  "odds": -105,
+  "model_prob": 0.614,
+  "implied_prob": 0.512,
+  "edge_pct": 10.2,
+  "confidence_tier": "MEDIUM-HIGH",
   "why": [
-    "Cleared this line in 25/38 recent games",
-    "Houston Rockets ranks bottom-tier defending this market",
-    "Opponent travel fatigue creates efficiency upside"
+    "Cleared this line in 36/48 recent games",
+    "Washington Wizards ranks bottom-tier defending this market",
+    "Game environment projects above-average pace",
+    "Favorable rest and home-court setup"
   ],
   "risk_factors": [
-    "Recent volatility elevated"
+    "Early start time adds variance"
   ],
   "meta": {
     "selection_tier": "strict",
     "reason_tags": [
       "recent_form",
       "matchup",
-      "fatigue"
+      "pace",
+      "rest_home"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 3
+    "signals_triggered": 4
   }
 }
