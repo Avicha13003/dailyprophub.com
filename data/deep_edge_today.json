@@ -1,0 +1,34 @@
+{
+  "date": "2026-02-26",
+  "player": "Josh Giddey",
+  "team": "Chicago Bulls",
+  "opponent": "Portland Trail Blazers",
+  "market": "AST",
+  "line": 6.5,
+  "odds": 104,
+  "model_prob": 0.566,
+  "implied_prob": 0.49,
+  "edge_pct": 7.6,
+  "confidence_tier": "MEDIUM",
+  "why": [
+    "Portland Trail Blazers ranks bottom-tier defending this market",
+    "Game environment projects above-average pace",
+    "Below-median recent volatility"
+  ],
+  "risk_factors": [],
+  "meta": {
+    "selection_tier": "strict",
+    "reason_tags": [
+      "matchup",
+      "pace",
+      "volatility_control"
+    ],
+    "excluded_from": [
+      "featured_edge",
+      "top_model"
+    ],
+    "signals_triggered": 3,
+    "minutes_mult": 1.0,
+    "volatility_value": 2.191
+  }
+}
