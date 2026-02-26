@@ -1,23 +1,18 @@
 {
-  "date": "2026-02-25",
-  "player": "Ty Jerome",
-  "team": "MEM",
-  "team_abbr": "MEM",
-  "market": "PTS",
-  "line": "16.5",
-  "odds": "-108",
-  "blend_prob": 0.5931523991425167,
-  "implied_prob": 0.5192307692307693,
-  "edge": 0.0739216299117474,
-  "ev_score": 0.027869392733995437,
-  "matchup": {
-    "game": "Golden State Warriors @ Memphis Grizzlies",
-    "home_team": "Memphis Grizzlies",
-    "away_team": "Golden State Warriors",
-    "game_date": "2/25/2026",
-    "start_time_local": "18:30",
-    "opponent": "Golden State Warriors",
-    "opponent_abbr": "GSW"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge"
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
