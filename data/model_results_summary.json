@@ -1,31 +1,31 @@
 {
   "featured": {
-    "latest_date": "2026-02-25",
+    "latest_date": "2026-02-26",
     "yesterday": "MISS",
     "last_7_days": {
       "wins": 0,
-      "losses": 6,
+      "losses": 7,
       "hit_rate": 0.0
     },
     "season_to_date": {
       "wins": 13,
-      "losses": 16,
-      "hit_rate": 0.448
+      "losses": 17,
+      "hit_rate": 0.433
     }
   },
   "top_model": {
-    "latest_date": "2026-02-25",
-    "yesterday": "HIT",
+    "latest_date": "2026-02-26",
+    "yesterday": "MISS",
     "last_7_days": {
       "wins": 1,
-      "losses": 5,
-      "hit_rate": 0.167
+      "losses": 6,
+      "hit_rate": 0.143
     },
     "season_to_date": {
       "wins": 11,
-      "losses": 19,
-      "hit_rate": 0.367
+      "losses": 20,
+      "hit_rate": 0.355
     }
   },
-  "generated_at": "2026-02-25"
+  "generated_at": "2026-02-26"
 }
