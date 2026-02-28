@@ -1,43 +1,18 @@
 {
-  "date": "2026-02-27",
-  "player": "Derrick White",
-  "team": "BOS",
-  "team_full": "Boston Celtics",
-  "market": "REB",
-  "line": "3.5",
-  "odds": "-166",
-  "opponent": "BKN",
-  "opponent_full": "Brooklyn Nets",
-  "is_home": 1,
-  "game_date": "2/27/2026",
-  "start_time_local": "18:30",
-  "venue_city": "Boston",
-  "venue_state": "MA",
-  "blend_prob": 0.5657468098465547,
-  "implied_prob": 0.6240601503759399,
-  "edge": -0.0583133405293851,
-  "air_score": 0.5952825788741568,
-  "minutes_mult": 1.0,
-  "why": [
-    "Model edge: -5.8% vs book implied",
-    "Matchup pace tailwind: -1.74z (headwind priced in)",
-    "Matchup pace tailwind: -1.74z (headwind priced in)",
-    "Team pace factor: -2.05z (headwind priced in)"
+  "status": "PLACEHOLDER",
+  "type": "FEATURED",
+
+  "title": "Featured Edge · Coming Soon",
+  "message": "Today’s Featured Edge is still being finalized.",
+
+  "details": [
+    "We wait for confirmed line movement",
+    "Late injury and rotation news",
+    "Final slate-level context"
   ],
-  "disclaimer": "Research highlight \u2014 not a betting recommendation",
-  "_meta": {
-    "used_fallback": true,
-    "air_gate": null,
-    "max_edge_outlier": 0.18,
-    "minutes_mult_floor": 0.9,
-    "minutes_bonus_weight": 0.1,
-    "pts_minutes_floor": 26,
-    "pts_vol_suppression": {
-      "min_recent_n": 10,
-      "max_vol_std10": 6.5,
-      "max_vol_var_ratio": 1.25,
-      "max_line_to_season_diff_pos": 3.5,
-      "min_top10_score": 0.55
-    }
-  }
+
+  "timing": "Check back ~2 hours before tip-off.",
+
+  "footer_note": "Updated daily · Never rushed",
+  "date": "2026-02-06"
 }
