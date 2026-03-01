@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-01",
+  "player": "Nikola Vucevic",
+  "team": "BOS",
+  "team_abbr": "BOS",
+  "market": "REB",
+  "line": "6.5",
+  "odds": "-142",
+  "blend_prob": 0.6411639657398447,
+  "implied_prob": 0.5867768595041323,
+  "edge": 0.0543871062357124,
+  "ev_score": 0.031567346031733605,
+  "minutes_mult": 1.0,
+  "vol_std10": 3.8223029707232783,
+  "matchup": {
+    "game": "Philadelphia 76ers @ Boston Celtics",
+    "home_team": "Boston Celtics",
+    "away_team": "Philadelphia 76ers",
+    "game_date": "3/1/2026",
+    "start_time_local": "19:00",
+    "opponent": "Philadelphia 76ers",
+    "opponent_abbr": "PHI"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }
