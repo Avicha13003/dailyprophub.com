@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-02",
+  "player": "Darius Garland",
+  "team": "LAC",
+  "team_abbr": "LAC",
+  "market": "PTS",
+  "line": "12.5",
+  "odds": "-108",
+  "blend_prob": 0.6752121564086342,
+  "implied_prob": 0.5192307692307693,
+  "edge": 0.1559813871778649,
+  "ev_score": 0.11415572177855925,
+  "minutes_mult": 1.0,
+  "vol_std10": 4.582575695,
+  "matchup": {
+    "game": "Los Angeles Clippers @ Golden State Warriors",
+    "home_team": "Golden State Warriors",
+    "away_team": "Los Angeles Clippers",
+    "game_date": "3/2/2026",
+    "start_time_local": "21:00",
+    "opponent": "Golden State Warriors",
+    "opponent_abbr": "GSW"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }
