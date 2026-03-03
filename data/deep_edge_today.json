@@ -1,23 +1,23 @@
 {
-  "date": "2026-03-02",
-  "player": "Keyonte George",
-  "team": "Utah Jazz",
-  "opponent": "Denver Nuggets",
-  "market": "AST",
-  "line": 4.5,
-  "odds": -112,
-  "model_prob": 0.601,
-  "implied_prob": 0.528,
-  "edge_pct": 7.3,
-  "confidence_tier": "MEDIUM",
+  "date": "2026-03-03",
+  "player": "VJ Edgecombe",
+  "team": "Philadelphia 76ers",
+  "opponent": "San Antonio Spurs",
+  "market": "REB",
+  "line": 5.5,
+  "odds": 108,
+  "model_prob": 0.523,
+  "implied_prob": 0.481,
+  "edge_pct": 4.3,
+  "confidence_tier": "LEAN",
   "why": [
-    "Cleared this line in 29/46 recent games",
-    "Denver Nuggets ranks bottom-tier defending this market",
+    "Cleared this line in 32/53 recent games",
+    "San Antonio Spurs ranks bottom-tier defending this market",
     "Below-median recent volatility"
   ],
   "risk_factors": [],
   "meta": {
-    "selection_tier": "strict",
+    "selection_tier": "relaxed",
     "reason_tags": [
       "recent_form",
       "matchup",
@@ -29,6 +29,6 @@
     ],
     "signals_triggered": 3,
     "minutes_mult": 1.0,
-    "volatility_value": 1.847
+    "volatility_value": 1.792
   }
 }
