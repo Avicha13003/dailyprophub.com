@@ -1,25 +1,25 @@
 {
-  "date": "2026-03-04",
-  "player": "Bobby Portis",
-  "team": "Milwaukee Bucks",
-  "opponent": "Atlanta Hawks",
-  "market": "3PM",
-  "line": 1.5,
-  "odds": -116,
-  "model_prob": 0.613,
-  "implied_prob": 0.537,
-  "edge_pct": 7.6,
-  "confidence_tier": "MEDIUM",
+  "date": "2026-03-05",
+  "player": "Max Christie",
+  "team": "Dallas Mavericks",
+  "opponent": "Orlando Magic",
+  "market": "AST",
+  "line": 2.5,
+  "odds": 127,
+  "model_prob": 0.544,
+  "implied_prob": 0.441,
+  "edge_pct": 10.3,
+  "confidence_tier": "MEDIUM-HIGH",
   "why": [
-    "Cleared this line in 45/55 recent games",
-    "Atlanta Hawks ranks bottom-tier defending this market",
+    "Orlando Magic ranks bottom-tier defending this market",
     "Below-median recent volatility"
   ],
-  "risk_factors": [],
+  "risk_factors": [
+    "Early start time adds variance"
+  ],
   "meta": {
-    "selection_tier": "strict",
+    "selection_tier": "relaxed",
     "reason_tags": [
-      "recent_form",
       "matchup",
       "volatility_control"
     ],
@@ -27,8 +27,8 @@
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 3,
+    "signals_triggered": 2,
     "minutes_mult": 1.0,
-    "volatility_value": 1.446
+    "volatility_value": 1.64
   }
 }
