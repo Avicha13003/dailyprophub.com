@@ -1,29 +1,18 @@
 {
-  "date": "2026-03-04",
-  "player": "Darius Garland",
-  "team": "LAC",
-  "team_abbr": "LAC",
-  "market": "AST",
-  "line": "4.5",
-  "odds": "-153",
-  "blend_prob": 0.6741974089049844,
-  "implied_prob": 0.6047430830039525,
-  "edge": 0.0694543259010318,
-  "ev_score": 0.050509360439253234,
-  "minutes_mult": 1.0,
-  "vol_std10": 2.181742422927143,
-  "matchup": {
-    "game": "Indiana Pacers @ Los Angeles Clippers",
-    "home_team": "Los Angeles Clippers",
-    "away_team": "Indiana Pacers",
-    "game_date": "3/4/2026",
-    "start_time_local": "21:30",
-    "opponent": "Indiana Pacers",
-    "opponent_abbr": "IND"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
-  "_meta": {
-    "minutes_mult_floor": 0.88,
-    "vol_percentile_cap": 0.85
-  }
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
