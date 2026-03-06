@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-06",
+  "player": "Coby White",
+  "team": "CHA",
+  "team_abbr": "CHA",
+  "market": "PTS",
+  "line": "13.5",
+  "odds": "-111",
+  "blend_prob": 0.6918310337829666,
+  "implied_prob": 0.5260663507109005,
+  "edge": 0.1657646830720661,
+  "ev_score": 0.13405282683603983,
+  "minutes_mult": 1.0,
+  "vol_std10": 5.003998401,
+  "matchup": {
+    "game": "Miami Heat @ Charlotte Hornets",
+    "home_team": "Charlotte Hornets",
+    "away_team": "Miami Heat",
+    "game_date": "3/6/2026",
+    "start_time_local": "18:00",
+    "opponent": "Miami Heat",
+    "opponent_abbr": "MIA"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }

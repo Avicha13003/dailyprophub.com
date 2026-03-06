@@ -1,18 +1,19 @@
 {
-  "date": "2026-03-05",
-  "player": "Max Christie",
-  "team": "Dallas Mavericks",
-  "opponent": "Orlando Magic",
-  "market": "AST",
-  "line": 2.5,
-  "odds": 127,
-  "model_prob": 0.544,
-  "implied_prob": 0.441,
-  "edge_pct": 10.3,
-  "confidence_tier": "MEDIUM-HIGH",
+  "date": "2026-03-06",
+  "player": "Grant Williams",
+  "team": "Charlotte Hornets",
+  "opponent": "Miami Heat",
+  "market": "REB",
+  "line": 3.5,
+  "odds": -111,
+  "model_prob": 0.572,
+  "implied_prob": 0.526,
+  "edge_pct": 4.6,
+  "confidence_tier": "LEAN",
   "why": [
-    "Orlando Magic ranks bottom-tier defending this market",
-    "Below-median recent volatility"
+    "Cleared this line in 13/20 recent games",
+    "Miami Heat ranks bottom-tier defending this market",
+    "Game environment projects above-average pace"
   ],
   "risk_factors": [
     "Early start time adds variance"
@@ -20,15 +21,16 @@
   "meta": {
     "selection_tier": "relaxed",
     "reason_tags": [
+      "recent_form",
       "matchup",
-      "volatility_control"
+      "pace"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 2,
+    "signals_triggered": 3,
     "minutes_mult": 1.0,
-    "volatility_value": 1.64
+    "volatility_value": 2.154
   }
 }
