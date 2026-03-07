@@ -1,19 +1,20 @@
 {
-  "date": "2026-03-06",
-  "player": "Grant Williams",
-  "team": "Charlotte Hornets",
-  "opponent": "Miami Heat",
+  "date": "2026-03-07",
+  "player": "Zaccharie Risacher",
+  "team": "Atlanta Hawks",
+  "opponent": "Philadelphia 76ers",
   "market": "REB",
   "line": 3.5,
-  "odds": -111,
-  "model_prob": 0.572,
-  "implied_prob": 0.526,
-  "edge_pct": 4.6,
+  "odds": -103,
+  "model_prob": 0.555,
+  "implied_prob": 0.507,
+  "edge_pct": 4.8,
   "confidence_tier": "LEAN",
   "why": [
-    "Cleared this line in 13/20 recent games",
-    "Miami Heat ranks bottom-tier defending this market",
-    "Game environment projects above-average pace"
+    "Cleared this line in 32/47 recent games",
+    "Philadelphia 76ers ranks bottom-tier defending this market",
+    "Game environment projects above-average pace",
+    "Below-median recent volatility"
   ],
   "risk_factors": [
     "Early start time adds variance"
@@ -23,14 +24,15 @@
     "reason_tags": [
       "recent_form",
       "matchup",
-      "pace"
+      "pace",
+      "volatility_control"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 3,
+    "signals_triggered": 4,
     "minutes_mult": 1.0,
-    "volatility_value": 2.154
+    "volatility_value": 2.182
   }
 }
