@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-08",
+  "player": "Jaime Jaquez Jr.",
+  "team": "MIA",
+  "team_abbr": "MIA",
+  "market": "PTS",
+  "line": "14.5",
+  "odds": "-101",
+  "blend_prob": 0.5795289930042853,
+  "implied_prob": 0.5024875621890548,
+  "edge": 0.0770414308152305,
+  "ev_score": 0.02471798533157567,
+  "minutes_mult": 1.0,
+  "vol_std10": 5.044799302251775,
+  "matchup": {
+    "game": "Detroit Pistons @ Miami Heat",
+    "home_team": "Miami Heat",
+    "away_team": "Detroit Pistons",
+    "game_date": "3/8/2026",
+    "start_time_local": "17:00",
+    "opponent": "Detroit Pistons",
+    "opponent_abbr": "DET"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }

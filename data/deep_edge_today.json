@@ -1,18 +1,17 @@
 {
-  "date": "2026-03-07",
-  "player": "Zaccharie Risacher",
-  "team": "Atlanta Hawks",
-  "opponent": "Philadelphia 76ers",
+  "date": "2026-03-08",
+  "player": "Derik Queen",
+  "team": "New Orleans Pelicans",
+  "opponent": "Washington Wizards",
   "market": "REB",
-  "line": 3.5,
-  "odds": -103,
-  "model_prob": 0.555,
-  "implied_prob": 0.507,
-  "edge_pct": 4.8,
-  "confidence_tier": "LEAN",
+  "line": 6.5,
+  "odds": 114,
+  "model_prob": 0.531,
+  "implied_prob": 0.467,
+  "edge_pct": 6.4,
+  "confidence_tier": "MEDIUM",
   "why": [
-    "Cleared this line in 32/47 recent games",
-    "Philadelphia 76ers ranks bottom-tier defending this market",
+    "Washington Wizards ranks bottom-tier defending this market",
     "Game environment projects above-average pace",
     "Below-median recent volatility"
   ],
@@ -22,7 +21,6 @@
   "meta": {
     "selection_tier": "relaxed",
     "reason_tags": [
-      "recent_form",
       "matchup",
       "pace",
       "volatility_control"
@@ -31,8 +29,8 @@
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 4,
+    "signals_triggered": 3,
     "minutes_mult": 1.0,
-    "volatility_value": 2.182
+    "volatility_value": 2.83
   }
 }
