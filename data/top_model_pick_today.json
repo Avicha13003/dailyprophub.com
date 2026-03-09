@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-09",
+  "player": "Aaron Gordon",
+  "team": "DEN",
+  "team_abbr": "DEN",
+  "market": "AST",
+  "line": "2.5",
+  "odds": "124",
+  "blend_prob": 0.5659767450456905,
+  "implied_prob": 0.4464285714285714,
+  "edge": 0.119548173617119,
+  "ev_score": 0.03173464552686511,
+  "minutes_mult": 1.0,
+  "vol_std10": 2.6,
+  "matchup": {
+    "game": "Denver Nuggets @ Oklahoma City Thunder",
+    "home_team": "Oklahoma City Thunder",
+    "away_team": "Denver Nuggets",
+    "game_date": "3/9/2026",
+    "start_time_local": "18:30",
+    "opponent": "Oklahoma City Thunder",
+    "opponent_abbr": "OKC"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }

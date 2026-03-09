@@ -1,18 +1,17 @@
 {
-  "date": "2026-03-08",
-  "player": "Derik Queen",
-  "team": "New Orleans Pelicans",
-  "opponent": "Washington Wizards",
-  "market": "REB",
-  "line": 6.5,
-  "odds": 114,
-  "model_prob": 0.531,
-  "implied_prob": 0.467,
-  "edge_pct": 6.4,
-  "confidence_tier": "MEDIUM",
+  "date": "2026-03-09",
+  "player": "Jaylen Wells",
+  "team": "Memphis Grizzlies",
+  "opponent": "Brooklyn Nets",
+  "market": "3PM",
+  "line": 2.5,
+  "odds": 127,
+  "model_prob": 0.551,
+  "implied_prob": 0.441,
+  "edge_pct": 11.0,
+  "confidence_tier": "MEDIUM-HIGH",
   "why": [
-    "Washington Wizards ranks bottom-tier defending this market",
-    "Game environment projects above-average pace",
+    "Brooklyn Nets ranks bottom-tier defending this market",
     "Below-median recent volatility"
   ],
   "risk_factors": [
@@ -22,15 +21,14 @@
     "selection_tier": "relaxed",
     "reason_tags": [
       "matchup",
-      "pace",
       "volatility_control"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 3,
+    "signals_triggered": 2,
     "minutes_mult": 1.0,
-    "volatility_value": 2.83
+    "volatility_value": 1.114
   }
 }
