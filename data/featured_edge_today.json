@@ -1,43 +1,18 @@
 {
-  "date": "2026-03-08",
-  "player": "Moussa Diabate",
-  "team": "CHA",
-  "team_full": "Charlotte Hornets",
-  "market": "REB",
-  "line": "10.5",
-  "odds": "-112",
-  "opponent": "PHX",
-  "opponent_full": "Phoenix Suns",
-  "is_home": 0,
-  "game_date": "3/8/2026",
-  "start_time_local": "21:00",
-  "venue_city": "Phoenix",
-  "venue_state": "AZ",
-  "blend_prob": 0.580931366142841,
-  "implied_prob": 0.5283018867924528,
-  "edge": 0.0526294793503882,
-  "air_score": 0.7333245850853626,
-  "minutes_mult": 1.0,
-  "why": [
-    "Model edge: +5.3% vs book implied",
-    "Matchup pace tailwind: -0.97z (headwind priced in)",
-    "Matchup pace tailwind: -0.97z (headwind priced in)",
-    "Team pace factor: -0.91z (headwind priced in)"
+  "status": "PLACEHOLDER",
+  "type": "FEATURED",
+
+  "title": "Featured Edge · Coming Soon",
+  "message": "Today’s Featured Edge is still being finalized.",
+
+  "details": [
+    "We wait for confirmed line movement",
+    "Late injury and rotation news",
+    "Final slate-level context"
   ],
-  "disclaimer": "Research highlight \u2014 not a betting recommendation",
-  "_meta": {
-    "used_fallback": false,
-    "air_gate": 0.7333245850853626,
-    "max_edge_outlier": 0.18,
-    "minutes_mult_floor": 0.9,
-    "minutes_bonus_weight": 0.1,
-    "pts_minutes_floor": 26,
-    "pts_vol_suppression": {
-      "min_recent_n": 10,
-      "max_vol_std10": 6.5,
-      "max_vol_var_ratio": 1.25,
-      "max_line_to_season_diff_pos": 3.5,
-      "min_top10_score": 0.55
-    }
-  }
+
+  "timing": "Check back ~2 hours before tip-off.",
+
+  "footer_note": "Updated daily · Never rushed",
+  "date": "2026-02-06"
 }
