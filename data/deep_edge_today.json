@@ -1,17 +1,19 @@
 {
-  "date": "2026-03-09",
-  "player": "Jaylen Wells",
-  "team": "Memphis Grizzlies",
-  "opponent": "Brooklyn Nets",
-  "market": "3PM",
-  "line": 2.5,
-  "odds": 127,
-  "model_prob": 0.551,
-  "implied_prob": 0.441,
-  "edge_pct": 11.0,
-  "confidence_tier": "MEDIUM-HIGH",
+  "date": "2026-03-10",
+  "player": "Zaccharie Risacher",
+  "team": "Atlanta Hawks",
+  "opponent": "Dallas Mavericks",
+  "market": "REB",
+  "line": 3.5,
+  "odds": -103,
+  "model_prob": 0.549,
+  "implied_prob": 0.507,
+  "edge_pct": 4.2,
+  "confidence_tier": "LEAN",
   "why": [
-    "Brooklyn Nets ranks bottom-tier defending this market",
+    "Cleared this line in 39/48 recent games",
+    "Dallas Mavericks ranks bottom-tier defending this market",
+    "Game environment projects above-average pace",
     "Below-median recent volatility"
   ],
   "risk_factors": [
@@ -20,15 +22,17 @@
   "meta": {
     "selection_tier": "relaxed",
     "reason_tags": [
+      "recent_form",
       "matchup",
+      "pace",
       "volatility_control"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 2,
+    "signals_triggered": 4,
     "minutes_mult": 1.0,
-    "volatility_value": 1.114
+    "volatility_value": 2.119
   }
 }

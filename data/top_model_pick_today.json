@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-10",
+  "player": "Baylor Scheierman",
+  "team": "BOS",
+  "team_abbr": "BOS",
+  "market": "PTS",
+  "line": "7.5",
+  "odds": "-113",
+  "blend_prob": 0.6057811984944965,
+  "implied_prob": 0.5305164319248826,
+  "edge": 0.0752647665696139,
+  "ev_score": 0.032334705101852046,
+  "minutes_mult": 1.0,
+  "vol_std10": 3.1368774282716245,
+  "matchup": {
+    "game": "Boston Celtics @ San Antonio Spurs",
+    "home_team": "San Antonio Spurs",
+    "away_team": "Boston Celtics",
+    "game_date": "3/10/2026",
+    "start_time_local": "19:00",
+    "opponent": "San Antonio Spurs",
+    "opponent_abbr": "SAS"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }
