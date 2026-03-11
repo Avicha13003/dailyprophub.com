@@ -1,38 +1,34 @@
 {
-  "date": "2026-03-10",
-  "player": "Zaccharie Risacher",
-  "team": "Atlanta Hawks",
-  "opponent": "Dallas Mavericks",
-  "market": "REB",
+  "date": "2026-03-11",
+  "player": "Trey Murphy III",
+  "team": "New Orleans Pelicans",
+  "opponent": "Toronto Raptors",
+  "market": "3PM",
   "line": 3.5,
-  "odds": -103,
-  "model_prob": 0.549,
-  "implied_prob": 0.507,
-  "edge_pct": 4.2,
-  "confidence_tier": "LEAN",
+  "odds": 114,
+  "model_prob": 0.551,
+  "implied_prob": 0.467,
+  "edge_pct": 8.3,
+  "confidence_tier": "MEDIUM",
   "why": [
-    "Cleared this line in 39/48 recent games",
-    "Dallas Mavericks ranks bottom-tier defending this market",
-    "Game environment projects above-average pace",
+    "Cleared this line in 36/54 recent games",
+    "Toronto Raptors ranks bottom-tier defending this market",
     "Below-median recent volatility"
   ],
-  "risk_factors": [
-    "Early start time adds variance"
-  ],
+  "risk_factors": [],
   "meta": {
-    "selection_tier": "relaxed",
+    "selection_tier": "strict",
     "reason_tags": [
       "recent_form",
       "matchup",
-      "pace",
       "volatility_control"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 4,
+    "signals_triggered": 3,
     "minutes_mult": 1.0,
-    "volatility_value": 2.119
+    "volatility_value": 2.648
   }
 }

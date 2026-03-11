@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-11",
+  "player": "Jabari Smith Jr.",
+  "team": "HOU",
+  "team_abbr": "HOU",
+  "market": "REB",
+  "line": "6.5",
+  "odds": "106",
+  "blend_prob": 0.5928423934882584,
+  "implied_prob": 0.4854368932038835,
+  "edge": 0.1074055002843749,
+  "ev_score": 0.04035527908713513,
+  "minutes_mult": 1.0,
+  "vol_std10": 3.6674241641784495,
+  "matchup": {
+    "game": "Houston Rockets @ Denver Nuggets",
+    "home_team": "Denver Nuggets",
+    "away_team": "Houston Rockets",
+    "game_date": "3/11/2026",
+    "start_time_local": "21:00",
+    "opponent": "Denver Nuggets",
+    "opponent_abbr": "DEN"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }
