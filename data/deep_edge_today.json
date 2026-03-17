@@ -1,38 +1,34 @@
 {
-  "date": "2026-03-16",
-  "player": "Zaccharie Risacher",
-  "team": "Atlanta Hawks",
-  "opponent": "Orlando Magic",
-  "market": "REB",
-  "line": 3.5,
-  "odds": 124,
-  "model_prob": 0.57,
-  "implied_prob": 0.446,
-  "edge_pct": 12.4,
-  "confidence_tier": "MEDIUM-HIGH",
+  "date": "2026-03-17",
+  "player": "Aaron Gordon",
+  "team": "Denver Nuggets",
+  "opponent": "Philadelphia 76ers",
+  "market": "AST",
+  "line": 2.5,
+  "odds": 112,
+  "model_prob": 0.56,
+  "implied_prob": 0.472,
+  "edge_pct": 8.8,
+  "confidence_tier": "MEDIUM",
   "why": [
-    "Cleared this line in 36/50 recent games",
-    "Orlando Magic ranks bottom-tier defending this market",
-    "Game environment projects above-average pace",
+    "Cleared this line in 16/23 recent games",
+    "Philadelphia 76ers ranks bottom-tier defending this market",
     "Below-median recent volatility"
   ],
-  "risk_factors": [
-    "Early start time adds variance"
-  ],
+  "risk_factors": [],
   "meta": {
     "selection_tier": "strict",
     "reason_tags": [
       "recent_form",
       "matchup",
-      "pace",
       "volatility_control"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 4,
+    "signals_triggered": 3,
     "minutes_mult": 1.0,
-    "volatility_value": 2.417
+    "volatility_value": 2.7
   }
 }
