@@ -1,29 +1,18 @@
 {
-  "date": "2026-03-18",
-  "player": "Jaylen Wells",
-  "team": "MEM",
-  "team_abbr": "MEM",
-  "market": "3PM",
-  "line": "1.5",
-  "odds": "-169",
-  "blend_prob": 0.7014921737061303,
-  "implied_prob": 0.6282527881040892,
-  "edge": 0.073239385602041,
-  "ev_score": 0.06257672650895331,
-  "minutes_mult": 1.0,
-  "vol_std10": 0.7810249675906654,
-  "matchup": {
-    "game": "Denver Nuggets @ Memphis Grizzlies",
-    "home_team": "Memphis Grizzlies",
-    "away_team": "Denver Nuggets",
-    "game_date": "3/18/2026",
-    "start_time_local": "19:30",
-    "opponent": "Denver Nuggets",
-    "opponent_abbr": "DEN"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
-  "_meta": {
-    "minutes_mult_floor": 0.88,
-    "vol_percentile_cap": 0.85
-  }
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
