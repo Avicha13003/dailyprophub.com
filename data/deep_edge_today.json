@@ -1,25 +1,25 @@
 {
-  "date": "2026-03-18",
-  "player": "Nickeil Alexander-Walker",
-  "team": "Atlanta Hawks",
-  "opponent": "Dallas Mavericks",
-  "market": "REB",
-  "line": 3.5,
-  "odds": -112,
-  "model_prob": 0.599,
-  "implied_prob": 0.528,
-  "edge_pct": 7.0,
-  "confidence_tier": "MEDIUM",
+  "date": "2026-03-19",
+  "player": "LeBron James",
+  "team": "Los Angeles Lakers",
+  "opponent": "Miami Heat",
+  "market": "3PM",
+  "line": 1.5,
+  "odds": 147,
+  "model_prob": 0.539,
+  "implied_prob": 0.405,
+  "edge_pct": 13.4,
+  "confidence_tier": "MEDIUM-HIGH",
   "why": [
-    "Dallas Mavericks ranks bottom-tier defending this market",
     "Game environment projects above-average pace",
     "Below-median recent volatility"
   ],
-  "risk_factors": [],
+  "risk_factors": [
+    "Back-to-back spot could cap ceiling"
+  ],
   "meta": {
-    "selection_tier": "strict",
+    "selection_tier": "relaxed",
     "reason_tags": [
-      "matchup",
       "pace",
       "volatility_control"
     ],
@@ -27,8 +27,8 @@
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 3,
+    "signals_triggered": 2,
     "minutes_mult": 1.0,
-    "volatility_value": 1.513
+    "volatility_value": 1.281
   }
 }

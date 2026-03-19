@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-19",
+  "player": "Coby White",
+  "team": "CHA",
+  "team_abbr": "CHA",
+  "market": "AST",
+  "line": "2.5",
+  "odds": "-178",
+  "blend_prob": 0.6758804151909371,
+  "implied_prob": 0.6402877697841727,
+  "edge": 0.0355926454067644,
+  "ev_score": 0.02615716406786589,
+  "minutes_mult": 1.0,
+  "vol_std10": 1.624807681,
+  "matchup": {
+    "game": "Orlando Magic @ Charlotte Hornets",
+    "home_team": "Charlotte Hornets",
+    "away_team": "Orlando Magic",
+    "game_date": "3/19/2026",
+    "start_time_local": "18:00",
+    "opponent": "Orlando Magic",
+    "opponent_abbr": "ORL"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }
