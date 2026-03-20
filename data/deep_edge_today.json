@@ -1,27 +1,25 @@
 {
-  "date": "2026-03-19",
-  "player": "LeBron James",
-  "team": "Los Angeles Lakers",
-  "opponent": "Miami Heat",
-  "market": "3PM",
-  "line": 1.5,
-  "odds": 147,
-  "model_prob": 0.539,
-  "implied_prob": 0.405,
-  "edge_pct": 13.4,
-  "confidence_tier": "MEDIUM-HIGH",
+  "date": "2026-03-20",
+  "player": "Nikola Jokic",
+  "team": "Denver Nuggets",
+  "opponent": "Toronto Raptors",
+  "market": "AST",
+  "line": 10.5,
+  "odds": -101,
+  "model_prob": 0.551,
+  "implied_prob": 0.502,
+  "edge_pct": 4.8,
+  "confidence_tier": "LEAN",
   "why": [
-    "Game environment projects above-average pace",
-    "Below-median recent volatility"
+    "Cleared this line in 33/50 recent games",
+    "Toronto Raptors ranks bottom-tier defending this market"
   ],
-  "risk_factors": [
-    "Back-to-back spot could cap ceiling"
-  ],
+  "risk_factors": [],
   "meta": {
     "selection_tier": "relaxed",
     "reason_tags": [
-      "pace",
-      "volatility_control"
+      "recent_form",
+      "matchup"
     ],
     "excluded_from": [
       "featured_edge",
@@ -29,6 +27,6 @@
     ],
     "signals_triggered": 2,
     "minutes_mult": 1.0,
-    "volatility_value": 1.281
+    "volatility_value": 3.318
   }
 }
