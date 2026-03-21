@@ -1,32 +1,36 @@
 {
-  "date": "2026-03-20",
-  "player": "Nikola Jokic",
-  "team": "Denver Nuggets",
-  "opponent": "Toronto Raptors",
-  "market": "AST",
-  "line": 10.5,
-  "odds": -101,
-  "model_prob": 0.551,
-  "implied_prob": 0.502,
-  "edge_pct": 4.8,
-  "confidence_tier": "LEAN",
+  "date": "2026-03-21",
+  "player": "Trey Murphy III",
+  "team": "New Orleans Pelicans",
+  "opponent": "Cleveland Cavaliers",
+  "market": "3PM",
+  "line": 3.5,
+  "odds": 119,
+  "model_prob": 0.568,
+  "implied_prob": 0.457,
+  "edge_pct": 11.1,
+  "confidence_tier": "MEDIUM-HIGH",
   "why": [
-    "Cleared this line in 33/50 recent games",
-    "Toronto Raptors ranks bottom-tier defending this market"
+    "Cleared this line in 39/58 recent games",
+    "Cleveland Cavaliers ranks bottom-tier defending this market",
+    "Below-median recent volatility"
   ],
-  "risk_factors": [],
+  "risk_factors": [
+    "Early start time adds variance"
+  ],
   "meta": {
-    "selection_tier": "relaxed",
+    "selection_tier": "strict",
     "reason_tags": [
       "recent_form",
-      "matchup"
+      "matchup",
+      "volatility_control"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 2,
+    "signals_triggered": 3,
     "minutes_mult": 1.0,
-    "volatility_value": 3.318
+    "volatility_value": 1.005
   }
 }
