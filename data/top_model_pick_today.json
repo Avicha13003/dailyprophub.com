@@ -1,29 +1,18 @@
 {
-  "date": "2026-03-20",
-  "player": "Cedric Coward",
-  "team": "MEM",
-  "team_abbr": "MEM",
-  "market": "PTS",
-  "line": "11.5",
-  "odds": "-117",
-  "blend_prob": 0.5937228711498617,
-  "implied_prob": 0.5391705069124424,
-  "edge": 0.0545523642374192,
-  "ev_score": 0.020695920660413474,
-  "minutes_mult": 1.0,
-  "vol_std10": 4.695742752749559,
-  "matchup": {
-    "game": "Boston Celtics @ Memphis Grizzlies",
-    "home_team": "Memphis Grizzlies",
-    "away_team": "Boston Celtics",
-    "game_date": "3/20/2026",
-    "start_time_local": "19:00",
-    "opponent": "Boston Celtics",
-    "opponent_abbr": "BOS"
-  },
-  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
-  "_meta": {
-    "minutes_mult_floor": 0.88,
-    "vol_percentile_cap": 0.85
-  }
+  "status": "PLACEHOLDER",
+  "type": "TOP_MODEL",
+
+  "title": "Top Model Pick · Pending",
+  "message": "The model hasn’t released today’s top edge yet.",
+
+  "details": [
+    "Full slate ingestion",
+    "Market stabilization",
+    "Final model confidence check"
+  ],
+
+  "timing": "Expected before first tip-off.",
+
+  "footer_note": "Highest conviction · Posted late on purpose",
+  "date": "2026-02-06"
 }
