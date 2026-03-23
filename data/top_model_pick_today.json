@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-23",
+  "player": "Ziaire Williams",
+  "team": "BKN",
+  "team_abbr": "BKN",
+  "market": "AST",
+  "line": "1.5",
+  "odds": "140",
+  "blend_prob": 0.5831528824537803,
+  "implied_prob": 0.4166666666666667,
+  "edge": 0.1664862157871136,
+  "ev_score": 0.055894393259100006,
+  "minutes_mult": 1.0,
+  "vol_std10": 1.743559577416269,
+  "matchup": {
+    "game": "Brooklyn Nets @ Portland Trail Blazers",
+    "home_team": "Portland Trail Blazers",
+    "away_team": "Brooklyn Nets",
+    "game_date": "3/23/2026",
+    "start_time_local": "21:00",
+    "opponent": "Portland Trail Blazers",
+    "opponent_abbr": "POR"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }
