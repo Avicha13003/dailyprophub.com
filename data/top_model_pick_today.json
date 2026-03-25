@@ -1,18 +1,29 @@
 {
-  "status": "PLACEHOLDER",
-  "type": "TOP_MODEL",
-
-  "title": "Top Model Pick · Pending",
-  "message": "The model hasn’t released today’s top edge yet.",
-
-  "details": [
-    "Full slate ingestion",
-    "Market stabilization",
-    "Final model confidence check"
-  ],
-
-  "timing": "Expected before first tip-off.",
-
-  "footer_note": "Highest conviction · Posted late on purpose",
-  "date": "2026-02-06"
+  "date": "2026-03-25",
+  "player": "Cam Spencer",
+  "team": "MEM",
+  "team_abbr": "MEM",
+  "market": "3PM",
+  "line": "1.5",
+  "odds": "-128",
+  "blend_prob": 0.6313644692829666,
+  "implied_prob": 0.5614035087719298,
+  "edge": 0.0699609605110368,
+  "ev_score": 0.03764423454594591,
+  "minutes_mult": 1.0,
+  "vol_std10": 0.781024968,
+  "matchup": {
+    "game": "San Antonio Spurs @ Memphis Grizzlies",
+    "home_team": "Memphis Grizzlies",
+    "away_team": "San Antonio Spurs",
+    "game_date": "3/25/2026",
+    "start_time_local": "19:00",
+    "opponent": "San Antonio Spurs",
+    "opponent_abbr": "SAS"
+  },
+  "disclaimer": "Model-derived highlight \u2014 higher variance than Featured Edge",
+  "_meta": {
+    "minutes_mult_floor": 0.88,
+    "vol_percentile_cap": 0.85
+  }
 }

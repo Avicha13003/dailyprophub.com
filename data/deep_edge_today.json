@@ -1,29 +1,29 @@
 {
-  "date": "2026-03-23",
-  "player": "Victor Wembanyama",
-  "team": "San Antonio Spurs",
-  "opponent": "Miami Heat",
-  "market": "AST",
-  "line": 3.5,
-  "odds": 102,
-  "model_prob": 0.601,
-  "implied_prob": 0.495,
-  "edge_pct": 10.6,
-  "confidence_tier": "MEDIUM-HIGH",
+  "date": "2026-03-25",
+  "player": "Cedric Coward",
+  "team": "Memphis Grizzlies",
+  "opponent": "San Antonio Spurs",
+  "market": "PTS",
+  "line": 12.5,
+  "odds": -123,
+  "model_prob": 0.618,
+  "implied_prob": 0.552,
+  "edge_pct": 6.7,
+  "confidence_tier": "MEDIUM",
   "why": [
-    "Miami Heat ranks bottom-tier defending this market",
-    "Game environment projects above-average pace",
-    "Below-median recent volatility"
+    "Cleared this line in 38/49 recent games",
+    "San Antonio Spurs ranks bottom-tier defending this market",
+    "Game environment projects above-average pace"
   ],
   "risk_factors": [
-    "Early start time adds variance"
+    "Recent volatility elevated"
   ],
   "meta": {
     "selection_tier": "strict",
     "reason_tags": [
+      "recent_form",
       "matchup",
-      "pace",
-      "volatility_control"
+      "pace"
     ],
     "excluded_from": [
       "featured_edge",
@@ -31,6 +31,6 @@
     ],
     "signals_triggered": 3,
     "minutes_mult": 1.0,
-    "volatility_value": 1.497
+    "volatility_value": 4.696
   }
 }
