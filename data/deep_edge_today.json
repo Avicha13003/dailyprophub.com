@@ -1,36 +1,32 @@
 {
-  "date": "2026-03-25",
-  "player": "Cedric Coward",
-  "team": "Memphis Grizzlies",
-  "opponent": "San Antonio Spurs",
-  "market": "PTS",
-  "line": 12.5,
-  "odds": -123,
-  "model_prob": 0.618,
-  "implied_prob": 0.552,
+  "date": "2026-03-31",
+  "player": "Nic Claxton",
+  "team": "Brooklyn Nets",
+  "opponent": "Charlotte Hornets",
+  "market": "REB",
+  "line": 5.5,
+  "odds": 102,
+  "model_prob": 0.562,
+  "implied_prob": 0.495,
   "edge_pct": 6.7,
   "confidence_tier": "MEDIUM",
   "why": [
-    "Cleared this line in 38/49 recent games",
-    "San Antonio Spurs ranks bottom-tier defending this market",
-    "Game environment projects above-average pace"
+    "Cleared this line in 37/61 recent games",
+    "Favorable rest and home-court setup"
   ],
   "risk_factors": [
-    "Recent volatility elevated"
+    "Early start time adds variance"
   ],
   "meta": {
-    "selection_tier": "strict",
+    "selection_tier": "relaxed",
     "reason_tags": [
       "recent_form",
-      "matchup",
-      "pace"
+      "rest_home"
     ],
     "excluded_from": [
       "featured_edge",
       "top_model"
     ],
-    "signals_triggered": 3,
-    "minutes_mult": 1.0,
-    "volatility_value": 4.696
+    "signals_triggered": 2
   }
 }
