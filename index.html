@@ -7,1108 +7,396 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    gtag('config', 'G-FKT71P5JMH', {
-      send_page_view: true
-    });
+    gtag('config', 'G-FKT71P5JMH', { send_page_view: true });
   </script>
 
-  
   <meta charset="UTF-8" />
-  <title>DailyPropHub – NBA Player Props Trends & Model-Powered Insights</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Primary SEO -->
-  <meta name="description"
-      content="DailyPropHub provides NBA player prop trends, hit rates, model edges, and context (fatigue, travel, matchups, allowed stats). A free NBA props dashboard updated daily before tip-off." />
-  <meta name="keywords"
-      content="NBA player props, NBA props today, NBA prop trends, NBA prop model, NBA betting model, NBA prop predictions, NBA overs today, best NBA props, NBA stats, player prop edges, DailyPropHub" />
-
-  <!-- Canonical URL -->
+  <title>DailyPropHub – Player Prop Picks, Parlays &amp; Model Edges | Android App</title>
+  <meta name="description" content="DailyPropHub is a free Android app for model-based player props, parlays and live tracking across the NBA, NFL and college sports. Updated daily before games." />
+  <meta name="keywords" content="player props app, NBA player props, NFL player props, prop picks today, prop model, best parlays today, DailyPropHub" />
   <link rel="canonical" href="https://dailyprophub.com/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="DailyPropHub – NBA Player Prop Trends & Model-Powered Edges">
-  <meta property="og:description"
-      content="Explore NBA player prop trends, probabilities, hit rates, and model-powered edges — updated daily before tip-off.">
+  <meta property="og:title" content="DailyPropHub – Player Prop Picks &amp; Model Edges">
+  <meta property="og:description" content="Free Android app: model-based player props, parlays and live tracking for the NBA, NFL and college sports.">
   <meta property="og:url" content="https://dailyprophub.com/">
-  <meta property="og:image" content="https://dailyprophub.com/og-image.png">
+  <meta property="og:image" content="https://dailyprophub.com/app/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DailyPropHub – Player Prop Picks &amp; Model Edges">
+  <meta name="twitter:description" content="Free Android app: model-based player props, parlays and live tracking.">
+  <meta name="twitter:image" content="https://dailyprophub.com/app/logo.png">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="DailyPropHub – NBA Player Prop Trends & Edges">
-  <meta name="twitter:description"
-      content="A free NBA player prop dashboard for trends, probabilities, and model-powered edges.">
-  <meta name="twitter:image" content="https://dailyprophub.com/og-image.png">
-
-  <!-- Additional SEO / Rich Search -->
-  <meta name="theme-color" content="#0d1117">
+  <meta name="theme-color" content="#06121e">
   <meta name="author" content="DailyPropHub">
   <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="icon" href="/app/logo.png" />
 
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root{--bg:#06121e;--card:#0c2232;--card2:#0a1c2b;--border:#214560;--blue:#12a2ff;--sky:#2fc8ff;--mint:#4cffc3;--text:#eaf1fa;--muted:#9fb6c9}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 'Segoe UI',Roboto,Arial,sans-serif}
+    a{color:#77caff}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    h1,h2,h3{line-height:1.15;margin:0}
+    h2{font-size:clamp(26px,4vw,34px);margin-bottom:10px}
+    .sub{color:var(--muted);margin:0 0 28px;max-width:640px}
+    section{padding:72px 0}
+    .alt{background:#081827;border-top:1px solid #12304a;border-bottom:1px solid #12304a}
+
+    /* header */
+    header{position:sticky;top:0;z-index:20;background:rgba(6,18,30,.92);backdrop-filter:blur(8px);border-bottom:1px solid #12304a}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-weight:900;font-style:italic;font-size:20px;letter-spacing:-.02em}
+    .brand img{width:36px;height:36px;border-radius:9px}
+    .brand span{color:var(--sky)}
+    .links{display:flex;gap:20px;flex-wrap:wrap}
+    .links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
+    .links a:hover{color:var(--text)}
+
+    /* buttons */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 24px;border-radius:14px;font-weight:800;text-decoration:none;font-size:17px}
+    .btn-main{background:linear-gradient(#12a2ff,#076ed1);color:#fff;box-shadow:0 8px 30px #0b6fd055}
+    .btn-main:hover{filter:brightness(1.08)}
+    .btn-ghost{border:1px solid var(--border);color:var(--text);background:transparent}
+    .btn-ghost:hover{border-color:var(--sky)}
+    .btn-sm{min-height:44px;padding:8px 18px;font-size:15px}
+
+    /* hero */
+    .hero{padding:64px 0 72px}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center}
+    .pill{display:inline-block;padding:6px 14px;border-radius:999px;background:#0f2b44;border:1px solid var(--border);color:var(--mint);font-weight:700;font-size:14px;margin-bottom:18px}
+    .hero h1{font-size:clamp(34px,5.4vw,56px);font-weight:900;letter-spacing:-.02em}
+    .hero h1 em{color:var(--sky);font-style:italic}
+    .hero p.lead{color:var(--muted);font-size:18px;margin:18px 0 28px;max-width:560px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .fine{color:var(--muted);font-size:14px;margin-top:16px}
+    .scan{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:28px;text-align:center}
+    .scan img.logo{width:96px;height:96px;border-radius:22px;box-shadow:0 10px 40px #0009}
+    .scan .qr{width:220px;height:220px;display:block;margin:22px auto 14px}
+    .scan h2{font-size:22px;margin:0}
+    .scan p{color:var(--muted);font-size:14px;margin:6px 0 0}
+
+    /* screenshots */
+    .shots{list-style:none;margin:0;padding:4px max(20px,calc((100vw - 1100px)/2 + 20px)) 18px;display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 max(20px,calc((100vw - 1100px)/2 + 20px))}
+    .shots li{flex:0 0 auto;scroll-snap-align:start}
+    .shots img{display:block;width:250px;height:auto;border-radius:20px;border:1px solid var(--border);box-shadow:0 12px 40px #0008}
+    .shots:focus-visible{outline:2px solid var(--sky);outline-offset:-2px}
+
+    /* today strip */
+    .today{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .stat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px 18px}
+    .stat b{display:block;color:var(--mint);font-size:14px;letter-spacing:.08em}
+    .stat .n{font-size:30px;font-weight:900}
+    .stat .d{color:var(--muted);font-size:14px}
+
+    /* features */
+    .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px}
+    .card h3{font-size:18px;color:var(--mint);margin-bottom:6px}
+    .card p{margin:0;color:var(--text);font-size:15px}
+
+    /* steps */
+    .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+    .step{background:var(--card2);border:1px solid #1b3a52;border-radius:18px;padding:22px}
+    .step::before{counter-increment:s;content:counter(s);display:inline-flex;width:36px;height:36px;border-radius:10px;align-items:center;justify-content:center;background:#0f2b44;color:var(--sky);font-weight:900;margin-bottom:12px}
+    .step h3{font-size:17px;margin-bottom:6px}
+    .step p{margin:0;color:var(--muted);font-size:15px}
+
+    /* web dashboard + support */
+    .split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .split .card p{color:var(--muted);margin-bottom:16px}
+    .don{display:flex;gap:10px;flex-wrap:wrap}
+
+    /* faq */
+    .faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .faq .card h3{color:var(--text);font-size:17px}
+    .faq .card p{color:var(--muted)}
+
+    /* cta + footer */
+    .cta{text-align:center}
+    .cta .sub{margin:0 auto 26px}
+    footer{border-top:1px solid #12304a;padding:40px 0 48px;color:var(--muted);font-size:14px}
+    .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .foot nav{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .foot nav a,.foot nav button{color:var(--muted);text-decoration:none;font:inherit;background:none;border:0;padding:0;cursor:pointer;line-height:inherit}
+    .foot nav a:hover,.foot nav button:hover{color:var(--text)}
+    .legal{margin-top:20px;font-size:13px;line-height:1.6}
+
+    /* contact modal */
+    dialog{background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:18px;padding:24px;width:min(92vw,440px)}
+    dialog::backdrop{background:rgba(0,0,0,.7);backdrop-filter:blur(4px)}
+    dialog label{display:block;font-size:14px;font-weight:600;margin:12px 0 6px}
+    dialog input,dialog textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:var(--card2);color:var(--text);font:inherit}
+    dialog textarea{height:120px;resize:vertical}
+    .row{display:flex;gap:10px;margin-top:16px}
+    .row button{flex:1;min-height:46px;border-radius:12px;border:0;font:inherit;font-weight:700;cursor:pointer}
+    #sendBtn{background:var(--blue);color:#fff}
+    #cancelBtn{background:#24435c;color:var(--text)}
+    #contactStatus{min-height:22px;font-size:14px;margin:10px 0 0}
+
+    @media (max-width:860px){
+      .hero-grid,.split,.faq{grid-template-columns:1fr}
+      .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .steps,.today{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .links{display:none}
+      section{padding:56px 0}
+    }
+    @media (max-width:520px){
+      .shots img{width:210px}
+      .scan{display:none}
+      .stat .n{font-size:24px}
+      .grid3,.steps{grid-template-columns:1fr}
+      .actions .btn{width:100%}
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Nav -->
-  <header class="site-header">
-    <div class="container nav">
-      <div class="logo">
-        <span class="logo-mark">DPH</span>
-        <span class="logo-text">DailyPropHub</span>
-      </div>
-      <nav class="nav-links">
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/"><img src="/app/logo.png" alt="" width="36" height="36"><b style="font-weight:inherit">DailyProp<span>Hub</span></b></a>
+      <nav class="links" aria-label="Sections">
+        <a href="#screens">Screenshots</a>
         <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
+        <a href="#install">How to install</a>
         <a href="#faq">FAQ</a>
-        <a href="#support">Support the Project</a>
+        <a href="#support">Support</a>
       </nav>
-      <div class="nav-cta">
-        <a class="btn-primary" href="https://nbadailytrends.streamlit.app" target="_blank" rel="noopener">
-          Launch NBA Dashboard
-        </a>
-      </div>
+      <a class="btn btn-main btn-sm" href="/app/" data-cta="header">Get the app</a>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>NBA Player Prop Trends & Model-Powered Edges — In One Place.</h1>
-        <p class="hero-subtitle">
-          DailyPropHub tracks NBA player props, hit rates, model probabilities, and context
-          (fatigue, travel, matchups, venues) to help you make sharper decisions — not just vibes.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn-primary hero-main-cta" href="https://nbadailytrends.streamlit.app" target="_blank" rel="noopener">
-            🚀 Open Daily NBA Dashboard
-          </a>
-          <a class="btn-secondary" href="#features">
-            See what’s inside
-          </a>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="pill">Free Android app · Coming soon to Google Play</span>
+          <h1>Player prop picks &amp; model edges, <em>in your pocket.</em></h1>
+          <p class="lead">DailyPropHub runs every prop through its model and shows you the edge, hit rates, parlays and live tracking for the NBA, NFL and college sports — updated daily before games.</p>
+          <div class="actions">
+            <a class="btn btn-main" href="/app/" data-cta="hero">Download for Android</a>
+            <a class="btn btn-ghost" href="#features">See what's inside</a>
+          </div>
+          <p class="fine">Free. No subscriptions, no picks for sale. Android 8.0 or newer · iPhone not supported yet.</p>
         </div>
 
-        <p class="hero-meta">
-          Updated daily at least ~2 hours before first tip-off.  
-          <span class="hero-tag">For informational & entertainment purposes only.</span>
-        </p>
+        <div class="scan">
+          <img class="logo" src="/app/logo.png" alt="DailyPropHub app icon" width="96" height="96">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QR code to download the DailyPropHub app" class="qr" viewBox="0 0 39 39"><rect width="39" height="39" rx="1.5" fill="#ffffff"/><path d="M3 3h1v1h-1zM4 3h1v1h-1zM5 3h1v1h-1zM6 3h1v1h-1zM7 3h1v1h-1zM8 3h1v1h-1zM9 3h1v1h-1zM11 3h1v1h-1zM13 3h1v1h-1zM17 3h1v1h-1zM19 3h1v1h-1zM20 3h1v1h-1zM21 3h1v1h-1zM23 3h1v1h-1zM24 3h1v1h-1zM26 3h1v1h-1zM27 3h1v1h-1zM29 3h1v1h-1zM30 3h1v1h-1zM31 3h1v1h-1zM32 3h1v1h-1zM33 3h1v1h-1zM34 3h1v1h-1zM35 3h1v1h-1zM3 4h1v1h-1zM9 4h1v1h-1zM11 4h1v1h-1zM16 4h1v1h-1zM17 4h1v1h-1zM22 4h1v1h-1zM27 4h1v1h-1zM29 4h1v1h-1zM35 4h1v1h-1zM3 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM7 5h1v1h-1zM9 5h1v1h-1zM11 5h1v1h-1zM12 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM16 5h1v1h-1zM18 5h1v1h-1zM19 5h1v1h-1zM20 5h1v1h-1zM21 5h1v1h-1zM24 5h1v1h-1zM26 5h1v1h-1zM27 5h1v1h-1zM29 5h1v1h-1zM31 5h1v1h-1zM32 5h1v1h-1zM33 5h1v1h-1zM35 5h1v1h-1zM3 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM7 6h1v1h-1zM9 6h1v1h-1zM12 6h1v1h-1zM15 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM27 6h1v1h-1zM29 6h1v1h-1zM31 6h1v1h-1zM32 6h1v1h-1zM33 6h1v1h-1zM35 6h1v1h-1zM3 7h1v1h-1zM5 7h1v1h-1zM6 7h1v1h-1zM7 7h1v1h-1zM9 7h1v1h-1zM12 7h1v1h-1zM13 7h1v1h-1zM14 7h1v1h-1zM15 7h1v1h-1zM16 7h1v1h-1zM18 7h1v1h-1zM19 7h1v1h-1zM20 7h1v1h-1zM21 7h1v1h-1zM22 7h1v1h-1zM23 7h1v1h-1zM29 7h1v1h-1zM31 7h1v1h-1zM32 7h1v1h-1zM33 7h1v1h-1zM35 7h1v1h-1zM3 8h1v1h-1zM9 8h1v1h-1zM11 8h1v1h-1zM12 8h1v1h-1zM15 8h1v1h-1zM19 8h1v1h-1zM23 8h1v1h-1zM24 8h1v1h-1zM25 8h1v1h-1zM26 8h1v1h-1zM27 8h1v1h-1zM29 8h1v1h-1zM35 8h1v1h-1zM3 9h1v1h-1zM4 9h1v1h-1zM5 9h1v1h-1zM6 9h1v1h-1zM7 9h1v1h-1zM8 9h1v1h-1zM9 9h1v1h-1zM11 9h1v1h-1zM13 9h1v1h-1zM15 9h1v1h-1zM17 9h1v1h-1zM19 9h1v1h-1zM21 9h1v1h-1zM23 9h1v1h-1zM25 9h1v1h-1zM27 9h1v1h-1zM29 9h1v1h-1zM30 9h1v1h-1zM31 9h1v1h-1zM32 9h1v1h-1zM33 9h1v1h-1zM34 9h1v1h-1zM35 9h1v1h-1zM11 10h1v1h-1zM13 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM19 10h1v1h-1zM20 10h1v1h-1zM21 10h1v1h-1zM22 10h1v1h-1zM24 10h1v1h-1zM25 10h1v1h-1zM26 10h1v1h-1zM5 11h1v1h-1zM6 11h1v1h-1zM7 11h1v1h-1zM9 11h1v1h-1zM11 11h1v1h-1zM12 11h1v1h-1zM13 11h1v1h-1zM16 11h1v1h-1zM17 11h1v1h-1zM20 11h1v1h-1zM21 11h1v1h-1zM23 11h1v1h-1zM26 11h1v1h-1zM27 11h1v1h-1zM28 11h1v1h-1zM29 11h1v1h-1zM30 11h1v1h-1zM33 11h1v1h-1zM34 11h1v1h-1zM35 11h1v1h-1zM3 12h1v1h-1zM4 12h1v1h-1zM5 12h1v1h-1zM6 12h1v1h-1zM7 12h1v1h-1zM8 12h1v1h-1zM14 12h1v1h-1zM16 12h1v1h-1zM19 12h1v1h-1zM20 12h1v1h-1zM23 12h1v1h-1zM24 12h1v1h-1zM26 12h1v1h-1zM28 12h1v1h-1zM29 12h1v1h-1zM35 12h1v1h-1zM4 13h1v1h-1zM5 13h1v1h-1zM7 13h1v1h-1zM9 13h1v1h-1zM11 13h1v1h-1zM13 13h1v1h-1zM14 13h1v1h-1zM16 13h1v1h-1zM17 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM21 13h1v1h-1zM22 13h1v1h-1zM24 13h1v1h-1zM28 13h1v1h-1zM29 13h1v1h-1zM30 13h1v1h-1zM33 13h1v1h-1zM34 13h1v1h-1zM5 14h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM12 14h1v1h-1zM13 14h1v1h-1zM15 14h1v1h-1zM20 14h1v1h-1zM24 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM32 14h1v1h-1zM33 14h1v1h-1zM4 15h1v1h-1zM5 15h1v1h-1zM8 15h1v1h-1zM9 15h1v1h-1zM11 15h1v1h-1zM12 15h1v1h-1zM14 15h1v1h-1zM24 15h1v1h-1zM26 15h1v1h-1zM28 15h1v1h-1zM30 15h1v1h-1zM32 15h1v1h-1zM34 15h1v1h-1zM3 16h1v1h-1zM5 16h1v1h-1zM10 16h1v1h-1zM11 16h1v1h-1zM12 16h1v1h-1zM14 16h1v1h-1zM25 16h1v1h-1zM26 16h1v1h-1zM28 16h1v1h-1zM29 16h1v1h-1zM30 16h1v1h-1zM33 16h1v1h-1zM35 16h1v1h-1zM3 17h1v1h-1zM5 17h1v1h-1zM7 17h1v1h-1zM8 17h1v1h-1zM9 17h1v1h-1zM10 17h1v1h-1zM13 17h1v1h-1zM14 17h1v1h-1zM25 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM29 17h1v1h-1zM31 17h1v1h-1zM33 17h1v1h-1zM34 17h1v1h-1zM3 18h1v1h-1zM5 18h1v1h-1zM7 18h1v1h-1zM11 18h1v1h-1zM12 18h1v1h-1zM13 18h1v1h-1zM14 18h1v1h-1zM24 18h1v1h-1zM25 18h1v1h-1zM27 18h1v1h-1zM29 18h1v1h-1zM31 18h1v1h-1zM32 18h1v1h-1zM33 18h1v1h-1zM34 18h1v1h-1zM3 19h1v1h-1zM4 19h1v1h-1zM8 19h1v1h-1zM9 19h1v1h-1zM12 19h1v1h-1zM13 19h1v1h-1zM28 19h1v1h-1zM30 19h1v1h-1zM31 19h1v1h-1zM32 19h1v1h-1zM34 19h1v1h-1zM35 19h1v1h-1zM3 20h1v1h-1zM5 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM11 20h1v1h-1zM13 20h1v1h-1zM26 20h1v1h-1zM27 20h1v1h-1zM29 20h1v1h-1zM30 20h1v1h-1zM34 20h1v1h-1zM35 20h1v1h-1zM3 21h1v1h-1zM4 21h1v1h-1zM9 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM25 21h1v1h-1zM28 21h1v1h-1zM29 21h1v1h-1zM30 21h1v1h-1zM31 21h1v1h-1zM33 21h1v1h-1zM34 21h1v1h-1zM3 22h1v1h-1zM8 22h1v1h-1zM10 22h1v1h-1zM14 22h1v1h-1zM24 22h1v1h-1zM25 22h1v1h-1zM26 22h1v1h-1zM27 22h1v1h-1zM29 22h1v1h-1zM30 22h1v1h-1zM32 22h1v1h-1zM33 22h1v1h-1zM34 22h1v1h-1zM3 23h1v1h-1zM8 23h1v1h-1zM9 23h1v1h-1zM10 23h1v1h-1zM11 23h1v1h-1zM13 23h1v1h-1zM25 23h1v1h-1zM28 23h1v1h-1zM29 23h1v1h-1zM30 23h1v1h-1zM31 23h1v1h-1zM32 23h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM6 24h1v1h-1zM8 24h1v1h-1zM12 24h1v1h-1zM14 24h1v1h-1zM16 24h1v1h-1zM18 24h1v1h-1zM22 24h1v1h-1zM23 24h1v1h-1zM25 24h1v1h-1zM27 24h1v1h-1zM33 24h1v1h-1zM35 24h1v1h-1zM3 25h1v1h-1zM6 25h1v1h-1zM7 25h1v1h-1zM9 25h1v1h-1zM10 25h1v1h-1zM12 25h1v1h-1zM14 25h1v1h-1zM17 25h1v1h-1zM19 25h1v1h-1zM20 25h1v1h-1zM22 25h1v1h-1zM23 25h1v1h-1zM25 25h1v1h-1zM32 25h1v1h-1zM33 25h1v1h-1zM34 25h1v1h-1zM3 26h1v1h-1zM6 26h1v1h-1zM7 26h1v1h-1zM8 26h1v1h-1zM11 26h1v1h-1zM12 26h1v1h-1zM14 26h1v1h-1zM16 26h1v1h-1zM18 26h1v1h-1zM21 26h1v1h-1zM22 26h1v1h-1zM24 26h1v1h-1zM25 26h1v1h-1zM27 26h1v1h-1zM30 26h1v1h-1zM31 26h1v1h-1zM32 26h1v1h-1zM33 26h1v1h-1zM3 27h1v1h-1zM4 27h1v1h-1zM6 27h1v1h-1zM8 27h1v1h-1zM9 27h1v1h-1zM10 27h1v1h-1zM11 27h1v1h-1zM15 27h1v1h-1zM17 27h1v1h-1zM20 27h1v1h-1zM22 27h1v1h-1zM23 27h1v1h-1zM25 27h1v1h-1zM27 27h1v1h-1zM28 27h1v1h-1zM29 27h1v1h-1zM30 27h1v1h-1zM31 27h1v1h-1zM11 28h1v1h-1zM13 28h1v1h-1zM15 28h1v1h-1zM18 28h1v1h-1zM23 28h1v1h-1zM27 28h1v1h-1zM31 28h1v1h-1zM32 28h1v1h-1zM33 28h1v1h-1zM35 28h1v1h-1zM3 29h1v1h-1zM4 29h1v1h-1zM5 29h1v1h-1zM6 29h1v1h-1zM7 29h1v1h-1zM8 29h1v1h-1zM9 29h1v1h-1zM12 29h1v1h-1zM14 29h1v1h-1zM16 29h1v1h-1zM17 29h1v1h-1zM21 29h1v1h-1zM25 29h1v1h-1zM26 29h1v1h-1zM27 29h1v1h-1zM29 29h1v1h-1zM31 29h1v1h-1zM32 29h1v1h-1zM33 29h1v1h-1zM34 29h1v1h-1zM3 30h1v1h-1zM9 30h1v1h-1zM12 30h1v1h-1zM13 30h1v1h-1zM14 30h1v1h-1zM15 30h1v1h-1zM17 30h1v1h-1zM19 30h1v1h-1zM22 30h1v1h-1zM23 30h1v1h-1zM26 30h1v1h-1zM27 30h1v1h-1zM31 30h1v1h-1zM32 30h1v1h-1zM33 30h1v1h-1zM34 30h1v1h-1zM35 30h1v1h-1zM3 31h1v1h-1zM5 31h1v1h-1zM6 31h1v1h-1zM7 31h1v1h-1zM9 31h1v1h-1zM11 31h1v1h-1zM13 31h1v1h-1zM16 31h1v1h-1zM17 31h1v1h-1zM18 31h1v1h-1zM19 31h1v1h-1zM20 31h1v1h-1zM22 31h1v1h-1zM23 31h1v1h-1zM24 31h1v1h-1zM25 31h1v1h-1zM27 31h1v1h-1zM28 31h1v1h-1zM29 31h1v1h-1zM30 31h1v1h-1zM31 31h1v1h-1zM34 31h1v1h-1zM35 31h1v1h-1zM3 32h1v1h-1zM5 32h1v1h-1zM6 32h1v1h-1zM7 32h1v1h-1zM9 32h1v1h-1zM11 32h1v1h-1zM13 32h1v1h-1zM15 32h1v1h-1zM16 32h1v1h-1zM18 32h1v1h-1zM20 32h1v1h-1zM21 32h1v1h-1zM22 32h1v1h-1zM26 32h1v1h-1zM28 32h1v1h-1zM31 32h1v1h-1zM33 32h1v1h-1zM34 32h1v1h-1zM3 33h1v1h-1zM5 33h1v1h-1zM6 33h1v1h-1zM7 33h1v1h-1zM9 33h1v1h-1zM11 33h1v1h-1zM12 33h1v1h-1zM13 33h1v1h-1zM15 33h1v1h-1zM16 33h1v1h-1zM21 33h1v1h-1zM22 33h1v1h-1zM23 33h1v1h-1zM27 33h1v1h-1zM28 33h1v1h-1zM29 33h1v1h-1zM33 33h1v1h-1zM3 34h1v1h-1zM9 34h1v1h-1zM12 34h1v1h-1zM18 34h1v1h-1zM22 34h1v1h-1zM26 34h1v1h-1zM29 34h1v1h-1zM30 34h1v1h-1zM33 34h1v1h-1zM3 35h1v1h-1zM4 35h1v1h-1zM5 35h1v1h-1zM6 35h1v1h-1zM7 35h1v1h-1zM8 35h1v1h-1zM9 35h1v1h-1zM12 35h1v1h-1zM14 35h1v1h-1zM15 35h1v1h-1zM18 35h1v1h-1zM19 35h1v1h-1zM21 35h1v1h-1zM22 35h1v1h-1zM23 35h1v1h-1zM24 35h1v1h-1zM25 35h1v1h-1zM26 35h1v1h-1zM27 35h1v1h-1zM28 35h1v1h-1zM34 35h1v1h-1z" fill="#06121e" shape-rendering="crispEdges"/><svg x="15.3" y="15.3" width="8.4" height="8.4" viewBox="0 0 1024 1024"><defs><linearGradient id="bgqw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f2b44"/><stop offset="1" stop-color="#050f19"/></linearGradient><linearGradient id="mintqw" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2fe0a8"/><stop offset="1" stop-color="#7dffd2"/></linearGradient><linearGradient id="bmqw" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0a6fe0"/><stop offset=".6" stop-color="#2fc8ff"/><stop offset="1" stop-color="#7dffd2"/></linearGradient></defs><rect width="1024" height="1024" rx="224" fill="url(#bgqw)"/><g transform="skewX(-12) translate(110 0)"><rect x="150" y="300" width="70" height="16" rx="8" fill="#2fc8ff" opacity=".5"/><rect x="110" y="340" width="110" height="16" rx="8" fill="#2fc8ff" opacity=".7"/><text x="512" y="610" text-anchor="middle" font-family="Arial Black, Archivo Black, Inter, sans-serif" font-weight="900" font-size="300" fill="url(#bmqw)" letter-spacing="-8">DPH</text><rect x="250" y="660" width="540" height="26" rx="13" fill="url(#mintqw)"/></g></svg></svg>
+          <h2>On a computer? Scan with your phone.</h2>
+          <p>Opens the download page with 1-minute install steps.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="hero-card">
-        <div class="mini-tag">Live App Preview</div>
-        <h2>Today’s Slate at a Glance</h2>
-        <ul class="hero-list">
-          <li>🔥 Best Parlay of the Day (model + correlation based)</li>
-          <li>📊 Top Overs by market (PTS, REB, AST, STL, 3PM)</li>
-          <li>📈 Recent trend charts vs line & season averages</li>
-          <li>🛫 Travel, fatigue, opponent defense & allowed stats</li>
-          <li>🧠 Confidence index combining model, trends & context</li>
-        </ul>
-        <p class="hero-disclaimer">
-          No picks sold. No subscriptions. Just data & tools — free to use.
-        </p>
+    <!-- App screenshots -->
+    <section id="screens" aria-labelledby="screens-title">
+      <div class="wrap">
+        <h2 id="screens-title">See the app</h2>
+        <p class="sub">Swipe through the screens you'll use every day.</p>
       </div>
-    </div>
-  </section>
+      <ul class="shots" tabindex="0" aria-label="App screenshots">
+          <li><img src="/assets/app/screen-1.webp" width="540" height="960" loading="lazy" alt="Find the edges: green badges mark picks that beat the market's fair price"></li>
+          <li><img src="/assets/app/screen-2.webp" width="540" height="960" loading="lazy" alt="Today's top picks: model probabilities for every NBA and NFL prop"></li>
+          <li><img src="/assets/app/screen-3.webp" width="540" height="960" loading="lazy" alt="Every pick explained: hit rates, edge, line movement, news and reasoning"></li>
+          <li><img src="/assets/app/screen-4.webp" width="540" height="960" loading="lazy" alt="Data-built parlays: safe, ladder, risky, anytime TD and more"></li>
+          <li><img src="/assets/app/screen-5.webp" width="540" height="960" loading="lazy" alt="Track your parlay live: alerts when legs hit, one to go, cashed or busted"></li>
+          <li><img src="/assets/app/screen-6.webp" width="540" height="960" loading="lazy" alt="College hoops alt lines: model odds at every bought and sold line"></li>
+          <li><img src="/assets/app/screen-7.webp" width="540" height="960" loading="lazy" alt="Honest results: every list and parlay graded the next morning"></li>
+          <li><img src="/assets/app/screen-8.webp" width="540" height="960" loading="lazy" alt="Game models: win probability, spread, total and weather"></li>
+      </ul>
+    </section>
 
-  <!-- ============================= -->
-  <!-- NBA + MLB PRODUCTS -->
-  <!-- ============================= -->
-  <section class="section products-section">
-    <div class="container">
-      <h2 class="section-title">Two Sports. Two Models. One Edge.</h2>
-      <p class="section-subtitle">
-        DailyPropHub now powers both NBA and MLB player prop models — built for trend clarity, transparency, and edge.
+    <!-- Live slate from the app feed -->
+    <section class="alt" id="today" aria-labelledby="today-title">
+      <div class="wrap">
+        <h2 id="today-title">Today in the app</h2>
+        <p class="sub" id="todaySub">Live from the same feed the app uses.</p>
+        <div class="today" id="todayGrid">
+          <div class="stat"><b>NBA</b><div class="n">–</div><div class="d">Loading…</div></div>
+          <div class="stat"><b>NFL</b><div class="n">–</div><div class="d">Loading…</div></div>
+          <div class="stat"><b>NCAAF</b><div class="n">–</div><div class="d">Loading…</div></div>
+          <div class="stat"><b>NCAAB</b><div class="n">–</div><div class="d">Loading…</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <div class="wrap">
+        <h2>What's inside</h2>
+        <p class="sub">Everything you used to dig through a dashboard for, built for your phone.</p>
+        <div class="grid3">
+          <div class="card"><h3>Top picks &amp; props</h3><p>Every line with the model's probability, its edge over the book, and hit rates over the last 3–20 games.</p></div>
+          <div class="card"><h3>Parlays</h3><p>Ladders, anytime TDs, the best 3-leg and college overs, with the reasoning behind every leg.</p></div>
+          <div class="card"><h3>Live tracking</h3><p>Your picks and parlays scored live from the box score while the games are on.</p></div>
+          <div class="card"><h3>Build your own parlay</h3><p>Add legs from any prop, see the combined odds and the model's chance, then share the slip.</p></div>
+          <div class="card"><h3>Favorites &amp; alerts</h3><p>Star players and teams to get alerts for new picks, injuries and news.</p></div>
+          <div class="card"><h3>Home-screen widget</h3><p>Today's top three picks at a glance, without opening the app.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Install -->
+    <section class="alt" id="install">
+      <div class="wrap">
+        <h2>Install in about a minute</h2>
+        <p class="sub">Until the Google Play listing is live, the app installs straight from this site.</p>
+        <div class="steps">
+          <div class="step"><h3>Download</h3><p>On your Android phone, open <a href="/app/">dailyprophub.com/app</a> and tap Download. If Chrome warns you, tap Download anyway.</p></div>
+          <div class="step"><h3>Allow the install</h3><p>Open the file. When Android asks, allow "Install unknown apps" for Chrome, then go back.</p></div>
+          <div class="step"><h3>Install</h3><p>Tap Install. If Play Protect says "unknown developer," choose More details, then Install anyway.</p></div>
+          <div class="step"><h3>Turn on alerts</h3><p>Open DailyPropHub and allow notifications for new picks and your favorite players.</p></div>
+        </div>
+        <p class="fine">The app tells you when an update is ready, and your favorites and settings carry over.</p>
+      </div>
+    </section>
+
+    <!-- Web dashboard + support -->
+    <section id="support">
+      <div class="wrap split">
+        <div class="card">
+          <h3>Prefer a browser?</h3>
+          <p>The web dashboard is still up for desktop research, with the same models behind it.</p>
+          <a class="btn btn-ghost btn-sm" href="https://dailypropspot.streamlit.app" target="_blank" rel="noopener" data-cta="web_dashboard">Open the web dashboard</a>
+        </div>
+        <div class="card">
+          <h3>Support the project</h3>
+          <p>DailyPropHub is free. If it saves you time, a tip helps cover hosting and model work. Venmo <strong>@DailyPropHub</strong>.</p>
+          <div class="don">
+            <a class="btn btn-ghost btn-sm" href="https://venmo.com/u/DailyPropHub" target="_blank" rel="noopener">Tip $1</a>
+            <a class="btn btn-ghost btn-sm" href="https://venmo.com/u/DailyPropHub" target="_blank" rel="noopener">Buy me a beer ($5)</a>
+            <a class="btn btn-ghost btn-sm" href="https://venmo.com/u/DailyPropHub" target="_blank" rel="noopener">Pay a bill ($100)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="alt" id="faq">
+      <div class="wrap">
+        <h2>FAQ</h2>
+        <div class="faq">
+          <div class="card"><h3>Is it really free?</h3><p>Yes. No subscriptions and no picks for sale. Tips through Venmo are optional.</p></div>
+          <div class="card"><h3>When is it on Google Play?</h3><p>Soon. Install it from this site now, and the download page will point to Google Play as soon as the listing is live.</p></div>
+          <div class="card"><h3>Is installing from the site safe?</h3><p>Android warns about every app that isn't from the Play Store. The app asks for no personal information. See the <a href="/privacy/">privacy policy</a>.</p></div>
+          <div class="card"><h3>Is there an iPhone version?</h3><p>Not yet. iPhone users can use the <a href="https://dailypropspot.streamlit.app" target="_blank" rel="noopener">web dashboard</a> in the meantime.</p></div>
+          <div class="card"><h3>How often does it update?</h3><p>Every day, before the first game. Live tracking updates while games are on.</p></div>
+          <div class="card"><h3>Does it guarantee wins?</h3><p>No. Model probabilities are estimates, not guarantees. DailyPropHub is for information and entertainment, and it doesn't take bets.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta">
+      <div class="wrap">
+        <h2>Get today's edges on your phone.</h2>
+        <p class="sub">Free for Android. Takes about a minute to install.</p>
+        <a class="btn btn-main" href="/app/" data-cta="footer_cta">Download for Android</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a class="brand" href="/"><img src="/app/logo.png" alt="" width="36" height="36"><b style="font-weight:inherit">DailyProp<span>Hub</span></b></a>
+        <nav aria-label="Footer">
+          <a href="/app/">Get the app</a>
+          <a href="https://dailypropspot.streamlit.app" target="_blank" rel="noopener">Web dashboard</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <button type="button" id="contactBtn">Contact</button>
+        </nav>
+      </div>
+      <p class="legal">
+        © <span id="year"></span> DailyPropHub. DailyPropHub publishes model-based predictions for information and entertainment and does not accept wagers. Probabilities are estimates, not guarantees. Not affiliated with the NBA, NFL, NCAA, any team or any sportsbook. 21+. Gambling problem? Call 1-800-GAMBLER.
       </p>
-
-      <div class="products-grid">
-
-        <!-- NBA CARD -->
-        <div class="product-card">
-          <div class="product-badge">🏀 NBA</div>
-          <h3>NBADailyTrends</h3>
-          <p>
-            Free dashboard featuring model edges, top overs, parlay builder,
-            recent trend charts, and matchup context.
-          </p>
-
-          <ul class="product-features">
-            <li>📊 Model vs Implied Probabilities</li>
-            <li>🔥 Featured Edge + Top Model Pick</li>
-            <li>📈 Hit Rates & Volatility</li>
-            <li>🧠 Correlated Best Parlay</li>
-          </ul>
-
-          <a class="btn-primary btn-large"
-             href="https://nbadailytrends.streamlit.app"
-             target="_blank"
-             rel="noopener">
-            Open NBA Dashboard →
-          </a>
-        </div>
-
-        <!-- MLB CARD -->
-        <div class="product-card mlb-card">
-          <div class="product-badge">⚾ MLB</div>
-          <h3>MLBDailyTrends</h3>
-          <p>
-            Season-long MLB prop model focused on:
-            <strong>Hits, Total Bases, H+R+RBI, Walks, and Pitcher Strikeouts.</strong>
-          </p>
-
-          <ul class="product-features">
-            <li>📅 Daily Picks (Email Subscribers)</li>
-            <li>📊 Rolling Production Trends</li>
-            <li>🏟 Park, Elevation & Context</li>
-            <li>🚀 Founding Member Access</li>
-          </ul>
-
-          <a class="btn-primary btn-large mlb-btn"
-             href="https://mlbdailytrends.streamlit.app"
-             target="_blank"
-             rel="noopener">
-            Explore MLB →
-          </a>
-        </div>
-
-      </div>
     </div>
-  </section>
-
-  <!-- ============================= -->
-  <!-- TODAY'S MODEL HIGHLIGHTS -->
-  <!-- ============================= -->
-<section class="section model-highlights">
-  <div class="container">
-    <h2 class="section-title">🔥 Today’s Model Highlights</h2>
-    <p class="section-subtitle">
-      <span class="live-badge">Updated daily ~2 hours before tip-off</span><br />
-      Two lenses on today’s slate — one curated for stability, one purely model-driven.
-    </p>
-
-    <div class="model-cards">
-      <div id="featured-edge-card" class="model-card"></div>
-      <div id="top-model-card" class="model-card"></div>
-    </div>
-  </div>
-
-    <div class="daily-email-cta">
-      <p class="email-cta-title">
-        Get The Deep Edge — One Fully Explained Model Pick, Emailed Daily.
-      </p>
-      <p class="email-cta-sub">
-        One email before tip-off. No spam. Not posted publicly. Free.
-      </p>
-
-      <div class="email-cta-inline">
-        <input
-          type="email"
-          placeholder="Your email"
-          class="email-cta-input"
-        />
-        <button class="email-cta-btn">Get Daily Edge</button>
-      </div>
-
-      <div class="email-cta-msg"></div>
-    </div>
-</section>
-
-  <!-- ============================= -->
-  <!-- MODEL PERFORMANCE SUMMARY -->
-  <!-- ============================= -->
-<section class="section model-performance">
-  <div class="container">
-    <h2 class="section-title">📈 Model Performance</h2>
-    <p class="section-subtitle">
-      Every Featured Edge and Top Model Pick is tracked — wins and losses included.
-    </p>
-
-    <div id="model-results" class="results-grid">
-      <div class="result-card">Loading performance…</div>
-    </div>
-
-    <p class="results-footnote">
-      Past performance is not predictive. Shown for transparency only.
-    </p>
-  </div>
-</section>
-    
-  <!-- Features -->
-  <section id="features" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Why Bettors Use DailyPropHub</h2>
-      <p class="section-subtitle">
-        Built by a hoops fan who got tired of guessing and scrolling — DailyPropHub sits between
-        raw box scores and paid touts, giving you a transparent view into the numbers.
-      </p>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <h3>📊 Model-Powered Edges</h3>
-          <p>
-            See model over probabilities vs implied book odds, plus estimated edge on each prop.
-            No “locks”, just transparent numbers.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>📈 Real Trends, Not Narratives</h3>
-          <p>
-            Quickly see last-N game performance vs the line and vs season averages, along with
-            volatility (standard deviation) so you understand consistency.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>🧩 Correlated “Best Parlay”</h3>
-          <p>
-            A single 3-leg parlay surfaced each day based on model edge, correlation, and AIR
-            score — designed as a starting point for your own research.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>🛫 Context: Fatigue, Travel, Matchups</h3>
-          <p>
-            Back-to-backs, travel miles, defensive rankings, and opponent allowed stats
-            are baked into the view so you don’t miss hidden context.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>📚 Player Profiles & History</h3>
-          <p>
-            Dive into historical hit rates by market, day-of-week splits, and player-specific
-            logs to see where certain props truly shine (or disappoint).
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <h3>💻 Free, Evolving, Transparent</h3>
-          <p>
-            The project is actively iterated to improve consistency and accuracy over time.
-            No paywall — just optional support if the data helps you.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section id="how-it-works" class="section">
-    <div class="container">
-      <h2 class="section-title">How DailyPropHub Works</h2>
-      <div class="hiw-grid">
-        <div class="hiw-step">
-          <div class="step-number">1</div>
-          <h3>Collect & Clean Data</h3>
-          <p>
-            Game logs, prop lines, odds, and team context are pulled daily and cleaned into a
-            consistent dataset with rolling metrics and matchup stats.
-          </p>
-        </div>
-        <div class="hiw-step">
-          <div class="step-number">2</div>
-          <h3>Run the Models</h3>
-          <p>
-            A blend of baseline logic and machine learning estimates probabilities for each
-            player prop, calibrated against historical outcomes.
-          </p>
-        </div>
-        <div class="hiw-step">
-          <div class="step-number">3</div>
-          <h3>Surface Edges & Context</h3>
-          <p>
-            The dashboard highlights potential edges, recent hit rates, and contextual factors
-            so you can quickly decide what deserves a deeper look.
-          </p>
-        </div>
-        <div class="hiw-step">
-          <div class="step-number">4</div>
-          <h3>You Do the Final Handicapping</h3>
-          <p>
-            DailyPropHub is built as a decision support tool — you bring the judgment, risk
-            tolerance, and bankroll management. No picks are guaranteed.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Strip -->
-  <section class="section cta-strip">
-    <div class="container cta-strip-inner">
-      <div>
-        <h2>Ready to explore today’s NBA player prop landscape?</h2>
-        <p>Open the live dashboard and start with the top markets or the Best Parlay of the Day.</p>
-      </div>
-      <div>
-        <a class="btn-primary btn-large" href="https://nbadailytrends.streamlit.app" target="_blank" rel="noopener">
-          Launch the Dashboard
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Live Preview Section -->
-  <section class="section section-alt" id="preview">
-    <div class="container">
-      <h2 class="section-title">Live Dashboard Preview</h2>
-      <p class="section-subtitle">
-        Here’s a quick look at what you’ll see inside the DailyPropHub NBA dashboard — 
-        real model-powered edges, clean visuals, and everything organized for fast decision-making.
-      </p>
-
-      <!-- Screenshot Grid -->
-      <div class="preview-grid">
-
-        <div class="preview-item">
-          <img src="assets/screenshots/001_predictions.png" alt="Predictions Overview" />
-          <p class="preview-caption">🏀 Predictions Overview</p>
-        </div>
-
-        <div class="preview-item">
-          <img src="assets/screenshots/005_top_overs_3pm.png" alt="3PM Top Overs" />
-          <p class="preview-caption">🔥 3PM · Top Overs</p>
-        </div>
-
-        <div class="preview-item">
-          <img src="assets/screenshots/008_yesterday_results.png" alt="Yesterday Results" />
-          <p class="preview-caption">📊 Yesterday's Results Breakdown</p>
-        </div>
-
-        <div class="preview-item">
-          <img src="assets/screenshots/009_history_profile.png" alt="Player History" />
-          <p class="preview-caption">📚 Historical Player Profiles</p>
-        </div>
-
-      </div>
-
-      <!-- Tutorial Video -->
-      <div class="video-wrapper">
-        <h3 class="video-title">🎥 Full Tutorial: How to Use the Dashboard</h3>
-        <video controls class="tutorial-video">
-          <source src="assets/video/final_tutorial.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-    </div>
-  </section>
-
-  <style>
-    .preview-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-      margin-top: 40px;
-    }
-    .preview-item img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-      border: 1px solid #222;
-    }
-    .preview-caption {
-      text-align: center;
-      margin-top: 8px;
-      color: #ccc;
-      font-size: 0.95em;
-    }
-    .video-wrapper {
-      margin-top: 60px;
-      text-align: center;
-    }
-    .tutorial-video {
-      width: 100%;
-      max-width: 780px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
-    }
-  </style>
-  
-  <!-- Support / Venmo -->
-  <section id="support" class="section section-alt">
-    <div class="container support-grid">
-      <div>
-        <h2 class="section-title">Support the Project</h2>
-        <p class="section-subtitle">
-          If DailyPropHub has helped you cash some slips or just save time digging through stats,
-          you can support ongoing development and improvements.
-        </p>
-
-        <div class="donation-options">
-          <a class="don-btn" href="https://venmo.com/u/DailyPropHub" target="_blank" rel="noopener">
-            🍺 Buy me a beer ($5)
-          </a>
-          <a class="don-btn" href="https://venmo.com/u/DailyPropHub" target="_blank" rel="noopener">
-            💸 Tip me ($1)
-          </a>
-          <a class="don-btn" href="https://venmo.com/u/DailyPropHub" target="_blank" rel="noopener">
-            🏦 Pay a bill ($100)
-          </a>
-        </div>
-
-        <p class="support-meta">
-          Venmo: <strong>@DailyPropHub</strong>  
-          <br />
-          Every bit helps justify more time spent improving the models, visuals, and
-          overall experience.
-        </p>
-      </div>
-
-      <div class="support-sidebox">
-        <h3>What’s Coming Next?</h3>
-        <ul>
-          <li>⚾ MLBDailyTrends now live for 2026 season</li>
-          <li>📬 Optional email updates for new features & big slates</li>
-          <li>📱 More mobile-first UX enhancements</li>
-          <li>🧪 Ongoing model tuning using historical results</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section">
-    <div class="container">
-      <h2 class="section-title">FAQ</h2>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h3>Is this a pick-selling service?</h3>
-          <p>
-            No. DailyPropHub does not sell picks, “locks”, or subscriptions. It’s a data and
-            visualization tool to help you make more informed decisions.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h3>Is this free to use?</h3>
-          <p>
-            Yes. The NBA dashboard is free. If the tools help you, you can optionally support
-            the project via Venmo to help cover time and hosting.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h3>Does this guarantee profits?</h3>
-          <p>
-            Absolutely not. Sports are volatile and betting carries real risk. DailyPropHub
-            is for informational and entertainment purposes only and does not guarantee
-            outcomes or profits.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h3>Will you add MLB or other sports?</h3>
-          <p>
-            MLB is planned as the next major expansion, using similar home run / prop modeling
-            concepts. Other leagues might follow over time.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h3>How often is the data updated?</h3>
-          <p>
-            The goal is to update at least once daily during the NBA season, typically ~2 hours
-            before the first tip-off, with additional improvements to the pipeline over time.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h3>Can I share feedback or feature ideas?</h3>
-          <p>
-            Definitely. The project is actively evolving. A contact/feedback channel will be
-            added soon.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <div class="logo footer-logo">
-          <span class="logo-mark">DPH</span>
-          <span class="logo-text">DailyPropHub</span>
-        </div>
-        <p class="footer-text">
-          NBA player prop trends & model-powered insights, refreshed throughout the season.
-        </p>
-        <p class="footer-disclaimer">
-          DailyPropHub is for informational and entertainment purposes only.  
-          Nothing on this site or in the dashboard is betting advice or a guarantee of results.  
-          Please bet responsibly and within your means.
-        </p>
-      </div>
-      <div class="footer-right">
-        <div class="footer-links">
-          <a href="#features">Features</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#faq">FAQ</a>
-
-          <!-- FIXED CONTACT BUTTON -->
-          <a href="javascript:void(0)" id="footerContactBtn">Contact</a>
-
-        </div>
-        <a class="btn-secondary footer-cta" href="https://nbadailytrends.streamlit.app" target="_blank" rel="noopener">
-          Open NBA Dashboard
-        </a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      © <span id="year"></span> DailyPropHub. All rights reserved.<br>
-      NBA statistics and information are used for informational purposes only.<br>
-      DailyPropHub is not affiliated with the NBA, its teams, or any sportsbook.<br>
-      This website does not provide gambling advice. Please wager responsibly.
-    </div>
-
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </footer>
 
-  <!-- CONTACT MODAL + EMAILJS -->
+  <!-- Contact -->
+  <dialog id="contactModal" aria-labelledby="contactTitle">
+    <h2 id="contactTitle" style="font-size:22px">Contact us</h2>
+    <p style="color:var(--muted);margin:6px 0 0">Have a suggestion, idea or issue? Send a message.</p>
+    <label for="contactEmail">Your email</label>
+    <input id="contactEmail" type="email" autocomplete="email">
+    <label for="contactMessage">Message</label>
+    <textarea id="contactMessage"></textarea>
+    <p id="contactStatus" role="status"></p>
+    <div class="row">
+      <button type="button" id="cancelBtn">Cancel</button>
+      <button type="button" id="sendBtn">Send</button>
+    </div>
+  </dialog>
+
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
-      emailjs.init("0_dafSDzoQhezJW_o");
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Track download-button clicks in Google Analytics
+    document.querySelectorAll('[data-cta]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        if (typeof gtag === 'function') gtag('event', 'get_app_click', { event_label: a.dataset.cta });
+      });
+    });
+
+    // Contact form (EmailJS)
+    if (window.emailjs) emailjs.init('0_dafSDzoQhezJW_o');
+    var modal = document.getElementById('contactModal');
+    var status = document.getElementById('contactStatus');
+    document.getElementById('contactBtn').onclick = function () { status.textContent = ''; modal.showModal(); };
+    document.getElementById('cancelBtn').onclick = function () { modal.close(); };
+    document.getElementById('sendBtn').onclick = function () {
+      var email = document.getElementById('contactEmail').value.trim();
+      var msg = document.getElementById('contactMessage').value.trim();
+      if (!email || !msg) { status.textContent = 'Please enter your email and a message.'; return; }
+      status.textContent = 'Sending…';
+      emailjs.send('service_xb35won', 'template_j46hu89', { email: email, name: 'User', title: msg })
+        .then(function () { status.textContent = "Sent! We'll get back to you soon."; document.getElementById('contactMessage').value = ''; })
+        .catch(function (err) { status.textContent = 'Something went wrong. Please try again.'; console.error(err); });
+    };
+
+    // "Today in the app" from the app's own feed
+    (function () {
+      var order = ['NBA', 'NFL', 'NCAAF', 'NCAAB'];
+      function fmt(iso) {
+        var d = new Date(iso + 'T12:00:00');
+        return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+      }
+      fetch('/feed/v1/index.json?t=' + Date.now(), { cache: 'no-store' })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var grid = document.getElementById('todayGrid');
+          grid.textContent = '';
+          order.forEach(function (key) {
+            var s = (data.sports || {})[key];
+            if (!s) return;
+            var card = document.createElement('div'); card.className = 'stat';
+            var b = document.createElement('b'); b.textContent = key;
+            var n = document.createElement('div'); n.className = 'n';
+            var d = document.createElement('div'); d.className = 'd';
+            var t = s.today;
+            if (t && t.games) {
+              n.textContent = t.games + (t.games === 1 ? ' game' : ' games');
+              d.textContent = s.props ? s.props + ' props modeled today' : 'Today';
+            } else if (s.next && s.next.games) {
+              n.textContent = s.next.games + ' games';
+              d.textContent = 'Next slate: ' + fmt(s.next.date);
+            } else {
+              n.textContent = '–'; d.textContent = 'No games scheduled';
+            }
+            card.append(b, n, d); grid.appendChild(card);
+          });
+        })
+        .catch(function () {
+          document.getElementById('todaySub').textContent = "Open the app for today's slate.";
+          document.getElementById('todayGrid').style.display = 'none';
+        });
+    })();
   </script>
-
-  <!-- Modal -->
-  <div id="contactModal" style="
-      display:none;
-      position:fixed;
-      top:0; left:0;
-      width:100%; height:100%;
-      background:rgba(0,0,0,0.7);
-      backdrop-filter: blur(5px);
-      z-index:9999;
-      justify-content:center;
-      align-items:center;
-  ">
-      <div style="
-          background:#111;
-          padding:24px;
-          width:90%;
-          max-width:420px;
-          border-radius:12px;
-          color:white;
-          box-shadow:0 4px 20px rgba(0,0,0,0.4);
-      ">
-          <h2>Contact Us</h2>
-          <p style="color:#ccc;">Have a suggestion, idea, or issue? Send us a message.</p>
-
-          <input id="contactEmail" type="email" placeholder="Your email"
-              style="width:100%;padding:10px;margin-bottom:10px;border:1px solid #333;border-radius:6px;background:#1c1c1c;color:#fff;">
-
-          <textarea id="contactMessage" placeholder="Your message"
-              style="width:100%;height:120px;padding:10px;border:1px solid #333;border-radius:6px;background:#1c1c1c;color:#fff;"></textarea>
-
-          <button onclick="sendContact()" style="
-              width:100%;
-              background:#1d72f3;
-              color:white;
-              padding:10px;
-              margin-top:10px;
-              border:none;
-              border-radius:6px;
-              font-size:1rem;
-          ">Send</button>
-
-          <button onclick="closeContact()" style="
-              width:100%;
-              background:#555;
-              color:white;
-              padding:8px;
-              margin-top:10px;
-              border:none;
-              border-radius:6px;
-          ">Cancel</button>
-      </div>
-  </div>
-
-  <script>
-    const modal = document.getElementById("contactModal");
-
-    // 🔥 FIXED: only use the existing footer button
-    document.getElementById("footerContactBtn").onclick = () => modal.style.display = "flex";
-
-    function closeContact() {
-        modal.style.display = "none";
-    }
-
-    function sendContact() {
-        const email = document.getElementById("contactEmail").value;
-        const msg = document.getElementById("contactMessage").value;
-
-        if (!email || !msg) {
-            alert("Please enter both email and message.");
-            return;
-        }  
-
-        emailjs.send("service_xb35won", "template_j46hu89", {
-            email: email,     // matches {{email}} in EmailJS
-            name: "User",     // matches {{name}} — you can add a name field later
-            title: msg        // matches {{title}} in the auto-reply
-        })
-        .then(() => {
-            alert("Message sent! We'll get back to you soon.");
-            closeContact();
-        })
-        .catch((err) => {
-            alert("❌ Error sending message");
-            console.error(err);
-        });
-    }
-    </script>
-
-<script>
-  const DASHBOARD_URL = "https://nbadailytrends.streamlit.app";
-  const SUBSCRIBE_ENDPOINT =
-    "https://script.google.com/macros/s/AKfycbwHOWAfNchFzuPri9yhkEVVlwHYh9tjBPH-e-TrxyyW4Oo6jhSsT3zGQyLMPVmKkSiD2g/exec";
-
-  /* ===============================
-     DAILY EMAIL CTA HANDLER
-  ================================ */
-  document.addEventListener("click", async (e) => {
-    if (!e.target.classList.contains("email-cta-btn")) return;
-
-    const wrapper = e.target.closest(".daily-email-cta");
-    if (!wrapper) return;
-
-    const input = wrapper.querySelector(".email-cta-input");
-    const msg = wrapper.querySelector(".email-cta-msg");
-
-    const email = input.value.trim();
-
-    if (!email || !email.includes("@")) {
-      msg.textContent = "Please enter a valid email.";
-      msg.style.color = "#f87171";
-      return;
-    }
-
-    // GA: intent
-    if (typeof gtag === "function") {
-      gtag("event", "subscribe_click", {
-        event_category: "engagement",
-        event_label: "daily_email_cta"
-      });
-    }
-
-    msg.textContent = "Subscribing...";
-    msg.style.color = "#9ca3af";
-
-    try {
-      await fetch(SUBSCRIBE_ENDPOINT, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: `email=${encodeURIComponent(email)}&source=dailyprophub_daily_cta`
-      });
-
-      msg.textContent = "✅ You’re in. Today’s edge will be emailed.";
-      msg.style.color = "#4cffc3";
-      input.value = "";
-
-      // GA: success
-      if (typeof gtag === "function") {
-        gtag("event", "subscribe_success", {
-          event_category: "conversion",
-          event_label: "daily_email_cta"
-        });
-      }
-
-    } catch (err) {
-      msg.textContent = "❌ Something went wrong. Try again later.";
-      msg.style.color = "#f87171";
-    }
-  });
-
-  async function loadJson(url) {
-    const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error("Failed to load " + url);
-    return res.json();
-  }
-
-  function safeTeamAbbr(d) {
-    // Prefer team_abbr if you add it; otherwise fallback to team (often already BOS/PHI/etc)
-    return (d.team_abbr || d.team || "").toString().trim().toUpperCase();
-  }
-
-  function formatOdds(o) {
-    const n = Number(o);
-    if (!Number.isFinite(n)) return "";
-    return n > 0 ? `+${n}` : `${n}`;
-  }
-
-  function formatTime(t) {
-    // expects "18:00"
-    try {
-      const [h, m] = t.split(":").map(Number);
-      const ampm = h >= 12 ? "PM" : "AM";
-      const hr = h % 12 || 12;
-      return `${hr}:${m.toString().padStart(2, "0")} ${ampm}`;
-    } catch {
-      return t;
-    }
-  }
-
-  function confidenceTier(edge) {
-    if (edge >= 0.22) return { label: "ELITE", pct: 95 };
-    if (edge >= 0.15) return { label: "HIGH", pct: 85 };
-    if (edge >= 0.08) return { label: "MEDIUM", pct: 70 };
-    return { label: "LEAN", pct: 55 };
-  }
-
-  async function loadModelCards() {
-    let headshots = {};
-    try {
-      headshots = await loadJson("/data/player_headshots.json");
-    } catch (e) {
-      console.warn("player_headshots.json not found (headshots will fallback).", e);
-    }
-
-    function renderPlaceholderCard(el, d, label, subtitle) {
-      el.innerHTML = `
-        <div class="model-card-inner placeholder-card">
-          <div class="model-card-header">
-            <span class="model-badge">${label}</span>
-          </div>
-
-          <div class="placeholder-body">
-            <div class="placeholder-icon">⏳</div>
-
-            <h3>${d.title || "Not Live Yet"}</h3>
-
-            ${d.message ? `
-              <p class="placeholder-main">
-                ${d.message}
-              </p>
-            ` : ""}
-
-            ${Array.isArray(d.details) && d.details.length ? `
-              <ul class="placeholder-details">
-                ${d.details.map(x => `<li>${x}</li>`).join("")}
-              </ul>
-            ` : ""}
-
-            ${d.timing ? `
-              <p class="placeholder-timing">
-                ${d.timing}
-              </p>
-            ` : ""}
-
-            ${subtitle ? `
-              <p class="placeholder-sub">
-                ${subtitle}
-              </p>
-            ` : ""}
-
-            ${d.footer_note ? `
-              <p class="placeholder-footer">
-                ${d.footer_note}
-              </p>
-            ` : ""}
-          </div>
-        </div>
-      `;
-    }
-
-    async function renderCard(pickUrl, containerId, label, subtitle) {
-      const el = document.getElementById(containerId);
-      if (!el) return;
-
-      try {
-        const d = await loadJson(pickUrl);
-
-      if (d.status === "PLACEHOLDER") {
-        renderPlaceholderCard(el, d, label, subtitle);
-        return;
-      }
-        
-        let teamColors = null;
-        try {
-          const logos = await loadJson("/data/team_logos.json");
-          const abbr = safeTeamAbbr(d);
-          teamColors = logos[abbr] || null;
-        } catch (e) {
-          console.warn("team_logos.json not loaded", e);
-        }
-
-        const teamAbbr = safeTeamAbbr(d);
-        const teamLogo = teamAbbr
-          ? `https://a.espncdn.com/i/teamlogos/nba/500/${teamAbbr}.png`
-          : null;
-
-        // --- Matchup info (supports both JSON shapes) ---
-        const opponentAbbr = d.opponent || d.matchup?.opponent_abbr || "";
-        const opponentFull = d.opponent_full || d.matchup?.opponent || "";
-        const isHome = d.is_home === 1 || d.matchup?.home_team === d.team_full;
-
-        const homeAwayLabel = isHome ? "vs" : "@";
-
-        const startTime = d.start_time_local || d.matchup?.start_time_local || "";
-        const venueCity = d.venue_city || "";
-        const venueState = d.venue_state || "";
-
-        const matchupLine = opponentFull
-          ? `${homeAwayLabel} ${opponentFull}${startTime ? " • " + formatTime(startTime) : ""}${venueCity ? " • " +         venueCity + (venueState ? ", " + venueState : "") : ""}`
-          : "";
-
-        // Headshot from your mapping
-        const mappedHeadshot = headshots[d.player];
-        // If no mapping, fall back to a silhouette in /assets (optional)
-        const headshot = mappedHeadshot || "assets/player_silhouette.png";
-
-        el.innerHTML = `
-          <div class="model-card-inner team-accent"
-               role="button"
-               tabindex="0"
-               style="
-                 ${teamColors ? `
-                   --team-primary: ${teamColors.primary_color};
-                   --team-secondary: ${teamColors.secondary_color};
-                 ` : ''}
-               ">
-
-            <!-- HEADER (badge only — logo REMOVED here) -->
-            <div class="model-card-header">
-              <span class="model-badge">${label}</span>
-            </div>
-            
-            ${(() => {
-              const c = confidenceTier(Number(d.edge));
-              return `
-                <div class="confidence-box">
-                  <div class="confidence-ring" style="--pct:${c.pct}">
-                    <span>${c.pct}%</span>
-                  </div>
-                  <div class="confidence-label">${c.label}</div>
-                </div>
-              `;
-            })()}
-
-            <!-- PLAYER ROW -->
-            <div class="model-player">
-              <div class="player-media">
-                ${teamLogo ? `
-                  <img class="team-logo-inline"
-                       src="${teamLogo}"
-                       alt="${teamAbbr} logo"
-                       onerror="this.style.display='none'">
-        `         : ""}
-
-                <a
-                  href="https://nbadailytrends.streamlit.app/?player=${encodeURIComponent(d.player)}"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <img class="player-headshot"
-                       src="${headshot}"
-                       alt="${d.player}"
-                       onerror="this.src='assets/player_silhouette.png'">
-                </a>
-              </div>
-
-              <div class="player-meta">
-                <h3>
-                  <a
-                    href="https://nbadailytrends.streamlit.app/?player=${encodeURIComponent(d.player)}"
-                    target="_blank"
-                    rel="noopener"
-                    class="player-link"
-                  >
-                    ${d.player}
-                  </a>
-                </h3>
-
-                ${matchupLine ? `<p class="matchup-line">${matchupLine}</p>` : ""}
-
-                <p>${d.market} Over ${d.line} <span class="odds">${formatOdds(d.odds)}</span></p>
-                <p class="model-sub">${subtitle}</p>
-              </div>
-            </div>
-
-            <div class="model-stats">
-              <div><strong>${(Number(d.blend_prob)*100).toFixed(1)}%</strong><span>Model</span></div>
-              <div><strong>${(Number(d.implied_prob)*100).toFixed(1)}%</strong><span>Implied</span></div>
-              <div class="edge">
-                <strong>${(Number(d.edge)*100 >= 0 ? "+" : "")}${(Number(d.edge)*100).toFixed(1)}%</strong>
-                <span>Edge</span>
-              </div>
-            </div>
-
-            ${d.why && d.why.length ? `
-              <details class="why-pick">
-                <summary>Why this pick</summary>
-                <ul>
-                  ${d.why.map(w => `<li>${w}</li>`).join("")}
-                </ul>
-              </details>
-            ` : ""}
-
-            <a
-              class="model-cta"
-              href="https://nbadailytrends.streamlit.app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View full breakdown →
-            </a>
-          </div>
-        `;
-
-      } catch (e) {
-        console.error("Failed loading model card", pickUrl, e);
-        el.innerHTML = `
-          <div class="model-card-inner">
-            <div class="model-card-header">
-              <span class="model-badge">${label}</span>
-            </div>
-            <div class="model-player">
-              <div class="player-meta">
-                <h3>Unavailable today</h3>
-                <p>Model output not found yet.</p>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-    }
-
-    renderCard("/data/featured_edge_today.json", "featured-edge-card", "⭐ Featured Edge", "Lower variance, stability-filtered");
-    renderCard("/data/top_model_pick_today.json", "top-model-card", "🔥 Top Model Pick", "Highest raw EV (more variance)");
-  }    
-
-  async function loadModelResults() {
-    const el = document.getElementById("model-results");
-    if (!el) {
-      console.error("[model-results] element not found");
-      return;
-    }
-
-    // Make it obvious the function is running
-    el.innerHTML = `<div class="result-card">Loading performance… (fetching)</div>`;
-
-    // Use a cache-busting query param so GH Pages / CDN can't serve stale
-    const url = `./data/model_results_summary.json?v=${Date.now()}`;
-    console.log("[model-results] fetching:", url);
-
-    try {
-      const res = await fetch(url, { cache: "no-store" });
-      console.log("[model-results] status:", res.status);
-
-      if (!res.ok) {
-        const text = await res.text().catch(() => "");
-        throw new Error(`HTTP ${res.status} ${res.statusText} — ${text.slice(0, 120)}`);
-      }
-
-      // Read as text first so we can show useful errors if JSON parse fails
-      const raw = await res.text();
-      let d;
-      try {
-        d = JSON.parse(raw);
-      } catch (e) {
-        throw new Error(`JSON parse failed: ${e.message}. First 120 chars: ${raw.slice(0, 120)}`);
-      }
-
-      // Validate expected shape
-      if (!d?.featured || !d?.top_model) {
-        throw new Error(
-          `Unexpected JSON shape. Expected keys: featured, top_model. Got: ${Object.keys(d || {}).join(", ")}`
-        );
-      }
-
-      el.innerHTML = `
-        <div class="result-card">
-          <h3>Latest Result</h3>
-          <p>
-            ⭐ Featured:
-            <span class="${d.featured.yesterday === "HIT" ? "result-hit" : "result-miss"}">
-              ${d.featured.yesterday ?? "—"}
-            </span>
-          </p>
-          <p>
-            🔥 Top Model:
-            <span class="${d.top_model.yesterday === "HIT" ? "result-hit" : "result-miss"}">
-              ${d.top_model.yesterday ?? "—"}
-            </span>
-          </p>
-        </div>
-
-        <div class="result-card">
-          <h3>Last 7 Days</h3>
-          <p>
-            Featured: ${d.featured.last_7_days.wins}-${d.featured.last_7_days.losses}
-            (${(d.featured.last_7_days.hit_rate * 100).toFixed(1)}%)
-          </p>
-          <p>
-            Top Model: ${d.top_model.last_7_days.wins}-${d.top_model.last_7_days.losses}
-            (${(d.top_model.last_7_days.hit_rate * 100).toFixed(1)}%)
-          </p>
-        </div>
-
-        <div class="result-card">
-          <h3>Season-to-Date</h3>
-          <p>Featured: ${(d.featured.season_to_date.hit_rate * 100).toFixed(1)}%</p>
-          <p>Top Model: ${(d.top_model.season_to_date.hit_rate * 100).toFixed(1)}%</p>
-        </div>
-      `;
-
-      console.log("[model-results] rendered OK");
-    } catch (err) {
-      console.error("[model-results] failed:", err);
-
-      // IMPORTANT: show the error on the page instead of silently sitting on “Loading…”
-      el.innerHTML = `
-        <div class="result-card">
-          <h3>Performance Unavailable</h3>
-          <p style="color:#f87171; font-size:13px; line-height:1.4;">
-            ${String(err?.message || err)}
-          </p>
-          <p style="color:#9ca3af; font-size:12px;">
-            Open DevTools → Console and search for <strong>[model-results]</strong>.
-          </p>
-        </div>
-      `;
-    }
-  }
-
-  // GA: outbound clicks to Streamlit
-  document.addEventListener("click", (e) => {
-    const link = e.target.closest("a");
-    if (!link) return;
-
-    if (link.href && link.href.includes("nbadailytrends.streamlit.app")) {
-      if (typeof gtag === "function") {
-        gtag("event", "outbound_nba_dashboard", {
-          event_category: "outbound",
-          event_label: link.href
-        });
-      }
-    }
-
-    if (link.href && link.href.includes("mlbdailytrends.streamlit.app")) {
-      if (typeof gtag === "function") {
-        gtag("event", "outbound_mlb_dashboard", {
-          event_category: "outbound",
-          event_label: link.href
-        });
-      }
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    loadModelCards();
-    loadModelResults();
-  });
-
-</script>
- 
 </body>
 </html>
