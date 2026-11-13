@@ -1,7 +1,7 @@
 {
- "version_code": 10,
- "version_name": "1.4.1",
+ "version_code": 23,
+ "version_name": "1.7.8",
  "url": "https://dailyprophub.com/app/DailyPropHub.apk",
- "notes": "Prop news headlines now link to the full ESPN article: tap Read article on any prop with news.",
- "published": "November 2, 2026"
+ "notes": "Tap any player to see all of their props for the day, plus height, weight and starter/bench info. Results now show void legs and re-priced parlays. Lots of fixes and polish.",
+ "published": "November 13, 2026"
 }
