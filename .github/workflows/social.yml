@@ -1,0 +1,39 @@
+name: Social posts
+# Publishes each new social/posts/*.json (written by the DailyPropHub pipeline) to X and Instagram.
+on:
+  push:
+    branches: [main]
+    paths: ["social/posts/**"]
+  workflow_dispatch:
+    inputs:
+      post:
+        description: "Re-post one file, e.g. social/posts/2026-11-13-nba-trends.json"
+        required: true
+concurrency: social
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+      - name: Find new posts
+        id: new
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "files=${{ github.event.inputs.post }}" >> "$GITHUB_OUTPUT"
+          else
+            files=$(git diff --name-only --diff-filter=A "${{ github.event.before }}" "${{ github.sha }}" -- 'social/posts/*.json' | tr '\n' ' ')
+            echo "files=$files" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Post
+        if: steps.new.outputs.files != ''
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python .github/scripts/social_post.py ${{ steps.new.outputs.files }}
